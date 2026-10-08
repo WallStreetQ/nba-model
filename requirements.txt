@@ -1,0 +1,7 @@
+streamlit>=1.46,<2
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+pyarrow>=15
+requests>=2.31
+pdfplumber>=0.11   # optional: official NBA injury report PDF
