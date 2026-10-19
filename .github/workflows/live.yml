@@ -1,0 +1,67 @@
+# Halftime 2H pricing on game nights.
+#
+# One job per night watches ESPN's live scoreboard every 90 seconds and prices each game the moment it
+# reaches halftime, then commits model/live.json, model/halftime_log.csv and model/live_picks.csv
+# (Streamlit redeploys about a minute after each push). It exits early on nights with no games and as
+# soon as the last game is final.
+#
+# Starts 23:30 UTC = 7:30 PM EDT / 6:30 PM EST and runs up to 345 minutes (GitHub's limit is 360),
+# i.e. until ~1:15 AM EDT / 12:15 AM EST. Late West Coast finals are graded on the next night's run.
+# Scheduled starts can be 10-20+ minutes late on busy days; that only delays the start, not the polling.
+#
+# BILLING: a full night is ~5-6 runner hours. Public repos: free. Private repos: the free plan has
+# 2,000 minutes/month, which this would exceed in about a week. For a private repo, comment out the
+# watch schedule and use the every-10-minutes schedule below instead (~1,300 min/month, but a game's
+# halftime is only caught when a run happens to land in the ~15-minute break).
+#
+# Shares no files with refresh.yml, so the two never conflict; each rebases onto the other before pushing.
+
+name: Halftime pricing
+
+on:
+  schedule:
+    - cron: "30 23 * * *"            # watch mode (default)
+    # - cron: "*/10 23 * * *"        # private-repo alternative: one pass every 10 minutes...
+    # - cron: "*/10 0-5 * * *"       # ...from 7 PM to 1 AM Eastern. Also change WATCH_MINUTES to 0 below.
+  workflow_dispatch:
+    inputs:
+      watch_minutes:
+        description: "Minutes to keep watching (0 = one pass)"
+        default: "345"
+
+concurrency:
+  group: nba-live
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      WATCH_MINUTES: ${{ github.event.inputs.watch_minutes || '345' }}
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      LIVE_ODDS: ${{ vars.LIVE_ODDS || '0' }}    # repo variable: 1 = buy live 2H lines (~2 credits per game)
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Price games at halftime
+        run: |
+          ODDS_FLAG=""
+          if [ "$LIVE_ODDS" = "1" ]; then ODDS_FLAG="--odds"; fi
+          python nba_live.py --watch "$WATCH_MINUTES" --push $ODDS_FLAG

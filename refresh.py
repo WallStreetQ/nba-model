@@ -64,9 +64,14 @@ def publish(message):
         return
     git("commit", "-m", message)
     if git("push", check=False).returncode != 0:
-        print("\n[push failed] The commit is saved locally. If the remote has newer commits (e.g. from the\n"
-              "GitHub Action), run\n  git pull --rebase\n  git push\nthen Streamlit will pick it up.")
-        sys.exit(1)
+        # usually the halftime job (or the other machine) pushed first; their files don't overlap with ours
+        print("  remote has newer commits - rebasing onto them and retrying")
+        if git("pull", "--rebase", "--autostash", check=False).returncode != 0 or \
+                git("push", check=False).returncode != 0:
+            git("rebase", "--abort", check=False)
+            print("\n[push failed] The commit is saved locally. Run\n  git pull --rebase\n  git push\n"
+                  "then Streamlit will pick it up.")
+            sys.exit(1)
     print("Pushed. Streamlit Cloud will redeploy in about a minute.")
 
 
@@ -110,7 +115,7 @@ def update_logs(art):
         from nba_picks import game_lines_args
         try:
             r = pred.predict_game(g["home"], g["away"], g["home_b2b"], g["away_b2b"], g.get("neutral", False),
-                                  **game_lines_args(L))
+                                  **game_lines_args(L), travel=g.get("travel"))
         except ValueError as e:
             print(f"  [skip] {g['away']} @ {g['home']}: {e}")
             continue
@@ -119,6 +124,10 @@ def update_logs(art):
                     "exp_home": r["exp_home"], "exp_away": r["exp_away"], "exp_total": r["exp_total"],
                     "exp_margin": r["exp_margin"], "p_home_win": r["p_home_win"], "p_ot": r["p_ot"],
                     "exp_h1": r["exp_h1"], "exp_h2": r["exp_h2"], "pace": r["pace"],
+                    # pre-tip regulation + 1H means per team: what nba_live.py prices the 2nd half from
+                    "reg_home": r["reg_home"], "reg_away": r["reg_away"],
+                    "exp_h1_home": r["exp_h1_home"], "exp_h1_away": r["exp_h1_away"],
+                    "home_travel_adj": r["travel"]["home"]["adj"], "away_travel_adj": r["travel"]["away"]["adj"],
                     "total_line": L.get("total_line"), "spread_home": L.get("spread_home"),
                     "ml_home": L.get("ml_home"), "ml_away": L.get("ml_away"),
                     "home_tt_line": L.get("home_tt_line"), "away_tt_line": L.get("away_tt_line"),
@@ -172,7 +181,7 @@ def backtest_summary(**kw):
 
 
 def main():
-    from nba_model import DEFAULT_CARRYOVER, DEFAULT_HALF_LIFE, DEFAULT_PRIOR_GAMES
+    from nba_model import DEFAULT_CARRYOVER, DEFAULT_HALF_LIFE, DEFAULT_PRIOR_GAMES, DEFAULT_TRAVEL
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--skip-fetch", action="store_true", help="don't call any API; retrain from existing data/")
     ap.add_argument("--days-back", type=int, default=2, help="days to sweep for newly finished games")
@@ -182,6 +191,8 @@ def main():
     ap.add_argument("--half-life", type=float, default=DEFAULT_HALF_LIFE, help="recency half-life (days)")
     ap.add_argument("--prior-games", type=float, default=DEFAULT_PRIOR_GAMES, help="ridge prior strength (games)")
     ap.add_argument("--carryover", type=float, default=DEFAULT_CARRYOVER, help="weight per past season (1 = off)")
+    ap.add_argument("--travel", type=int, choices=[0, 1], default=DEFAULT_TRAVEL,
+                    help="1 = rest/travel terms (3 in 4, time zones, road trips, altitude), 0 = back-to-backs only")
     args = ap.parse_args()
 
     py = sys.executable
@@ -200,7 +211,8 @@ def main():
     injuries = json.loads(INJURIES_PATH.read_text()) if INJURIES_PATH.exists() else None
 
     print("\n=== Retrain model ===")
-    settings = dict(half_life_days=args.half_life, prior_games=args.prior_games, carryover=args.carryover)
+    settings = dict(half_life_days=args.half_life, prior_games=args.prior_games, carryover=args.carryover,
+                    travel=args.travel)
     art = train_artifact(ROOT / "data", upcoming=upcoming, odds=odds, injuries=injuries, log=lambda *a: print(" ", *a), **settings)
     old = load_artifact(ARTIFACT) if ARTIFACT.exists() else None
     if old and old.get("version", 0) < art["version"]:

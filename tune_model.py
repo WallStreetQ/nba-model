@@ -2,7 +2,7 @@
 tune_model.py
 --------------
 Walk-forward tuning of the model settings in nba_model.py:
-    DEFAULT_HALF_LIFE, DEFAULT_PRIOR_GAMES, DEFAULT_CARRYOVER
+    DEFAULT_HALF_LIFE, DEFAULT_PRIOR_GAMES, DEFAULT_CARRYOVER, DEFAULT_TRAVEL
 
 How it works (same method as the NHL tuner)
   1. Backtests the CURRENT defaults (the baseline).
@@ -15,6 +15,7 @@ How it works (same method as the NHL tuner)
   python tune_model.py                          # judge on moneyline Brier
   python tune_model.py --metric total_abs       # judge on full-game total error
   python tune_model.py --only half_life         # sweep just some settings
+  python tune_model.py --only travel --metric margin_abs   # do the travel terms earn their place?
   python tune_model.py --seasons 3              # test on the last 3 complete seasons (default 2)
 """
 import argparse
@@ -34,6 +35,8 @@ SETTINGS = {
     "half_life": ("half_life_days", "DEFAULT_HALF_LIFE", "--half-life", [45, 60, 90, 120, 180, 270]),
     "prior_games": ("prior_games", "DEFAULT_PRIOR_GAMES", "--prior-games", [2, 4, 8, 12, 20, 30]),
     "carryover": ("carryover", "DEFAULT_CARRYOVER", "--carryover", [0.3, 0.45, 0.6, 0.8, 1.0]),
+    # 1 = rest/travel terms on, 0 = back-to-backs only. Keep travel only if it beats "off" by more than noise.
+    "travel": ("travel", "DEFAULT_TRAVEL", "--travel", [0, 1]),
 }
 
 # metric name -> per-game loss (lower is better) from walk_forward's raw rows
@@ -129,7 +132,7 @@ def main():
     print("then run:   python refresh.py --skip-fetch --backtest --push")
     flags = " ".join(f"{SETTINGS[n][2]} {fmt(v)}" for n, v in winners.items())
     print(f"(or test first without editing:   python refresh.py --skip-fetch --backtest {flags})")
-    edge = [n for n, v in winners.items() if v in (SETTINGS[n][3][0], SETTINGS[n][3][-1])]
+    edge = [n for n, v in winners.items() if n != "travel" and v in (SETTINGS[n][3][0], SETTINGS[n][3][-1])]
     if edge:
         print(f"Note: {', '.join(edge)} won at the edge of its range - extend the values in SETTINGS and re-run.")
 

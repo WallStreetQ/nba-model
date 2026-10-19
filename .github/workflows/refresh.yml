@@ -1,0 +1,51 @@
+# Daily refresh: runs refresh.py on GitHub so you don't have to.
+#
+#   ~6-7 AM ET    settle last night's games, grade picks
+#   ~noon ET      post the slate and selections
+#   ~5:30-6:30 PM refresh lines + injuries before tip-off
+#
+# GitHub schedules are in UTC, so each run lands an hour earlier in winter (EST) than in summer (EDT).
+# Minutes are set off the hour on purpose: runs scheduled on the hour start late most often.
+# Commits model/ and data/ (Streamlit redeploys about a minute later). If the halftime job pushed
+# first, refresh.py rebases onto it and pushes again by itself.
+
+name: Daily refresh
+
+on:
+  schedule:
+    - cron: "7 11 * * *"     # 7:07 AM EDT / 6:07 AM EST
+    - cron: "7 16 * * *"     # 12:07 PM EDT / 11:07 AM EST
+    - cron: "22 22 * * *"    # 6:22 PM EDT / 5:22 PM EST
+  workflow_dispatch:         # lets you run it by hand: Actions -> Daily refresh -> Run workflow
+
+concurrency:
+  group: nba-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}    # optional; without it ESPN's lines are used
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Refresh and publish
+        run: python refresh.py --push

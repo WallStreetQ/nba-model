@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
+.DS_Store
+.pytest_cache/
+# CSV twins are for eyeballing locally; parquet files are what gets committed
+data/*.csv

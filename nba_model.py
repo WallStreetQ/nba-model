@@ -24,7 +24,12 @@ Model (v1)
     out-of-sample games.
   * Recency half-life + season carryover; the ridge prior is worth `prior_games` games of
     league-average play, so ratings regress toward average when there is little current data.
-  * Rest: back-to-back flags for the team and its opponent. Neutral-site games get no home edge.
+  * Rest and travel: back-to-back, 3 games in 4 nights, time zones crossed since the last game,
+    game number of a road trip and visiting at altitude (DEN, UTAH), each for the team and its
+    opponent. Neutral-site games get no home edge. Travel terms can be switched off (DEFAULT_TRAVEL)
+    and tune_model.py checks whether they help.
+  * Halftime: second-half total and margin given the first-half score, fitted on out-of-sample
+    games (Predictor.halftime), used by nba_live.py and the app's Halftime tab.
   * Uncertainty (score spread) is measured on out-of-sample predictions, never in-sample fits.
   * Player availability (nba_availability.py): tonight's injuries move the projection by the value of the
     minutes that change hands; see that module's docstring.
@@ -41,12 +46,29 @@ from scipy.stats import norm
 import nba_availability as nav
 from nba_common import DATA_DIR, competitive_only, read_table, season_of
 
-ARTIFACT_VERSION = 1
+ARTIFACT_VERSION = 2
 DEFAULT_HALF_LIFE = 120      # days
 DEFAULT_PRIOR_GAMES = 2      # ridge prior strength, in games of league-average play
 DEFAULT_CARRYOVER = 0.6      # weight multiplier per season boundary crossed (1 = off)
+DEFAULT_TRAVEL = 0           # 1 = use the travel terms below, 0 = back-to-backs only
 DEFAULT_PLAYOFF_WEIGHT = 0.7
+
+# Per-team schedule features. Each enters the ratings twice: for the team and for its opponent.
+TRAVEL_FEATS = ["three_in_four", "tz", "trip", "alt"]
 REST_COLS = ["b2b", "opp_b2b"]
+# Altitude has no opponent term: with only two altitude teams the data can't separate "visitors score
+# less" from "the home side scores more", so one visitor-side term carries the whole effect.
+TRAVEL_COLS = REST_COLS + [c for f in TRAVEL_FEATS for c in ((f,) if f == "alt" else (f, f"opp_{f}"))]
+TEAM_TZ = {**{t: 0 for t in ("ATL", "BOS", "BKN", "CHA", "CLE", "DET", "IND", "MIA", "NY", "ORL", "PHI", "TOR", "WSH")},
+           **{t: -1 for t in ("CHI", "DAL", "HOU", "MEM", "MIL", "MIN", "NO", "OKC", "SA")},
+           **{t: -2 for t in ("DEN", "UTAH", "PHX")},
+           **{t: -3 for t in ("GS", "LAC", "LAL", "POR", "SAC")}}   # hours vs Eastern (Arizona ~ Mountain in season)
+ALTITUDE_TEAMS = {"DEN", "UTAH"}
+TRIP_BREAK_DAYS = 5          # a gap this long ends a road trip (All-Star break, season boundary)
+TRIP_CAP = 4                 # road-trip game number counted up to this (0 = first road game)
+TRAVEL_SHOW = 0.5            # margin points before the app names a travel effect
+TRAVEL_HALF_LIFE = 730       # days: travel effects are league-wide and slow-moving, so they're fitted on
+                             # long-horizon weights, not the ratings' recency half-life (too noisy)
 REG_MIN, OT_MIN = 48, 5
 LO, HI = 40, 220             # regulation points grid per team
 MARGIN_BUCKETS = 16          # |regulation margin| 0..14, 15+
@@ -196,6 +218,53 @@ def _truthy(s):
     return s.astype(str).str.lower().isin(["true", "1"])
 
 
+def schedule_features(games):
+    """Rest and travel for every (game, team), using only that team's earlier games.
+
+    games: game_id, game_date, home_team, away_team and optionally neutral, in any order. Upcoming
+    games can be appended to finished ones so tonight's slate gets the same features.
+    Returns one row per (game_id, team): b2b, three_in_four, tz, trip, alt."""
+    neutral = _truthy(games["neutral"]) if "neutral" in games else pd.Series(False, index=games.index)
+    g = pd.DataFrame({"game_id": games["game_id"].astype(str).values,
+                      "game_date": pd.to_datetime(games["game_date"]).values,
+                      "home_team": games["home_team"].values, "neutral": neutral.values})
+    rows = pd.concat([g.assign(team=g["home_team"], is_home=~g["neutral"]),
+                      g.assign(team=games["away_team"].values, is_home=False)], ignore_index=True)
+    rows["venue_tz"] = rows["home_team"].map(TEAM_TZ).where(~rows["neutral"])   # neutral site: location unknown
+    rows = rows.sort_values(["team", "game_date", "game_id"]).reset_index(drop=True)
+    out = {k: np.zeros(len(rows)) for k in ("b2b", "three_in_four", "tz", "trip", "alt")}
+    dates = rows["game_date"].values.astype("datetime64[D]").astype(np.int64)
+    tz, home, team = rows["venue_tz"].values, rows["is_home"].values, rows["team"].values
+    for idx in rows.groupby("team").indices.values():
+        trip = -1
+        for n, i in enumerate(idx):
+            gap = dates[i] - dates[idx[n - 1]] if n else 999
+            out["b2b"][i] = float(gap == 1)
+            out["three_in_four"][i] = float(n >= 2 and dates[i] - dates[idx[n - 2]] <= 3)
+            if n and gap <= 2 and not np.isnan(tz[i]) and not np.isnan(tz[idx[n - 1]]):
+                out["tz"][i] = min(abs(tz[i] - tz[idx[n - 1]]), 3)
+            trip = -1 if (home[i] or gap > TRIP_BREAK_DAYS) else trip + 1
+            out["trip"][i] = 0.0 if home[i] else float(min(max(trip, 0), TRIP_CAP))
+    venue = rows["home_team"].values
+    out["alt"] = (~rows["is_home"].values & ~rows["neutral"].values & np.isin(venue, list(ALTITUDE_TEAMS))
+                  & (team != venue)).astype(float)
+    res = rows[["game_id", "team"]].copy()
+    for k, v in out.items():
+        res[k] = v
+    return res
+
+
+def attach_schedule_features(games, feats):
+    """home_<f> / away_<f> columns on a games table from schedule_features() output."""
+    games = games.copy()
+    f = feats.set_index(["game_id", "team"])
+    for side in ("home", "away"):
+        key = list(zip(games["game_id"].astype(str), games[f"{side}_team"]))
+        for c in ["b2b"] + TRAVEL_FEATS:
+            games[f"{side}_{c}"] = f[c].reindex(key).fillna(0).values
+    return games
+
+
 def load_data(data_dir=DATA_DIR, use_box="auto", min_box_coverage=0.95,
               playoff_weight=DEFAULT_PLAYOFF_WEIGHT, log=print):
     """Everything the fit and the backtest need, in one dict."""
@@ -240,14 +309,9 @@ def load_data(data_dir=DATA_DIR, use_box="auto", min_box_coverage=0.95,
     ot_rate = float((fin["n_ot"] > 0).mean())
     ot_mean_total = float((otg["home_ot"] + otg["away_ot"]).mean()) if len(otg) else 21.0
 
-    # ---- back-to-backs ----
-    sched = pd.concat([fin[["game_id", "game_date", "home_team"]].rename(columns={"home_team": "team"}),
-                       fin[["game_id", "game_date", "away_team"]].rename(columns={"away_team": "team"})])
-    sched = sched.sort_values(["team", "game_date", "game_id"])
-    sched["b2b"] = (sched.groupby("team")["game_date"].diff().dt.days == 1).astype(int)
-    b2b = sched.set_index(["game_id", "team"])["b2b"]
-    fin["home_b2b"] = b2b.reindex(list(zip(fin["game_id"], fin["home_team"]))).fillna(0).astype(int).values
-    fin["away_b2b"] = b2b.reindex(list(zip(fin["game_id"], fin["away_team"]))).fillna(0).astype(int).values
+    # ---- rest + travel (back-to-backs, 3 in 4, time zones, road trips, altitude) ----
+    fin = attach_schedule_features(fin, schedule_features(fin))
+    fin["home_b2b"], fin["away_b2b"] = fin["home_b2b"].astype(int), fin["away_b2b"].astype(int)
 
     # ---- possessions from box scores ----
     fin["poss_reg"] = np.nan
@@ -268,13 +332,20 @@ def load_data(data_dir=DATA_DIR, use_box="auto", min_box_coverage=0.95,
         log("box scores: OFF - no game_team_box file (run nba_boxscores.py)")
 
     # ---- long format: one row per team-game ----
-    cols = ["game_id", "season", "game_date", "team", "opponent", "is_home", "b2b", "opp_b2b",
-            "type_weight", "pts", "h1", "poss"]
+    cols = ["game_id", "season", "game_date", "team", "opponent", "is_home"] + TRAVEL_COLS + \
+           ["type_weight", "pts", "h1", "poss"]
     home_flag = (~fin["neutral"]).astype(int)
-    h = fin.assign(team=fin["home_team"], opponent=fin["away_team"], is_home=home_flag, b2b=fin["home_b2b"],
-                   opp_b2b=fin["away_b2b"], pts=fin["home_reg"], h1=fin["home_h1"], poss=fin["poss_reg"])[cols]
-    a = fin.assign(team=fin["away_team"], opponent=fin["home_team"], is_home=0, b2b=fin["away_b2b"],
-                   opp_b2b=fin["home_b2b"], pts=fin["away_reg"], h1=fin["away_h1"], poss=fin["poss_reg"])[cols]
+
+    def side_feats(me, opp):
+        d = {}
+        for f in ["b2b"] + TRAVEL_FEATS:
+            d[f], d[f"opp_{f}"] = fin[f"{me}_{f}"], fin[f"{opp}_{f}"]
+        return d
+
+    h = fin.assign(team=fin["home_team"], opponent=fin["away_team"], is_home=home_flag, **side_feats("home", "away"),
+                   pts=fin["home_reg"], h1=fin["home_h1"], poss=fin["poss_reg"])[cols]
+    a = fin.assign(team=fin["away_team"], opponent=fin["home_team"], is_home=0, **side_feats("away", "home"),
+                   pts=fin["away_reg"], h1=fin["away_h1"], poss=fin["poss_reg"])[cols]
     long = pd.concat([h, a], ignore_index=True)
     long["season"] = long["season"].astype(int)
     long["eff"] = 100 * long["pts"] / long["poss"]
@@ -334,10 +405,17 @@ def _weights(df, as_of, half_life, carryover):
     return (0.5 ** (days_ago / half_life) * df["type_weight"] * carryover ** seasons_back).values
 
 
+def rest_cols(travel=DEFAULT_TRAVEL):
+    return TRAVEL_COLS if travel else REST_COLS
+
+
 def fit_ratings(long, teams, as_of, half_life=DEFAULT_HALF_LIFE, prior_games=DEFAULT_PRIOR_GAMES,
-                carryover=DEFAULT_CARRYOVER, box_on=True):
+                carryover=DEFAULT_CARRYOVER, box_on=True, travel=DEFAULT_TRAVEL):
     """Fit all rating sets on `long` (rows strictly before as_of). Returns {name: beta} + diagnostics."""
     w = _weights(long, as_of, half_life, carryover)
+    w_travel = _weights(long, as_of, TRAVEL_HALF_LIFE, 1.0)
+    cols = rest_cols(travel)
+    extra = [c for c in cols if c not in REST_COLS]
     out = {}
     models = {"pts": ("pts", long), "h1": ("h1", long)}
     if box_on:
@@ -346,29 +424,52 @@ def fit_ratings(long, teams, as_of, half_life=DEFAULT_HALF_LIFE, prior_games=DEF
     pos = np.arange(len(long))
     for name, (ycol, df) in models.items():
         sel = pos if len(df) == len(long) else pos[long["eff"].notna().values]
-        m = TeamRidge(teams, prior_games).fit(df, df[ycol], w[sel])
-        out[name] = m.beta.tolist()
-    m = TeamRidge(teams, prior_games)
+        y = df[ycol].values.astype(float)
+        if not extra:
+            out[name] = TeamRidge(teams, prior_games, cols).fit(df, y, w[sel]).beta.tolist()
+            continue
+        # 1) travel effects on long-horizon weights, 2) ratings on recency weights around them
+        t = TeamRidge(teams, prior_games, cols).fit(df, y, w_travel[sel])
+        tc = np.array([t.coef(c) for c in extra])
+        offset = df[extra].values.astype(float) @ tc
+        r = TeamRidge(teams, prior_games, REST_COLS).fit(df, y - offset, w[sel])
+        out[name] = r.beta.tolist() + tc.tolist()     # same layout as TeamRidge(..., TRAVEL_COLS)
+    m = TeamRidge(teams, prior_games, cols)
     m.beta = np.array(out["eff" if box_on else "pts"])
     diag = {"home_coef": m.coef("is_home"), "b2b_coef": m.coef("b2b"), "opp_b2b_coef": m.coef("opp_b2b"),
+            "travel_coefs": {c: m.coef(c) for c in cols if c not in REST_COLS},
             "units": "pts per 100 poss" if box_on else "points"}
     return out, diag
 
 
-def _rows(teams_h, teams_a, is_home, b2b_h, b2b_a):
-    """Home-perspective and away-perspective rows for a batch of games."""
-    h = pd.DataFrame({"team": teams_h, "opponent": teams_a, "is_home": is_home, "b2b": b2b_h, "opp_b2b": b2b_a})
-    a = pd.DataFrame({"team": teams_a, "opponent": teams_h, "is_home": 0, "b2b": b2b_a, "opp_b2b": b2b_h})
-    return h, a
+def _rows(games, is_home, cols):
+    """Home-perspective and away-perspective rows for a batch of games. Missing feature columns = 0."""
+    def col(name):
+        return games[name].astype(float).values if name in games else np.zeros(len(games))
+
+    h = {"team": games["home_team"].values, "opponent": games["away_team"].values, "is_home": is_home}
+    a = {"team": games["away_team"].values, "opponent": games["home_team"].values, "is_home": 0}
+    for c in cols:
+        f = c[4:] if c.startswith("opp_") else c
+        own_h, own_a = col(f"home_{f}"), col(f"away_{f}")
+        h[c], a[c] = (own_a, own_h) if c.startswith("opp_") else (own_h, own_a)
+    return pd.DataFrame(h), pd.DataFrame(a)
+
+
+def _cols_for(beta, teams):
+    """Which rest/travel columns a fitted beta vector uses (older fits: back-to-backs only)."""
+    n_extra = len(beta) - 2 - 2 * len(teams)
+    return TRAVEL_COLS if n_extra == len(TRAVEL_COLS) else REST_COLS
 
 
 def project(betas, teams, games, box_on):
     """Expected REGULATION points and 1H points for a batch of games.
-    games needs home_team, away_team, home_b2b, away_b2b and optionally neutral."""
+    games needs home_team, away_team, home_b2b, away_b2b, optionally neutral and home_/away_ travel
+    features (three_in_four, tz, trip, alt; missing = 0)."""
     neutral = _truthy(games["neutral"]).values if "neutral" in games else np.zeros(len(games), bool)
-    h, a = _rows(games["home_team"].values, games["away_team"].values, (~neutral).astype(int),
-                 games["home_b2b"].values, games["away_b2b"].values)
-    m = TeamRidge(teams)
+    cols = _cols_for(betas["h1"], teams)
+    h, a = _rows(games, (~neutral).astype(int), cols)
+    m = TeamRidge(teams, extra_cols=cols)
 
     def pred(name, df):
         m.beta = np.asarray(betas[name])
@@ -403,7 +504,8 @@ def project_window(D, start, end, settings, refit_days=REFIT_DAYS, game_types=(2
         if chunk.empty or len(train) < 1000:
             continue
         betas, _ = fit_ratings(train.reset_index(drop=True), D["teams"], a, settings["half_life_days"],
-                               settings["prior_games"], settings["carryover"], D["box_on"])
+                               settings["prior_games"], settings["carryover"], D["box_on"],
+                               settings.get("travel", DEFAULT_TRAVEL))
         p = project(betas, D["teams"], chunk, D["box_on"])
         out.append(pd.concat([chunk, p], axis=1))
     if not out:
@@ -435,11 +537,93 @@ def calibrate(r, as_of=None, half_life=DEFAULT_HALF_LIFE):
     return sig, mw
 
 
+HALFTIME_MIN_GAMES = 300
+
+
+def _halftime_design(r):
+    """Regressors for 2H total / 2H margin residuals given the first-half score.
+      total : 1H total vs its projection (a fast or slow game so far), |1H margin| (blowouts slow down)
+      margin: 1H margin vs its projection, and the 1H margin itself (leaders ease off)"""
+    one = np.ones(len(r))
+    h1m = (r["home_h1"] - r["away_h1"]).values.astype(float)
+    xt = np.column_stack([one, (r["act_h1"] - r["mu_h1"]).values, np.abs(h1m)])
+    xm = np.column_stack([one, h1m - (r["h1_h"] - r["h1_a"]).values, h1m])
+    mu_2hm = ((r["mu_h"] - r["h1_h"]) - (r["mu_a"] - r["h1_a"])).values
+    yt = (r["act_2h"] - r["mu_2h"]).values
+    ym = ((r["home_score"] - r["away_score"]).values - h1m) - mu_2hm
+    return xt, yt, xm, ym
+
+
+def _ols(X, y):
+    b = np.linalg.solve(X.T @ X + 1e-6 * np.eye(X.shape[1]), X.T @ y)
+    sd = float(np.sqrt(np.sum((y - X @ b) ** 2) / max(len(y) - X.shape[1], 1)))
+    return b.tolist(), sd
+
+
+def fit_halftime(r, sig):
+    """Second half given the first: least squares on out-of-sample games. With too little history,
+    falls back to what the score spreads imply (1H and 2H are correlated through the full-game total)."""
+    if r is not None and len(r) >= HALFTIME_MIN_GAMES:
+        xt, yt, xm, ym = _halftime_design(r)
+        (ct, sdt), (cm, sdm) = _ols(xt, yt), _ols(xm, ym)
+        return {"fitted": True, "n_fit": int(len(r)), "total": {"coef": ct, "sd": sdt},
+                "margin": {"coef": cm, "sd": sdm}}
+    s1, s2, t = sig["h1_total"], sig["h2_total"], sig["total_reg"]
+    cov = (t ** 2 - s1 ** 2 - s2 ** 2) / 2
+    b = float(np.clip(cov / s1 ** 2, -0.5, 0.5))
+    sd = float(np.sqrt(max(s2 ** 2 - b ** 2 * s1 ** 2, 0.25 * s2 ** 2)))
+    return {"fitted": False, "n_fit": 0, "total": {"coef": [0.0, b, 0.0], "sd": sd},
+            "margin": {"coef": [0.0, 0.0, 0.0], "sd": float(sig["margin_reg"] * np.sqrt(0.5))}}
+
+
+def halftime_projection(ht, pre, h1_home, h1_away, ot_rate, ot_mean_total):
+    """2H expectations at halftime. pre: pre-game regulation means mu_h, mu_a and 1H means h1_h, h1_a."""
+    h1t, h1m = h1_home + h1_away, h1_home - h1_away
+    pre_2h = pre["mu_h"] + pre["mu_a"] - pre["h1_h"] - pre["h1_a"] + ot_rate * ot_mean_total
+    pre_2hm = (pre["mu_h"] - pre["h1_h"]) - (pre["mu_a"] - pre["h1_a"])
+    xt = np.array([1.0, h1t - pre["h1_h"] - pre["h1_a"], abs(h1m)])
+    xm = np.array([1.0, h1m - (pre["h1_h"] - pre["h1_a"]), h1m])
+    return {"h1_home": float(h1_home), "h1_away": float(h1_away), "pre_2h": float(pre_2h), "pre_2hm": float(pre_2hm),
+            "mu_2h": float(pre_2h + xt @ np.asarray(ht["total"]["coef"])), "sd_2h": float(ht["total"]["sd"]),
+            "mu_2hm": float(pre_2hm + xm @ np.asarray(ht["margin"]["coef"])), "sd_2hm": float(ht["margin"]["sd"])}
+
+
+def discrete_normal_spread(mu, sd, home_spread):
+    """Cover / push / fail for an integer margin ~ Normal(mu, sd). -2.5 = home lays 2.5."""
+    v = np.arange(np.floor(mu - 6 * sd), np.ceil(mu + 6 * sd) + 1)
+    p = norm.cdf(v + 0.5, mu, sd) - norm.cdf(v - 0.5, mu, sd)
+    p /= p.sum()
+    adj = v + home_spread
+    cover, push = float(p[adj > 1e-9].sum()), float(p[np.abs(adj) < 1e-9].sum())
+    return {"line": float(home_spread), "cover": cover, "push": push, "fail": float(max(0.0, 1 - cover - push))}
+
+
+def halftime_backtest(r, tests):
+    """2H error before the game vs at halftime, each test season scored with a fit on the other(s)."""
+    parts = []
+    for s in tests:
+        fit_on, score = r[r["season"] != s], r[r["season"] == s]
+        if len(fit_on) < HALFTIME_MIN_GAMES or score.empty:
+            continue
+        xt, yt, xm, ym = _halftime_design(fit_on)
+        ct, _ = _ols(xt, yt)
+        cm, _ = _ols(xm, ym)
+        xt, yt, xm, ym = _halftime_design(score)
+        parts.append(pd.DataFrame({"pre_t": yt, "ht_t": yt - xt @ np.asarray(ct),
+                                   "pre_m": ym, "ht_m": ym - xm @ np.asarray(cm)}))
+    if not parts:
+        return None
+    d = pd.concat(parts).abs()
+    return {"n_games": int(len(d)), "h2_mae_pregame": float(d["pre_t"].mean()), "h2_mae_halftime": float(d["ht_t"].mean()),
+            "h2_margin_mae_pregame": float(d["pre_m"].mean()), "h2_margin_mae_halftime": float(d["ht_m"].mean())}
+
+
 def walk_forward(data_dir=DATA_DIR, n_seasons=2, half_life_days=DEFAULT_HALF_LIFE, prior_games=DEFAULT_PRIOR_GAMES,
-                 carryover=DEFAULT_CARRYOVER, use_box="auto", margin_cal=True, refit_days=REFIT_DAYS, D=None, log=print):
+                 carryover=DEFAULT_CARRYOVER, use_box="auto", margin_cal=True, refit_days=REFIT_DAYS, D=None, log=print,
+                 travel=DEFAULT_TRAVEL):
     """Score the last `n_seasons` complete seasons; each block is predicted by a model trained only on earlier games."""
     D = D or load_data(data_dir, use_box=use_box, log=log)
-    settings = dict(half_life_days=half_life_days, prior_games=prior_games, carryover=carryover)
+    settings = dict(half_life_days=half_life_days, prior_games=prior_games, carryover=carryover, travel=int(travel))
     fin = D["fin"]
     counts = fin[fin["game_type"].astype(int) == 2].groupby("season").size()
     complete = [s for s, n in counts.items() if n >= 1000]
@@ -461,6 +645,9 @@ def walk_forward(data_dir=DATA_DIR, n_seasons=2, half_life_days=DEFAULT_HALF_LIF
     r["early"] = (r["game_date"] - first_day).dt.days < 30
     out = summarize_backtest(r, tests, sig)
     out["settings"] = settings
+    ht = halftime_backtest(r, tests)
+    if ht:
+        out["halftime"] = ht
     if D["players"] is not None and len(tests) >= 2:
         av = nav.build(D["fin"], D["players"])
         ra = nav.attach_M(r, av["M"])
@@ -537,32 +724,53 @@ def _lines_for(g, odds_rows):
     return lines
 
 
-def build_slate(upcoming, last_played, odds_rows):
+def build_slate(upcoming, last_played, odds_rows, fin=None):
+    """Upcoming games with lines and rest/travel flags. With `fin` (finished games) the full travel
+    features are computed from each team's real schedule, chaining through the upcoming days."""
+    upcoming = sorted(upcoming, key=lambda g: (g["game_date"], g.get("start_utc") or ""))
+    feats = None
+    if fin is not None and upcoming:
+        up = pd.DataFrame([{"game_id": str(g["game_id"]), "game_date": g["game_date"], "home_team": g["home_team"],
+                            "away_team": g["away_team"], "neutral": bool(g.get("neutral"))} for g in upcoming])
+        hist = fin[["game_id", "game_date", "home_team", "away_team", "neutral"]]
+        hist = hist[(hist["game_date"] >= pd.Timestamp(up["game_date"].min()) - pd.Timedelta(days=20))
+                    & ~hist["game_id"].astype(str).isin(up["game_id"])]
+        feats = schedule_features(pd.concat([hist, up], ignore_index=True)).set_index(["game_id", "team"])
     out, played = [], dict(last_played)
-    for g in sorted(upcoming, key=lambda g: (g["game_date"], g.get("start_utc") or "")):
-        flags = {}
+    for g in upcoming:
+        flags, travel = {}, {}
         for side in ("home", "away"):
-            prev = played.get(g[f"{side}_team"])
-            flags[f"{side}_b2b"] = bool(prev and (pd.Timestamp(g["game_date"]) - pd.Timestamp(prev)).days == 1)
+            team = g[f"{side}_team"]
+            if feats is not None:
+                f = feats.loc[(str(g["game_id"]), team)]
+                flags[f"{side}_b2b"] = bool(f["b2b"])
+                travel[side] = {k: float(f[k]) for k in TRAVEL_FEATS}
+            else:
+                prev = played.get(team)
+                flags[f"{side}_b2b"] = bool(prev and (pd.Timestamp(g["game_date"]) - pd.Timestamp(prev)).days == 1)
         out.append({"game_id": str(g["game_id"]), "date": g["game_date"], "start_utc": g.get("start_utc"),
                     "home": g["home_team"], "away": g["away_team"], "neutral": bool(g.get("neutral")),
-                    **flags, "lines": _lines_for(g, odds_rows)})
+                    **flags, "travel": travel or None, "lines": _lines_for(g, odds_rows)})
         played[g["home_team"]] = played[g["away_team"]] = g["game_date"]
     return out
 
 
 def train_artifact(data_dir=DATA_DIR, half_life_days=DEFAULT_HALF_LIFE, prior_games=DEFAULT_PRIOR_GAMES,
                    carryover=DEFAULT_CARRYOVER, use_box="auto", as_of=None, upcoming=None, odds=None,
-                   injuries=None, log=print):
+                   injuries=None, log=print, travel=DEFAULT_TRAVEL):
     D = load_data(data_dir, use_box=use_box, log=log)
     fin, long, teams = D["fin"], D["long"], D["teams"]
     last_date = fin["game_date"].max()
     as_of = pd.Timestamp(as_of) if as_of is not None else max(last_date, pd.Timestamp(date.today()))
-    settings = dict(half_life_days=half_life_days, prior_games=prior_games, carryover=carryover)
+    settings = dict(half_life_days=half_life_days, prior_games=prior_games, carryover=carryover, travel=int(travel))
 
-    betas, diag = fit_ratings(long, teams, as_of, half_life_days, prior_games, carryover, D["box_on"])
+    betas, diag = fit_ratings(long, teams, as_of, half_life_days, prior_games, carryover, D["box_on"], travel)
     log(f"fit: home {diag['home_coef']:+.2f} | b2b {diag['b2b_coef']:+.2f} | opp b2b {diag['opp_b2b_coef']:+.2f} "
         f"({diag['units']})")
+    if diag["travel_coefs"]:
+        log("travel: " + " | ".join(f"{k} {v:+.2f}" for k, v in diag["travel_coefs"].items()))
+    else:
+        log("travel: OFF (back-to-backs only)")
 
     # score spread + margin weights from the most recent year of out-of-sample predictions
     r = project_window(D, last_date - pd.Timedelta(days=CALIBRATION_DAYS), last_date + pd.Timedelta(days=1), settings)
@@ -575,6 +783,11 @@ def train_artifact(data_dir=DATA_DIR, half_life_days=DEFAULT_HALF_LIFE, prior_ga
     log("sd: " + " | ".join(f"{k} {v:.1f}" for k, v in sig.items()) + f"  ({len(r):,} out-of-sample games)")
     if mw:
         log("margin weights |m| 0..15+: " + ", ".join(f"{x:.2f}" for x in mw))
+    halftime = fit_halftime(r if len(r) else None, sig)
+    ct, cm = halftime["total"]["coef"], halftime["margin"]["coef"]
+    log(f"halftime: 2H total {ct[1]:+.2f} x 1H surprise {ct[2]:+.2f} x |1H margin| (sd {halftime['total']['sd']:.1f}) | "
+        f"2H margin {cm[1]:+.2f} x 1H surprise {cm[2]:+.2f} x 1H margin (sd {halftime['margin']['sd']:.1f})"
+        + ("" if halftime["fitted"] else "  [defaults: too few games]"))
 
     recent = fin[fin["game_date"] >= last_date - pd.Timedelta(days=365)]
     active = sorted(set(recent["home_team"]) | set(recent["away_team"]))
@@ -615,8 +828,8 @@ def train_artifact(data_dir=DATA_DIR, half_life_days=DEFAULT_HALF_LIFE, prior_ga
         "teams": teams, "betas": betas, "box_on": D["box_on"], "sigma": sig, "margin_weights": mw,
         "ot_pmf": D["ot_pmf"], "home_ot_win": D["home_ot_win"], "ot_rate": D["ot_rate"],
         "ot_mean_total": D["ot_mean_total"], "last_played": last_played,
-        "slate": build_slate(upcoming, last_played, odds_rows),
-        "availability": availability,
+        "slate": build_slate(upcoming, last_played, odds_rows, fin),
+        "availability": availability, "halftime": halftime,
     }
     return _clean(art)
 
@@ -671,9 +884,14 @@ class Predictor:
             raise ValueError(f"Unknown team '{team}'.")
         return team
 
-    def expected(self, home, away, home_b2b=False, away_b2b=False, neutral=False, overrides=None, use_av=True):
+    def expected(self, home, away, home_b2b=False, away_b2b=False, neutral=False, overrides=None, use_av=True,
+                 travel=None):
+        """travel: {"home": {three_in_four, tz, trip, alt}, "away": {...}} from the slate (None = no travel)."""
         g = pd.DataFrame({"home_team": [self.resolve(home)], "away_team": [self.resolve(away)],
                           "home_b2b": [int(home_b2b)], "away_b2b": [int(away_b2b)], "neutral": [bool(neutral)]})
+        for side in ("home", "away"):
+            for f in TRAVEL_FEATS:
+                g[f"{side}_{f}"] = float(((travel or {}).get(side) or {}).get(f, 0.0))
         e = project(self.betas, self.teams, g, self.box_on).iloc[0].copy()
         if use_av and self.av.get("on"):
             mh = nav.team_lost_value(self.roster(home), overrides)
@@ -685,10 +903,35 @@ class Predictor:
                 e[f"h1_{side}"] = e[f"h1_{side}"] * (base + d) / base   # same share of the change in the 1st half
         return e
 
+    def travel_effect(self, home, away, home_b2b=False, away_b2b=False, neutral=False, travel=None):
+        """Margin points each team gains (+) or loses (-) from its OWN travel situation, plus short notes.
+        Back-to-backs are shown separately on the cards, so they're not counted here."""
+        out = {"home": {"adj": 0.0, "notes": []}, "away": {"adj": 0.0, "notes": []}}
+        if not travel or _cols_for(self.betas["h1"], self.teams) is REST_COLS:
+            return out
+        args = (home, away, home_b2b, away_b2b, neutral, None, False)
+        e0 = self.expected(*args)
+        m0 = e0["mu_h"] - e0["mu_a"]
+        for side, sign in (("home", 1), ("away", -1)):
+            f = travel.get(side) or {}
+            e = self.expected(*args, travel={side: f})
+            out[side]["adj"] = float(sign * ((e["mu_h"] - e["mu_a"]) - m0))
+            notes = []
+            if f.get("three_in_four"):
+                notes.append("3 in 4 nights")
+            if f.get("tz"):
+                notes.append(f"{int(f['tz'])} time zone{'s' if f['tz'] > 1 else ''}")
+            if f.get("trip"):
+                notes.append(f"road game {int(f['trip']) + 1}" + ("+" if f["trip"] >= TRIP_CAP else ""))
+            if f.get("alt"):
+                notes.append("altitude")
+            out[side]["notes"] = notes
+        return out
+
     def predict_game(self, home, away, home_b2b=False, away_b2b=False, neutral=False, total_line=225.5,
                      home_spread=-3.5, home_team_line=None, away_team_line=None, h1_line=None, h2_line=None,
-                     overrides=None, use_av=True):
-        e = self.expected(home, away, home_b2b, away_b2b, neutral, overrides, use_av)
+                     overrides=None, use_av=True, travel=None):
+        e = self.expected(home, away, home_b2b, away_b2b, neutral, overrides, use_av, travel)
         gd = GameDist(e["mu_h"], e["mu_a"], self.sig, self.mw, self.art["ot_pmf"])
         mu_h1 = e["h1_h"] + e["h1_a"]
         mu_2h = e["mu_h"] + e["mu_a"] - mu_h1 + self.art["ot_rate"] * self.art["ot_mean_total"]
@@ -714,7 +957,49 @@ class Predictor:
             "margin_pmf": {"margin": d[keep].tolist(), "p": mp[keep].tolist()},
             "avail": {"home": self.availability(home, overrides) if use_av else None,
                       "away": self.availability(away, overrides) if use_av else None},
+            "travel": self.travel_effect(home, away, home_b2b, away_b2b, neutral, travel),
         }
+
+    # ---------- joint outcomes (correlated stakes) ----------
+    def sample_scores(self, home, away, home_b2b=False, away_b2b=False, neutral=False, n=20000, seed=0,
+                      overrides=None, use_av=True, travel=None):
+        """Simulated final scores (incl. OT) and first-half totals for one game, drawn from the same joint
+        grid the markets are priced from. The 1H total is drawn given the full-game total, with the
+        correlation implied by the fitted score spreads (2H = full game - 1H)."""
+        e = self.expected(home, away, home_b2b, away_b2b, neutral, overrides, use_av, travel)
+        gd = GameDist(e["mu_h"], e["mu_a"], self.sig, self.mw, self.art["ot_pmf"])
+        rng = np.random.default_rng(seed)
+        F = gd.F.ravel()
+        idx = rng.choice(F.size, size=n, p=F / F.sum())
+        i, j = np.unravel_index(idx, gd.F.shape)
+        h, a = gd.pts[i].astype(float), gd.pts[j].astype(float)
+        tv, tp = gd.total_pmf()
+        mu_t = float(tv @ tp)
+        var_t = float(((tv - mu_t) ** 2) @ tp)
+        s1, s2 = self.sig["h1_total"], self.sig["h2_total"]
+        cov = float(np.clip((var_t + s1 ** 2 - s2 ** 2) / 2, 0.0, 0.95 * s1 * np.sqrt(var_t)))
+        mu1 = float(e["h1_h"] + e["h1_a"])
+        h1 = np.round(rng.normal(mu1 + cov / var_t * (h + a - mu_t), np.sqrt(max(s1 ** 2 - cov ** 2 / var_t, 1.0))))
+        return {"home": h, "away": a, "h1": h1}
+
+    # ---------- halftime ----------
+    def pregame(self, home, away, home_b2b=False, away_b2b=False, neutral=False, overrides=None, travel=None):
+        e = self.expected(home, away, home_b2b, away_b2b, neutral, overrides, True, travel)
+        return {"mu_h": float(e["mu_h"]), "mu_a": float(e["mu_a"]), "h1_h": float(e["h1_h"]), "h1_a": float(e["h1_a"])}
+
+    def halftime(self, h1_home, h1_away, pre, total_line=None, home_spread=None):
+        """Second-half markets once the first-half score is known. pre: Predictor.pregame(...) or the
+        same four numbers saved in the prediction log before tip-off."""
+        ht = self.art.get("halftime") or fit_halftime(None, self.sig)
+        p = halftime_projection(ht, pre, h1_home, h1_away, self.art["ot_rate"], self.art["ot_mean_total"])
+        tl = total_line if total_line is not None else round(p["mu_2h"]) + 0.5
+        sp = home_spread if home_spread is not None else -(round(p["mu_2hm"]) + 0.5)
+        h1m = h1_home - h1_away
+        fin = discrete_normal_spread(p["mu_2hm"] + h1m, p["sd_2hm"], 0.0)
+        p.update(total=discrete_normal_ou(p["mu_2h"], p["sd_2h"], tl), spread=discrete_normal_spread(
+            p["mu_2hm"], p["sd_2hm"], sp), p_home_win=float(fin["cover"] + fin["push"] * self.art["home_ot_win"]),
+            fitted=bool(ht.get("fitted")))
+        return p
 
     def team_ratings(self):
         T = len(self.teams)

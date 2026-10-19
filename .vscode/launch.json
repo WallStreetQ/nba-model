@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name": "Streamlit app", "type": "debugpy", "request": "launch", "module": "streamlit",
+     "args": ["run", "streamlit_app.py"], "cwd": "${workspaceFolder}", "justMyCode": true},
+    {"name": "Refresh (no push)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/refresh.py", "cwd": "${workspaceFolder}"},
+    {"name": "Refresh: retrain only + backtest", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/refresh.py", "args": ["--skip-fetch", "--backtest"], "cwd": "${workspaceFolder}"},
+    {"name": "Tune model", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/tune_model.py", "cwd": "${workspaceFolder}"}
+  ]
+}

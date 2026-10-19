@@ -2,8 +2,8 @@
 
 Same design as the NHL predictor: a local (or scheduled) `refresh.py` fetches data, retrains, and writes one small model file plus logs. The Streamlit app reads only those files — no API calls — so it loads fast on phone and desktop.
 
-**Markets:** full-game total · team totals · 1H total · 2H total · spread · moneyline (plus alt spreads).
-**App tabs:** 🎯 Selections · 📅 Today's Slate · 🧮 Game Markets (enter your odds → edge, EV, ¼ Kelly) · 📈 Track Record · 📊 Model.
+**Markets:** full-game total · team totals · 1H total · 2H total · spread · moneyline (plus alt spreads) · **2H total and 2H spread at halftime**.
+**App tabs:** 🎯 Selections · 📅 Today's Slate · 🧮 Game Markets (enter your odds → edge, EV, ¼ Kelly) · ⏱ Halftime · 📈 Track Record · 📊 Model.
 
 ## How it maps to the NHL version
 
@@ -17,6 +17,7 @@ Same design as the NHL predictor: a local (or scheduled) `refresh.py` fetches da
 | `nhl_model.py` | `nba_model.py` | Ratings → joint score grid → every market. Details below. |
 | `goalie_features.py` | `nba_availability.py` + `nba_injuries.py` | Player availability (the NBA version of the goalie module): who's out, what they're worth, applied automatically. |
 | `refresh.py`, `tune_model.py` | same names | Same flags and behaviour: `--push`, `--skip-fetch`, `--backtest`; paired-bootstrap tuning. |
+| — | `nba_live.py` + `.github/workflows/live.yml` | Halftime: prices each game's second half from its first-half score as it happens. |
 | `streamlit_app.py` | same name | NHL calculator kept as **Game Markets**; Selections, Slate cards and pick record added. |
 
 ## What never enters the model
@@ -25,7 +26,7 @@ Only **regular season, play-in and playoff** games count. **Preseason** (ESPN se
 
 ## The model (`nba_model.py`)
 
-- **Team ratings** by weighted ridge regression with team (offense) and opponent (defense) terms, home court (zero at neutral sites) and back-to-back flags:
+- **Team ratings** by weighted ridge regression with team (offense) and opponent (defense) terms, home court (zero at neutral sites), back-to-back flags and travel (below):
   - *efficiency* — points per 100 possessions, and *pace* — possessions. Regulation points = pace × efficiency / 100. This separates "plays fast" (moves totals) from "scores well" (moves spreads).
   - a separate rating set for **first-half points**.
   - Without enough box-score coverage (<95 % of games) it falls back to a direct points rating, like the NHL goalie switch.
@@ -35,7 +36,24 @@ Only **regular season, play-in and playoff** games count. **Preseason** (ESPN se
 - **Uncertainty from out-of-sample errors only.** Score spreads (SDs) are measured on the last year of walk-forward predictions, refit every 14 days.
 - **1H / 2H:** 1H from its own ratings; 2H = full game − 1H, including OT (how books grade it).
 
-Tunable defaults at the top of `nba_model.py`: `DEFAULT_HALF_LIFE`, `DEFAULT_PRIOR_GAMES`, `DEFAULT_CARRYOVER`. Selection thresholds at the top of `nba_picks.py`.
+Tunable defaults at the top of `nba_model.py`: `DEFAULT_HALF_LIFE`, `DEFAULT_PRIOR_GAMES`, `DEFAULT_CARRYOVER`, `DEFAULT_TRAVEL`. Selection thresholds at the top of `nba_picks.py`.
+
+## Rest and travel
+
+On top of back-to-backs, each team's schedule gives four more inputs, for the team and its opponent:
+**3 games in 4 nights**, **time zones crossed** since its last game (only if that was within 2 days),
+**road-trip game number** (resets after 5+ days off) and **visiting at altitude** (DEN, UTAH; visitor side only,
+since two teams can't separate "visitors score less" from "the home side scores more").
+
+- These are league-wide effects that change slowly, so they're fitted on ~2-year weights (`TRAVEL_HALF_LIFE`).
+  The team ratings are then fitted around them with the usual recency half-life. Fitting them on the 120-day
+  ratings weights made them mostly noise.
+- Neutral sites (NBA Cup, international games) get no time-zone or altitude value, because the location isn't in
+  ESPN's scoreboard data.
+- **In the app** they only show up when they matter: a slate card gets `✈ Travel: LAL −1.2 (3 in 4 nights · 2 time zones)`
+  when a team's travel moves the margin by 0.5+ pts. The fitted effects are listed under 📊 Model.
+- **Check they earn their place:** `python tune_model.py --only travel --metric margin_abs` compares travel on vs off
+  on the same backtest games. If "off" wins, set `DEFAULT_TRAVEL = 0` (or run `refresh.py --travel 0`).
 
 ## Player availability (injuries)
 
@@ -51,6 +69,51 @@ Works like the NHL "usual goalie mix", except it's automatic and only shows what
 ## Selections
 
 For every slate game with a posted line, each market's sides are priced with the posted odds (−110 when a spread/total has no price). The book's margin is removed (no-vig), pushes are excluded from the model's win chance, and a side is selected when **edge ≥ 4 pts (5 for team totals and halves), EV > 0 and edge < 25 pts** (bigger "edges" are almost always stale lines or injury news). Stars: ★ 4+, ★★ 7+, ★★★ 10+ pts. Each card shows ¼ Kelly. Picks stay live until tip-off, then lock and are graded at the stored price.
+
+### Correlated exposure
+
+Selections in the same game share risk: a moneyline and a spread on the same team, or an Under plus a team-total
+Under, mostly win and lose together. So a game's selections are **sized as a package**:
+
+- Outcomes are simulated from the model's joint final-score grid (20,000 games; the 1H total is drawn given the
+  full-game total, using the correlation implied by the fitted score spreads).
+- Stakes maximise expected log bankroll for the set (joint Kelly), then ×¼. A bet is **never sized up** for
+  hedging another, because that benefit would rest on the model's correlations. All of a game's stakes together are capped at
+  `MAX_GAME_EXPOSURE` (5 % of bankroll).
+- **Cards** show the package stake, with the single-bet stake underneath (`solo 2.4% · sized with 2 other picks`),
+  and name the pick it moves with (`📎 moves with BOS −4.5 (+0.76)`) when the correlation is 0.3+.
+- **Game Markets** shows `¼ Kelly (alone)` and `¼ Kelly (together)` for whatever you price.
+
+The track record still grades every pick at 1 unit, so win rate and ROI aren't affected by the sizing.
+
+## Halftime (second-half pricing)
+
+`nba_live.py` watches ESPN's live scoreboard. When a game reaches halftime it prices the second half from the
+first-half score and the pre-game projection (saved by the last refresh before tip-off, so with that evening's
+injury news):
+
+- **2H total** = pre-game 2H + a share of how far the first half ran over or under its projection (pace carries
+  over), adjusted for the size of the lead (blowouts slow down). **2H margin** = pre-game 2H margin, adjusted
+  for the first-half margin (leaders ease off). Both are fitted on the same out-of-sample games as the score spreads,
+  with defaults until 300 games exist. The backtest shows 2H error before the game vs at halftime.
+- Also gives the **live win probability** (first-half margin + the 2H margin distribution, ties settled with OT).
+- Writes `model/live.json`, `model/halftime_log.csv` (graded when games end → Track Record) and, when it buys
+  live lines, `model/live_picks.csv` (2H selections, same thresholds as the 2H pre-game market: 5 pts).
+- A game first seen after the 3rd quarter starts (e.g. a late GitHub run) is still logged for accuracy, marked
+  late, with no line and no selection.
+- **App:** the ⏱ Halftime tab shows tonight's priced games and has a **manual pricer** (type the 1H score and your
+  book's 2H line), so it works even when the job hasn't run.
+- **Live 2H lines** (optional): with `--odds` (or repo variable `LIVE_ODDS=1` for the Action) it buys each game's
+  2H total + 2H spread from The Odds API at halftime: ~2 credits per game. Not every book posts these, so some
+  games will have no line.
+
+```bash
+python nba_live.py                    # one pass
+python nba_live.py --watch 345 --push # what the Action runs: poll every 90 s, push when something changes
+```
+
+`nba_live.py` owns those three files and `refresh.py` never writes them, so the evening Action and a refresh can
+both push. Either one rebases onto the other automatically if it lands second.
 
 ## 1. Set up in VS Code
 
@@ -85,7 +148,14 @@ python refresh.py --push             # fetch, retrain, log predictions + selecti
 python refresh.py --push --period-odds   # evening run: also buy team totals + 1H/2H lines
 ```
 
-…or let **GitHub Actions** do it (`.github/workflows/refresh.yml`): 6 AM ET settles last night, noon ET posts the slate, 6:30 PM ET refreshes lines before tip-off. If you mix both, `refresh.py` tells you to `git pull --rebase` when the Action pushed first.
+…or let **GitHub Actions** do it (`.github/workflows/refresh.yml`): 6 AM ET settles last night, noon ET posts the slate, 6:30 PM ET refreshes lines before tip-off. If you mix both, `refresh.py` now rebases onto the Action's commit and pushes again by itself.
+
+**Halftime job** (`.github/workflows/live.yml`): starts 7:30 PM EDT / 6:30 PM EST, prices each game at the half,
+exits early on nights with no games and as soon as the last game is final. Nothing to run by hand. A full night is
+~5–6 runner hours, **free on a public repo**. On a private repo that would use up the free 2,000 Action minutes a
+month in about a week, so the workflow file includes a commented-out "every 10 minutes" schedule instead
+(~1,300 min/month). That version only catches a game's halftime when a run lands inside the ~15-minute break.
+You can also start it by hand: repo → Actions → Halftime pricing → Run workflow.
 
 ## 4. Optional: sportsbook lines (The Odds API)
 
@@ -99,11 +169,21 @@ ESPN only posts spread, total and moneyline. For prices, **team totals and 1H/2H
 
 Every push (yours or the Action's) redeploys the app in about a minute.
 
+**After updating the code** (e.g. the travel / correlated-exposure / halftime release), the model file format changed
+(artifact version 2), so retrain once before or right after pushing, or the app asks you to:
+
+```bash
+python refresh.py --skip-fetch --backtest --push
+```
+
 ## Limits worth knowing
 
 - **Late scratches.** Statuses are as of the last refresh (the official game-day report is due by 1 p.m. local); news in the last hour before tip needs the Plays/Sits switch.
 - **Value is box-score based.** Game Score captures scoring and playmaking better than defense, so elite defenders are under-valued. On/off plus-minus is the natural upgrade once a season of data is in.
 - **Early season** leans on last season (shrunk by carryover) until teams have ~10 games; the app flags it.
+- **Halftime knows the score, not the story.** In-game injuries, ejections and foul trouble aren't seen; check before
+  betting a 2H number. GitHub can start the evening job 10–20+ minutes late; that only delays its start.
+- **Travel effects are averages.** They don't know a team flew in the night before or rested a star by choice.
 - **Historical lines aren't in ESPN's archive.** The backtest scores projections and probabilities; betting results start the day you begin running `refresh.py`, and the market comparison grows from there.
 
 *For information and entertainment only — not betting advice.*

@@ -1,10 +1,12 @@
 """
 streamlit_app.py - NBA game predictor
 
-Reads only model/model_artifact.json, model/prediction_log.csv and model/picks.csv (written by
-refresh.py). No raw data, no API calls.  Run locally:  streamlit run streamlit_app.py
+Reads only files in model/ (written by refresh.py and nba_live.py): model_artifact.json,
+prediction_log.csv, picks.csv, live.json, halftime_log.csv, live_picks.csv.
+No raw data, no API calls.  Run locally:  streamlit run streamlit_app.py
 """
 
+import json
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -14,17 +16,20 @@ import pandas as pd
 import streamlit as st
 
 from nba_availability import player_impacts
-from nba_model import Predictor, load_artifact
-from nba_picks import game_lines_args, market_rows, price
+from nba_model import TRAVEL_SHOW, Predictor, load_artifact
+from nba_picks import MAX_GAME_EXPOSURE, game_lines_args, halftime_rows, market_rows, price, size_together
 
 ROOT = Path(__file__).parent
 ART_PATH = ROOT / "model" / "model_artifact.json"
 LOG_PATH = ROOT / "model" / "prediction_log.csv"
 PICKS_PATH = ROOT / "model" / "picks.csv"
+LIVE_PATH = ROOT / "model" / "live.json"
+HT_LOG_PATH = ROOT / "model" / "halftime_log.csv"
+LIVE_PICKS_PATH = ROOT / "model" / "live_picks.csv"
 ET = ZoneInfo("America/New_York")
 CUSTOM = "Custom matchup"
 EARLY_GP = 10
-MARKETS = ["Spread", "Moneyline", "Total", "Team Total", "1H Total", "2H Total"]
+MARKETS = ["Spread", "Moneyline", "Total", "Team Total", "1H Total", "2H Total", "Live 2H Total", "Live 2H Spread"]
 
 st.set_page_config(page_title="NBA Game Predictor", page_icon="🏀", layout="wide")
 
@@ -56,6 +61,8 @@ st.markdown("""
 .chip.warn {background:rgba(234,179,8,.15); color:#ca8a04; border-color:rgba(234,179,8,.45);}
 .inj {margin-top:8px; font-size:.82rem; line-height:1.45;}
 .inj b.neg {color:#ef4444;} .inj b.pos {color:#22c55e;}
+.chip.corr {background:rgba(99,102,241,.12); color:#6366f1; border-color:rgba(99,102,241,.4);}
+.chip.live {background:rgba(239,68,68,.12); color:#ef4444; border-color:rgba(239,68,68,.4);}
 </style>""", unsafe_allow_html=True)
 
 
@@ -77,11 +84,16 @@ def slate_predictions(mtime: float) -> list[dict]:
     for g in pred.slate:
         try:
             r = pred.predict_game(g["home"], g["away"], g["home_b2b"], g["away_b2b"], g.get("neutral", False),
-                                  **game_lines_args(g.get("lines") or {}))
+                                  **game_lines_args(g.get("lines") or {}), travel=g.get("travel"))
         except ValueError:
             continue
         out.append({"g": g, "r": r})
     return out
+
+
+@st.cache_data(show_spinner=False)
+def get_json(path: str, mtime: float) -> dict:
+    return json.loads(Path(path).read_text())
 
 
 def csv_or_empty(path):
@@ -145,6 +157,17 @@ def injury_line(r, home, away):
     return '<div class="inj">🩹 Injury adj: ' + " &nbsp;|&nbsp; ".join(parts) + "</div>" if parts else ""
 
 
+def travel_line(r, home, away):
+    """'✈ Travel: LAL −1.2 (3 in 4 nights · 2 time zones)' - only teams whose travel moves the margin ≥ 0.5."""
+    parts = []
+    for side, team in (("away", away), ("home", home)):
+        t = (r.get("travel") or {}).get(side) or {}
+        if abs(t.get("adj", 0)) >= TRAVEL_SHOW:
+            cls = "neg" if t["adj"] < 0 else "pos"
+            parts.append(f'<b class="{cls}">{team} {t["adj"]:+.1f}</b>' + (f' ({" · ".join(t["notes"])})' if t.get("notes") else ""))
+    return '<div class="inj">✈ Travel: ' + " &nbsp;|&nbsp; ".join(parts) + "</div>" if parts else ""
+
+
 def lean(proj, line, over="Over", under="Under"):
     if line is None or pd.isna(line):
         return ""
@@ -166,8 +189,10 @@ except ValueError as e:
 meta = pred.meta
 gp = meta.get("season_gp", {})
 slate = slate_predictions(mtime)
-picks = csv_or_empty(PICKS_PATH)
+picks = pd.concat([csv_or_empty(PICKS_PATH), csv_or_empty(LIVE_PICKS_PATH)], ignore_index=True)
 plog = csv_or_empty(LOG_PATH)
+htlog = csv_or_empty(HT_LOG_PATH)
+live = get_json(str(LIVE_PATH), LIVE_PATH.stat().st_mtime) if LIVE_PATH.exists() else {"games": {}}
 
 st.title("🏀 NBA Game Predictor")
 odds_note = f" · lines {meta['odds_fetched_at'][5:16].replace('T', ' ')}" if meta.get("odds_fetched_at") else ""
@@ -178,8 +203,8 @@ inj_note = (f" · injuries **{av_meta['injuries_fetched_at'][5:16].replace('T', 
 st.caption(f"Model trained through **{meta['trained_through']}** · {meta['n_games']:,} games · "
            f"box scores **{'ON' if meta['box_on'] else 'OFF'}**{inj_note}{odds_note}")
 
-tab_sel, tab_slate, tab_game, tab_track, tab_model = st.tabs(
-    ["🎯 Selections", "📅 Today's Slate", "🧮 Game Markets", "📈 Track Record", "📊 Model"])
+tab_sel, tab_slate, tab_game, tab_half, tab_track, tab_model = st.tabs(
+    ["🎯 Selections", "📅 Today's Slate", "🧮 Game Markets", "⏱ Halftime", "📈 Track Record", "📊 Model"])
 
 # ================================================================== Selections
 with tab_sel:
@@ -201,11 +226,14 @@ with tab_sel:
         else:
             pk = pk.sort_values(["date", "stars", "edge"], ascending=[view == "Open", False, False])
             st.caption(f"{len(pk)} selection(s) · edge = model win chance (pushes excluded) minus the no-vig book "
-                       f"chance · stake shown is ¼ Kelly")
+                       f"chance · stake is ¼ Kelly, with picks in the same game sized together (they share risk)")
             cols = st.columns(2)
             for i, (_, p) in enumerate(pk.iterrows()):
+                is_live = str(p["market"]).startswith("Live")
                 chip = (f'<span class="chip {p["status"]}">{p["status"]} · {p["profit"]:+.2f}u</span>'
-                        if p["status"] in ("W", "L", "P") else f'<span class="chip">{tip(p["start_utc"])}</span>')
+                        if p["status"] in ("W", "L", "P") else
+                        ('<span class="chip live">⏱ at halftime</span>' if is_live
+                         else f'<span class="chip">{tip(p["start_utc"])}</span>'))
                 if p["market"] == "Moneyline":
                     proj = tile("Win prob", pct(p["model_proj"]), f"Fair {american(p['model_proj'])}")
                 elif p["market"] == "Spread":
@@ -216,6 +244,15 @@ with tab_sel:
                 dep = p.get("depends_on")
                 dep = (f'<div style="margin-top:6px"><span class="chip warn">⚠ depends on {dep}</span></div>'
                        if isinstance(dep, str) and dep else "")
+                cw = p.get("corr_with")
+                if isinstance(cw, str) and cw:
+                    dep += f'<div style="margin-top:6px"><span class="chip corr">📎 {cw}</span></div>'
+                solo = p.get("kelly_solo")
+                k_sub = "of bankroll"
+                if isinstance(solo, (int, float)) and not pd.isna(solo) and abs(solo - p["kelly"]) > 0.0005:
+                    n_other = int(p.get("n_same_game", 1) or 1) - 1
+                    k_sub = (f"solo {100 * solo:.1f}% · sized with {n_other} other pick{'s' if n_other != 1 else ''}"
+                             if n_other > 0 else f"solo {100 * solo:.1f}% · game cap")
                 cols[i % 2].markdown(f"""
                 <div class="card">
                   <div class="head"><span class="chip mk">{p['market']}</span>{chip}</div>
@@ -225,7 +262,7 @@ with tab_sel:
                     {proj}
                     {tile("Model / book", f"{pct(p['model_prob'])}", f"book {pct(p['book_prob'])}")}
                     {tile("Edge", f"{100 * p['edge']:+.1f} pts", f"EV {100 * p['ev']:+.1f}%")}
-                    {tile("¼ Kelly", f"{100 * p['kelly']:.1f}%", "of bankroll")}
+                    {tile("¼ Kelly", f"{100 * p['kelly']:.1f}%", k_sub)}
                   </div>{dep}
                 </div>""", unsafe_allow_html=True)
 
@@ -254,7 +291,7 @@ with tab_slate:
               <div class="score">{a} {r['exp_away']:.1f} – {r['exp_home']:.1f} {h}</div>
               <div class="muted">{'Pace ' + fmt(r['pace']) + ' · ' if r['pace'] else ''}OT chance {pct(r['p_ot'])}
                 {(' · early season: ' + ', '.join(early)) if early else ''}</div>
-              {injury_line(r, h, a)}
+              {injury_line(r, h, a)}{travel_line(r, h, a)}
               <div class="grid">
                 {tile("Win prob", f"{fav} {pf:.0%}", f"Fair {american(pf)} · ML {price_txt(L.get('ml_away'))}/{price_txt(L.get('ml_home'))}")}
                 {tile("Spread", f"{h} {-r['exp_margin']:+.1f}", (f"Line {sh:+g} · {h} covers {pct(r['spread']['cover'])}" if sh is not None else "no line"))}
@@ -296,10 +333,13 @@ with tab_game:
         st.info(f"Early season: {', '.join(f'{t} ({gp.get(t, 0)} GP)' for t in early)}. Ratings still lean on last "
                 "season, pulled toward league average. Roster changes since then aren't reflected yet.")
 
+    # rest/travel from the real schedule when this is the slate game (a custom matchup has none)
+    travel = sg.get("travel") if sg and sg["home"] == home and sg["away"] == away else None
+
     # ---- availability: automatic, with a switch only for players who move the line ----
     overrides = {}
     if pred.av.get("on"):
-        auto = pred.predict_game(home, away, home_b2b, away_b2b)
+        auto = pred.predict_game(home, away, home_b2b, away_b2b, travel=travel)
         listed = [(t, pl) for side, t in (("away", away), ("home", home))
                   for pl in (auto["avail"][side] or {}).get("players", [])]
         adj_txt = " · ".join(f"{t} {(auto['avail'][s_] or {}).get('adj', 0):+.1f}" for s_, t in (("away", away), ("home", home)))
@@ -320,7 +360,7 @@ with tab_game:
             st.caption("Auto uses tonight's injury report: listed players count by how often players with that "
                        "status actually play, and their minutes go to teammates. Override when news breaks.")
 
-    base = pred.predict_game(home, away, home_b2b, away_b2b, overrides=overrides)
+    base = pred.predict_game(home, away, home_b2b, away_b2b, overrides=overrides, travel=travel)
     rnd = lambda x: round(x * 2) / 2  # noqa: E731
 
     def dv(key, fallback):
@@ -339,7 +379,10 @@ with tab_game:
         h2_line = l6.number_input("2H total", 80.0, 150.0, dv("h2_total_line", rnd(base["exp_h2"])), 0.5, key=f"h2_{k}")
 
     r = pred.predict_game(home, away, home_b2b, away_b2b, False, total_line, home_spread, home_tt, away_tt, h1_line, h2_line,
-                          overrides=overrides)
+                          overrides=overrides, travel=travel)
+    tl_txt = travel_line(r, home, away)
+    if tl_txt:
+        st.markdown(tl_txt, unsafe_allow_html=True)
     m1, m2, m3, m4 = st.columns(4)
     m1.metric(f"{away} @ {home}", f"{r['exp_away']:.1f} – {r['exp_home']:.1f}", help="Expected final score incl. OT")
     m2.metric("Expected total", f"{r['exp_total']:.1f}")
@@ -383,18 +426,152 @@ with tab_game:
     priced = price(mk, edited["Your odds"].values)
     priced = priced[priced["dec"].notna()]
     if len(priced):
+        # bets with a positive stake are sized together: they settle on the same game
+        bets = priced[priced["kelly"] > 0]
+        joint = pd.Series(0.0, index=priced.index)
+        if len(bets) > 1:
+            sims = pred.sample_scores(home, away, home_b2b, away_b2b, n=20000, seed=0, overrides=overrides, travel=travel)
+            joint[bets.index] = size_together(bets, sims, home)[0]
+        else:
+            joint[bets.index] = np.minimum(bets["kelly"], MAX_GAME_EXPOSURE)
         st.markdown("**Value check**")
         st.dataframe(pd.DataFrame({
             "Market": priced["label"], "Book (no-vig)": priced["book"].map(pct), "Model": priced["p_cond"].map(pct),
             "Edge": priced["edge"].map(lambda x: f"{100 * x:+.1f} pts"),
             "EV per $100": priced["ev"].map(lambda x: f"{100 * x:+.2f}"),
-            "¼ Kelly stake": priced["kelly"].map(lambda x: f"{100 * x:.1f}% of bankroll" if x > 0 else "no bet")}),
+            "¼ Kelly (alone)": priced["kelly"].map(lambda x: f"{100 * x:.1f}%" if x > 0 else "no bet"),
+            "¼ Kelly (together)": joint.map(lambda x: f"{100 * x:.1f}%" if x > 0 else "—")}),
             hide_index=True, width="stretch")
-        st.caption("Small edges (under ~3 points) are within this model's error. It doesn't see injuries or rest "
-                   "decisions, so check the news. Stakes assume the model is right; ¼ Kelly is already cautious.")
+        st.caption(f"'Alone' sizes each bet as if it were the only one. 'Together' sizes every positive-EV bet in this "
+                   f"table as one package, since they all settle on this game: an Over plus a team-total Over share most "
+                   f"of their risk, so the package stakes less than the sum. A bet is never sized up for hedging another, "
+                   f"and the package is capped at {MAX_GAME_EXPOSURE:.0%} of bankroll. Small edges (under ~3 points) "
+                   f"are within this model's error. Stakes assume the model is right; ¼ Kelly is already cautious.")
     mp = pd.DataFrame(r["margin_pmf"])
     st.markdown(f"**Final margin** ({home} minus {away})")
     st.bar_chart(mp.set_index("margin")["p"], x_label=f"{home} margin", y_label="Probability", height=230)
+
+# ================================================================== Halftime
+def pre_for(game_id, home, away):
+    """Pre-tip means for a game: saved by the last refresh before tip-off, else from the model now."""
+    if game_id and not plog.empty and "reg_home" in plog:
+        row = plog[plog["game_id"] == str(game_id)]
+        need = ["reg_home", "reg_away", "exp_h1_home", "exp_h1_away"]
+        if not row.empty and row[need].notna().all(axis=1).iloc[-1]:
+            r_ = row.iloc[-1]
+            return {"mu_h": r_["reg_home"], "mu_a": r_["reg_away"], "h1_h": r_["exp_h1_home"], "h1_a": r_["exp_h1_away"]}
+    sg_ = next((s["g"] for s in slate if s["g"]["game_id"] == str(game_id)), None)
+    if sg_ and sg_["home"] == home and sg_["away"] == away:
+        return pred.pregame(home, away, sg_["home_b2b"], sg_["away_b2b"], sg_.get("neutral", False), travel=sg_.get("travel"))
+    return pred.pregame(home, away)
+
+
+with tab_half:
+    priced_tonight = sorted((live.get("games") or {}).values(), key=lambda v: (v.get("date", ""), v.get("priced_at", "")),
+                            reverse=True)
+    if priced_tonight:
+        st.caption("Each game is priced the moment it reaches halftime, from its first-half score and the pre-game "
+                   "projection. Book lines and edges appear when the job buys live 2H lines (The Odds API).")
+        cols = st.columns(2)
+        for i, v in enumerate(priced_tonight):
+            h, a = v["home"], v["away"]
+            fin_ = v.get("final")
+            chip = (f'<span class="chip">Final {a} {fin_["away"]:.0f}–{fin_["home"]:.0f} {h}</span>' if fin_ else
+                    ('<span class="chip warn">priced after the half</span>' if v.get("late") else
+                     '<span class="chip live">⏱ at halftime</span>'))
+            res = (f" · actual 2H {v['act_2h']:.0f}" if v.get("act_2h") is not None and not pd.isna(v.get("act_2h")) else "")
+            bl = ""
+            if v.get("markets"):
+                best_m = max(v["markets"], key=lambda m: m["edge"])
+                bl = tile("Best vs book", best_m["label"], f"edge {100 * best_m['edge']:+.1f} pts · {price_txt(best_m['price'])}")
+            picks_html = "".join(f'<span class="chip mk" style="margin-right:6px">{x}</span>' for x in (v.get("picks") or []))
+            cols[i % 2].markdown(f"""
+            <div class="card">
+              <div class="head"><span class="matchup">{a} @ {h}</span>{chip}</div>
+              <div class="score">{v['h1_line']} <span class="muted">at half</span></div>
+              <div class="muted">2H projection {v['mu_2h']:.1f} (pre-game {v['pre_2h']:.1f}){res}</div>
+              <div class="grid">
+                {tile("2H total", fmt(v['mu_2h']), f"Line {fmt(v.get('h2_total_line'))} {lean(v['mu_2h'], v.get('h2_total_line'))}")}
+                {tile("2H margin", f"{h} {v['mu_2hm']:+.1f}", f"Line {fmt(v.get('h2_spread_home'), 1, True)}" if v.get('h2_spread_home') is not None else "no line")}
+                {tile("Win prob now", f"{h} {v['p_home_win']:.0%}", f"Fair {american(v['p_home_win'])}")}
+                {bl}
+              </div>
+              {('<div style="margin-top:8px">' + picks_html + '</div>') if picks_html else ''}
+            </div>""", unsafe_allow_html=True)
+    else:
+        st.info("No games priced at halftime yet. On game nights the evening job (`nba_live.py`, GitHub Action "
+                "`live.yml`) fills this in as each game reaches the half. You can price any game by hand below.")
+
+    st.markdown("#### Price a second half")
+    opts = {CUSTOM: None}
+    for v in priced_tonight:
+        opts[f"{v['away']} @ {v['home']}  (priced at half)"] = {"game_id": v["game_id"], "home": v["home"], "away": v["away"],
+                                                                "h1": (v["h1_home"], v["h1_away"]), "v": v}
+    recent_log = plog[pd.to_datetime(plog["date"]) >= pd.Timestamp(datetime.now(ET).date()) - pd.Timedelta(days=1)] \
+        if not plog.empty and "date" in plog else pd.DataFrame()
+    for _, row in recent_log.iterrows():
+        opts.setdefault(f"{row['away']} @ {row['home']}  ({row['date'][5:]})",
+                        {"game_id": row["game_id"], "home": row["home"], "away": row["away"], "h1": None, "v": None})
+    for s in slate:
+        g = s["g"]
+        opts.setdefault(f"{g['away']} @ {g['home']}  ({g['date'][5:]})",
+                        {"game_id": g["game_id"], "home": g["home"], "away": g["away"], "h1": None, "v": None})
+    choice = st.selectbox("Game", list(opts), index=1 if len(opts) > 1 else 0, key="ht_game")
+    hg = opts[choice]
+    kk = str(hg["game_id"]) if hg else "custom"
+    teams_ = pred.active_teams
+    c1, c2 = st.columns(2)
+    if hg:
+        ht_home, ht_away = hg["home"], hg["away"]
+        c1.markdown(f"**{ht_away} @ {ht_home}**")
+    else:
+        ht_away = c1.selectbox("Away team", teams_, index=0, key="ht_away")
+        ht_home = c2.selectbox("Home team", teams_, index=1, key="ht_home")
+    if ht_home == ht_away:
+        st.warning("Pick two different teams.")
+    else:
+        pre = pre_for(hg["game_id"] if hg else None, ht_home, ht_away)
+        d_h1 = hg["h1"] if hg and hg["h1"] else (round(pre["h1_h"]), round(pre["h1_a"]))
+        s1, s2, s3, s4 = st.columns(4)
+        h1_away_pts = s1.number_input(f"{ht_away} 1H points", 20, 120, int(d_h1[1]), 1, key=f"ht_a1_{kk}")
+        h1_home_pts = s2.number_input(f"{ht_home} 1H points", 20, 120, int(d_h1[0]), 1, key=f"ht_h1_{kk}")
+        base_ht = pred.halftime(h1_home_pts, h1_away_pts, pre)
+        v = (hg or {}).get("v") or {}
+        rnd = lambda x: round(x * 2) / 2  # noqa: E731
+        tl_ = s3.number_input("2H total line", 60.0, 160.0, float(v.get("h2_total_line") or rnd(base_ht["mu_2h"])), 0.5,
+                              key=f"ht_tl_{kk}")
+        sp_ = s4.number_input(f"{ht_home} 2H spread", -30.0, 30.0,
+                              float(v.get("h2_spread_home") if v.get("h2_spread_home") is not None else rnd(-base_ht["mu_2hm"])),
+                              0.5, key=f"ht_sp_{kk}", help="-2.5 = home lays 2.5 in the second half")
+        p1, p2, p3, p4 = st.columns(4)
+        po = p1.number_input("Over price", -300, 300, -110, 5, key=f"ht_po_{kk}")
+        pu = p2.number_input("Under price", -300, 300, -110, 5, key=f"ht_pu_{kk}")
+        ph = p3.number_input(f"{ht_home} price", -300, 300, -110, 5, key=f"ht_ph_{kk}")
+        pa = p4.number_input(f"{ht_away} price", -300, 300, -110, 5, key=f"ht_pa_{kk}")
+        ht = pred.halftime(h1_home_pts, h1_away_pts, pre, tl_, sp_)
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("2H total", f"{ht['mu_2h']:.1f}", f"{ht['mu_2h'] - ht['pre_2h']:+.1f} vs pre-game", delta_color="off")
+        m2.metric(f"2H margin ({ht_home})", f"{ht['mu_2hm']:+.1f}")
+        m3.metric(f"{ht_home} wins the game", pct(ht["p_home_win"]))
+        m4.metric("Projected final", f"{h1_away_pts + (ht['mu_2h'] - ht['mu_2hm']) / 2:.0f}–"
+                                     f"{h1_home_pts + (ht['mu_2h'] + ht['mu_2hm']) / 2:.0f}")
+        rows_ = halftime_rows(ht, ht_home, ht_away, {
+            "h2_total_line": tl_, "h2_total_over_price": po, "h2_total_under_price": pu,
+            "h2_spread_home": sp_, "h2_spread_home_price": ph, "h2_spread_away_price": pa})
+        pr = price(rows_)
+        st.dataframe(pd.DataFrame({
+            "Market": pr["label"], "Model": pr["p_cond"].map(pct),
+            "Push": pr["push"].map(lambda x: pct(x) if x > 1e-9 else ""),
+            "Fair odds": pr["p_cond"].map(fair), "Book (no-vig)": pr["book"].map(pct),
+            "Edge": pr["edge"].map(lambda x: f"{100 * x:+.1f} pts"), "EV per $100": pr["ev"].map(lambda x: f"{100 * x:+.2f}"),
+            "¼ Kelly": pr["kelly"].map(lambda x: f"{100 * x:.1f}%" if x > 0 else "no bet")}), hide_index=True, width="stretch")
+        ht_meta = pred.art.get("halftime") or {}
+        st.caption("The second half is projected from the pre-game numbers, adjusted for how the first half went: a "
+                   "faster or slower first half than expected carries partly into the second, and big leads tend to "
+                   "shrink as starters sit. Fitted on "
+                   + (f"{ht_meta.get('n_fit', 0):,} out-of-sample games." if ht_meta.get("fitted")
+                      else "default relationships (not enough history yet).")
+                   + " It doesn't know about in-game injuries or foul trouble.")
 
 # ================================================================== Track record
 with tab_track:
@@ -494,6 +671,25 @@ with tab_track:
             st.markdown("**Calibration (home win probability)**")
             st.dataframe(cal.round(3), hide_index=True, width="stretch")
 
+    hs_ = htlog[htlog["act_2h"].notna()] if not htlog.empty and "act_2h" in htlog else pd.DataFrame()
+    if not hs_.empty:
+        st.markdown("#### Halftime projections")
+        b1, b2, b3, b4 = st.columns(4)
+        b1.metric("Games priced at half", f"{len(hs_):,}", help="Includes games first seen after the half; those count "
+                  "for accuracy but never produce selections")
+        b2.metric("2H total MAE", fmt((hs_["act_2h"] - hs_["mu_2h"]).abs().mean(), 2),
+                  delta=f"{(hs_['act_2h'] - hs_['mu_2h']).abs().mean() - (hs_['act_2h'] - hs_['pre_2h']).abs().mean():+.2f} vs pre-game",
+                  delta_color="inverse")
+        b3.metric("2H margin MAE", fmt((hs_["act_2hm"] - hs_["mu_2hm"]).abs().mean(), 2),
+                  delta=f"{(hs_['act_2hm'] - hs_['mu_2hm']).abs().mean() - (hs_['act_2hm'] - hs_['pre_2hm']).abs().mean():+.2f} vs pre-game",
+                  delta_color="inverse")
+        wl = hs_[hs_["h2_total_line"].notna()] if "h2_total_line" in hs_ else pd.DataFrame()
+        if not wl.empty:
+            res = wl["act_2h"] - wl["h2_total_line"]
+            won = np.where(wl["mu_2h"] > wl["h2_total_line"], res > 0, res < 0)
+            b4.metric("Lean vs 2H line", f"{int(won[res != 0].sum())}-{int((~won)[res != 0].sum())}-{int((res == 0).sum())}",
+                      help="The model's side of the book's halftime 2H total, every game with a line, edge or not")
+
     bt = meta.get("backtest")
     if bt:
         st.markdown(f"#### Walk-forward backtest ({bt['n_games']:,} games, seasons {', '.join(bt['seasons'])})")
@@ -506,6 +702,12 @@ with tab_track:
                 {"Check": "1H total MAE", "Model": f"{bt['h1_mae']:.2f}", "Reference": ""},
                 {"Check": "2H total MAE", "Model": f"{bt['h2_mae']:.2f}", "Reference": ""},
                 {"Check": "Early-season Brier (first 30 days)", "Model": f"{bt['early_win_brier']:.4f}", "Reference": f"{bt['early_n']:,} games"}]
+        bh = bt.get("halftime")
+        if bh:
+            rows += [{"Check": "2H total MAE at halftime", "Model": f"{bh['h2_mae_halftime']:.2f}",
+                      "Reference": f"{bh['h2_mae_pregame']:.2f} pre-game ({bh['n_games']:,} games)"},
+                     {"Check": "2H margin MAE at halftime", "Model": f"{bh['h2_margin_mae_halftime']:.2f}",
+                      "Reference": f"{bh['h2_margin_mae_pregame']:.2f} pre-game"}]
         wa = bt.get("with_availability")
         if wa:
             rows += [{"Check": "With known availability: Brier", "Model": f"{wa['win_brier']:.4f}",
@@ -546,6 +748,14 @@ with tab_model:
                    f"the opponent {a['b_opp']:+.2f} (fitted on {a['n_fit']:,} out-of-sample games). Chance a listed "
                    f"player plays: {rates}. Rates switch from defaults to your own measured ones as injury "
                    f"snapshots build up.")
+    tc = meta.get("travel_coefs") or {}
+    if tc:
+        names = {"three_in_four": "3 games in 4 nights", "opp_three_in_four": "opponent on 3 in 4",
+                 "tz": "per time zone crossed", "opp_tz": "opponent, per time zone", "trip": "per road-trip game",
+                 "opp_trip": "opponent, per road-trip game", "alt": "visiting at altitude"}
+        st.caption("Rest & travel (" + meta["units"] + ", fitted on ~2-year weights): "
+                   + " · ".join(f"{names.get(k, k)} {v:+.1f}" for k, v in tc.items())
+                   + f". A slate card names a team's travel only when it moves the margin {TRAVEL_SHOW:g}+ pts.")
     sd = pred.sig
     st.caption(
         f"Recency half-life {meta['half_life_days']:g} days · prior {meta['prior_games']:g} games · past-season weight "
