@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-19T11:36:30-04:00",
- "official_report": null,
+ "fetched_at": "2026-10-19T15:14:58-04:00",
+ "official_report": "2026-10-19T15:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -40,15 +40,15 @@
   },
   {
    "team": "BKN",
-   "player_id": "4870564",
-   "name": "Joshua Jefferson",
+   "player_id": "5105626",
+   "name": "Tyler Bilodeau",
    "espn_status": "Out",
-   "detail": "Torso Back",
-   "return_date": "2026-11-16",
-   "comment": "Jefferson (back) has yet to fully participate in team activities and remains without a timetable for his return, Erik Slater of ClutchPoints.com reports.",
+   "detail": "Not Specified Arm Shoulder",
+   "return_date": "2026-10-24",
+   "comment": "Bilodeau will miss the season opener against the Hornets on Wednesday due to a shoulder sprain, Sharif Phillips-Keaton of USA Today reports.",
    "status": "Out",
    "official_status": null,
-   "reason": "Torso Back"
+   "reason": "Not Specified Arm Shoulder"
   },
   {
    "team": "CHA",
@@ -124,6 +124,30 @@
   },
   {
    "team": "CHI",
+   "player_id": "4066650",
+   "name": "Zach Collins",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Toe",
+   "return_date": "2026-10-21",
+   "comment": "Collins (toe) is hopeful to play Wednesday against the Raptors, K.C. Johnson of Chicago Sports Network reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Toe"
+  },
+  {
+   "team": "CHI",
+   "player_id": "4278067",
+   "name": "Nic Claxton",
+   "espn_status": "Out",
+   "detail": "Not Specified Leg Hamstring",
+   "return_date": "2026-11-04",
+   "comment": "Claxton (hamstring) will be re-evaluated in two weeks, K.C. Johnson of Chicago Sports Network reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Not Specified Leg Hamstring"
+  },
+  {
+   "team": "CHI",
    "player_id": "5105555",
    "name": "Tobe Awaka",
    "espn_status": "Day-To-Day",
@@ -145,30 +169,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Undisclosed"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4066650",
-   "name": "Zach Collins",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Toe",
-   "return_date": "2026-10-21",
-   "comment": "Collins (toe) won't play in Friday's preseason finale against the Timberwolves, Bulls' reporter Will Gottlieb reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Toe"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4278067",
-   "name": "Nic Claxton",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Hamstring",
-   "return_date": "2026-10-21",
-   "comment": "Claxton tweaked his hamstring and will be re-evaluated in two weeks, Chuck Swirsky of the Bulls Radio Network of the Bulls Radio Network reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Leg Hamstring"
   },
   {
    "team": "CLE",
@@ -280,6 +280,42 @@
   },
   {
    "team": "GS",
+   "player_id": "3102531",
+   "name": "Kristaps Porzingis",
+   "espn_status": "Out",
+   "detail": "Other Undisclosed",
+   "return_date": "2026-11-09",
+   "comment": "Porzingis (undisclosed) won't travel with the Warriors and remains out indefinitely, Luca Evans of the San Francisco Chronicle reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Undisclosed"
+  },
+  {
+   "team": "GS",
+   "player_id": "4397886",
+   "name": "Charles Bassey",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-21",
+   "comment": "Bassey (knee) didn't practice Monday, per Nick Friedell of The Athletic.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "GS",
+   "player_id": "4709138",
+   "name": "Brandin Podziemski",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-10-21",
+   "comment": "Podziemski (back) is questionable for Wednesday's season opener against the Lakers, per Dalton Johnson of NBC Sports Bay Area.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
+  },
+  {
+   "team": "GS",
    "player_id": "3975",
    "name": "Stephen Curry",
    "espn_status": "Day-To-Day",
@@ -313,18 +349,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "GS",
-   "player_id": "3102531",
-   "name": "Kristaps Porzingis",
-   "espn_status": "Out",
-   "detail": "Other Undisclosed",
-   "return_date": "2026-11-09",
-   "comment": "Porzingis (undisclosed) returned Thursday to the Warriors' practice facility, per Anthony Slater of ESPN.com.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Other Undisclosed"
   },
   {
    "team": "IND",
@@ -368,7 +392,7 @@
    "name": "Johnny Furphy",
    "espn_status": "Out",
    "detail": "Right Leg Knee",
-   "return_date": "2027-01-01",
+   "return_date": "2027-01-02",
    "comment": "Furphy was diagnosed with a torn right ACL on Monday and will miss the remainder of the season, Michael Scotto of USA Today reports.",
    "status": "Out",
    "official_status": null,
@@ -428,7 +452,7 @@
    "name": "Jordan Miller",
    "espn_status": "Out",
    "detail": "Arm Shoulder",
-   "return_date": "2027-03-01",
+   "return_date": "2027-03-02",
    "comment": "Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.",
    "status": "Out",
    "official_status": null,
@@ -615,18 +639,6 @@
    "reason": "Right Leg Achilles"
   },
   {
-   "team": "NO",
-   "player_id": "3907497",
-   "name": "Dejounte Murray",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Toe",
-   "return_date": "2026-10-21",
-   "comment": "Murray (toe) won't play in Friday's preseason finale against the Wizards, Jim Eichenhofer of the Pelicans' official site reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Toe"
-  },
-  {
    "team": "NY",
    "player_id": "3062679",
    "name": "Josh Hart",
@@ -776,11 +788,35 @@
    "name": "Izaiyah Nelson",
    "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-11-01",
+   "return_date": "2026-11-18",
    "comment": "Team president Jeff Weltman said Monday that Nelson (ankle) remains about a month away from returning to the court after offseason surgery, per Philip Rossman-Reich of OrlandoMagicDaily.com.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "PHI",
+   "player_id": "4870562",
+   "name": "Dominick Barlow",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-10-20",
+   "comment": "Barlow (back) did not participate in Monday's practice, according to 76ers reporter Paul Hudrick.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
+  },
+  {
+   "team": "PHI",
+   "player_id": "3912848",
+   "name": "Dean Wade",
+   "espn_status": "Day-To-Day",
+   "detail": "Not Specified Leg Ankle",
+   "return_date": "2026-10-20",
+   "comment": "Wade (ankle) did not practice Monday, according to 76ers reporter Paul Hudrick.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Not Specified Leg Ankle"
   },
   {
    "team": "PHI",
@@ -817,30 +853,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Torso Hip"
-  },
-  {
-   "team": "PHI",
-   "player_id": "4870562",
-   "name": "Dominick Barlow",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-20",
-   "comment": "Barlow (back) didn't participate in Sunday's practice, Adam Aaronson of PhillyVoice.com reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3912848",
-   "name": "Dean Wade",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Ankle",
-   "return_date": "2026-10-20",
-   "comment": "Wade (ankle) didn't participate in Sunday's practice, Adam Aaronson of PhillyVoice.com reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Leg Ankle"
   },
   {
    "team": "PHI",
@@ -988,27 +1000,27 @@
   },
   {
    "team": "SA",
+   "player_id": "6440",
+   "name": "Tobias Harris",
+   "espn_status": "Out",
+   "detail": "Left Leg Calf",
+   "return_date": "2026-10-23",
+   "comment": "Harris (calf) will not be ready for the season opener Wednesday against the Thunder, Matt Guzman of SI.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Calf"
+  },
+  {
+   "team": "SA",
    "player_id": "5101845",
    "name": "Jayden Quaintance",
    "espn_status": "Out",
    "detail": "Right Leg Knee",
-   "return_date": "2026-12-01",
+   "return_date": "2026-12-03",
    "comment": "Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "SA",
-   "player_id": "6440",
-   "name": "Tobias Harris",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Calf",
-   "return_date": "2026-10-20",
-   "comment": "Spurs head coach Mitch Johnson said they will not rush Tobias Harris (calf) back to the court, Jared Weiss of The Athletic reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Calf"
   },
   {
    "team": "TOR",
@@ -1075,12 +1087,12 @@
    "player_id": "5142718",
    "name": "AJ Dybantsa",
    "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Ankle",
+   "detail": "Left Leg Ankle",
    "return_date": "2026-10-21",
-   "comment": "Head coach Brian Keefe said Sunday that Dybantsa is day-to-day with an ankle sprain, Kyle Williams of the Chicago Sun-Times reports.",
+   "comment": "Dybantsa (ankle) participated in shooting drills during Monday's practice but remains day-to-day, Ben Strober of 106-7 The Fan Washington reports.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Not Specified Leg Ankle"
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "WSH",
