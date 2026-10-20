@@ -1,7 +1,19 @@
 {
- "fetched_at": "2026-10-19T15:14:58-04:00",
- "official_report": "2026-10-19T15:00:00-04:00",
+ "fetched_at": "2026-10-19T21:08:00-04:00",
+ "official_report": "2026-10-19T21:00:00-04:00",
  "players": [
+  {
+   "team": "ATL",
+   "player_id": "4712863",
+   "name": "Mouhamed Gueye",
+   "espn_status": "Out",
+   "detail": "Left Leg Foot",
+   "return_date": "2026-11-20",
+   "comment": "Gueye underwent surgery Tuesday to repair a fractured left foot that he suffered during a workout last week, Brad Rowland of the Locked On Podcast Network reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Foot"
+  },
   {
    "team": "ATL",
    "player_id": "5105571",
@@ -13,18 +25,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "ATL",
-   "player_id": "4712863",
-   "name": "Mouhamed Gueye",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Foot",
-   "return_date": "2026-10-21",
-   "comment": "Gueye underwent surgery Tuesday to repair a fractured left foot that he suffered during a workout last week, Brad Rowland of the Locked On Podcast Network reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Foot"
   },
   {
    "team": "BOS",
@@ -279,12 +279,36 @@
    "reason": "Left Leg Knee"
   },
   {
+   "team": "DET",
+   "player_id": "2990962",
+   "name": "Taurean Prince",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Personal",
+   "return_date": "2026-10-20",
+   "comment": "Prince is questionable for Tuesday's season opener against the Celtics for personal reasons.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Personal"
+  },
+  {
+   "team": "GS",
+   "player_id": "3975",
+   "name": "Stephen Curry",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-21",
+   "comment": "Curry (ankle) is expected to play in Wednesday's season opener against the Lakers, per Kenzo Fukuda of ClutchPoints.com.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
+  },
+  {
    "team": "GS",
    "player_id": "3102531",
    "name": "Kristaps Porzingis",
    "espn_status": "Out",
    "detail": "Other Undisclosed",
-   "return_date": "2026-11-09",
+   "return_date": "2026-12-01",
    "comment": "Porzingis (undisclosed) won't travel with the Warriors and remains out indefinitely, Luca Evans of the San Francisco Chronicle reports.",
    "status": "Out",
    "official_status": null,
@@ -313,18 +337,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Torso Back"
-  },
-  {
-   "team": "GS",
-   "player_id": "3975",
-   "name": "Stephen Curry",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Ankle",
-   "return_date": "2026-10-21",
-   "comment": "Curry sustained a right ankle injury during Sunday's practice but is expected to be fine, Dalton Johnson of NBC Sports Bay Area reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Ankle"
   },
   {
    "team": "GS",
@@ -460,15 +472,15 @@
   },
   {
    "team": "LAL",
-   "player_id": "4278077",
-   "name": "Jarred Vanderbilt",
+   "player_id": "4683774",
+   "name": "Bronny James",
    "espn_status": "Day-To-Day",
-   "detail": "Other Undisclosed",
+   "detail": "Other Illness",
    "return_date": "2026-10-21",
-   "comment": "Vanderbilt (undisclosed) isn't expected to play in Friday's preseason game against the Nuggets, Thuc Nhi Nguyen of the Los Angeles Times reports.",
+   "comment": "James (illness) was excused from practice Monday, per Jovan Buha of The Athletic.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Other Undisclosed"
+   "reason": "Other Illness"
   },
   {
    "team": "LAL",
@@ -477,7 +489,19 @@
    "espn_status": "Day-To-Day",
    "detail": "Other Undisclosed",
    "return_date": "2026-10-21",
-   "comment": "Carr (undisclosed) has been ruled out for Friday's preseason game against Denver, Benjamin Royer of The Orange County Register reports.",
+   "comment": "Carr (undisclosed) didn't practice Monday, per Thuc Nhi Nguyen of the Los Angeles Times.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Undisclosed"
+  },
+  {
+   "team": "LAL",
+   "player_id": "5060631",
+   "name": "Adou Thiero",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Undisclosed",
+   "return_date": "2026-10-21",
+   "comment": "Thiero (undisclosed) didn't practice Monday, per Thuc Nhi Nguyen of the Los Angeles Times.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Undisclosed"
@@ -489,19 +513,19 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Lower Leg",
    "return_date": "2026-10-21",
-   "comment": "Sexton (lower leg) has been ruled out for Friday's preseason game against the Nuggets, Law Murray of The Athletic reports.",
+   "comment": "Sexton (lower leg) fully practiced Monday, per Dan Woike of The Athletic.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Lower Leg"
   },
   {
    "team": "LAL",
-   "player_id": "5060631",
-   "name": "Adou Thiero",
+   "player_id": "4278077",
+   "name": "Jarred Vanderbilt",
    "espn_status": "Day-To-Day",
    "detail": "Other Undisclosed",
    "return_date": "2026-10-21",
-   "comment": "Thiero (undisclosed) is out for Friday's preseason finale versus the Nuggets, Benjamin Royer of The Orange County Register reports.",
+   "comment": "Vanderbilt (undisclosed) isn't expected to play in Friday's preseason game against the Nuggets, Thuc Nhi Nguyen of the Los Angeles Times reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Undisclosed"
@@ -532,18 +556,6 @@
   },
   {
    "team": "MEM",
-   "player_id": "4432185",
-   "name": "Micah Peavy",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Ankle",
-   "return_date": "2026-10-21",
-   "comment": "Head coach Tumos Iisalo said Thursday that Peavy (ankle) has progressed well in his recovery, though he won't play in Friday's preseason finale against Charlotte, Anthony Sain of Buff City Media reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Leg Ankle"
-  },
-  {
-   "team": "MEM",
    "player_id": "4432810",
    "name": "Isaiah Stewart",
    "espn_status": "Out",
@@ -561,22 +573,10 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Calf",
    "return_date": "2026-10-21",
-   "comment": "Smith (calf) participated in Sunday's practice, Anthony Chiang of the Miami Herald reports.",
+   "comment": "Smith (calf) participated in practice Monday, Anthony Chiang of the Miami Herald reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Calf"
-  },
-  {
-   "team": "MIA",
-   "player_id": "4601025",
-   "name": "Pelle Larsson",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
-   "return_date": "2026-10-21",
-   "comment": "Larsson (illness) participated in Sunday's practice, Anthony Chiang of the Miami Herald reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Illness"
   },
   {
    "team": "MIA",
@@ -585,10 +585,22 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Groin Groin",
    "return_date": "2026-10-21",
-   "comment": "Adebayo (groin) participated in Sunday's practice, Ira Winderman of the South Florida Sun Sentinel reports.",
+   "comment": "Adebayo (groin) participated in Monday's practice, Anthony Chiang of the Miami Herald reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Groin Groin"
+  },
+  {
+   "team": "MIA",
+   "player_id": "4601025",
+   "name": "Pelle Larsson",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-21",
+   "comment": "Larsson (illness) participated in Monday's practice, Anthony Chiang of the Miami Herald reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
   },
   {
    "team": "MIL",
@@ -639,76 +651,28 @@
    "reason": "Right Leg Achilles"
   },
   {
-   "team": "NY",
-   "player_id": "3062679",
-   "name": "Josh Hart",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Ankle",
-   "return_date": "2026-10-20",
-   "comment": "Coach Mike Brown isn't concerned about Hart missing Tuesday's regular-season opener Tuesday against Philadelphia, Kristian Winfield of the New York Daily News reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Ankle"
-  },
-  {
-   "team": "OKC",
-   "player_id": "4683692",
-   "name": "Cason Wallace",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Undisclosed",
-   "return_date": "2026-10-20",
-   "comment": "Wallace (undisclosed) has agreed to a five-year, $139 million contract extension with the Thunder on Sunday, Shams Charania of ESPN reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Undisclosed"
-  },
-  {
    "team": "OKC",
    "player_id": "5061603",
    "name": "Thomas Sorber",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Knee",
-   "return_date": "2026-10-20",
-   "comment": "Sorber (knee) has been ruled out for Thursday's preseason game against the Rockets, Justin Martinez of The Oklahoman reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-22",
+   "comment": "Sorber (knee) won't play in Tuesday's season opener against the Spurs, Justin Martinez of The Oklahoman reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
   },
   {
    "team": "OKC",
-   "player_id": "4432823",
-   "name": "Jaylin Williams",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Heel",
-   "return_date": "2026-10-20",
-   "comment": "Williams (heel) won't play in Thursday's preseason game against Houston, Justin Martinez of The Oklahoman reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Heel"
-  },
-  {
-   "team": "OKC",
    "player_id": "5159925",
    "name": "Nikola Topic",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Not Specified Torso Back",
-   "return_date": "2026-10-20",
-   "comment": "Topic (back) is out for Thursday's preseason game against Houston, Justin Martinez of The Oklahoman reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-22",
+   "comment": "Topic (back) won't play in Tuesday's season opener against the Spurs, Justin Martinez of The Oklahoman reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Not Specified Torso Back"
-  },
-  {
-   "team": "OKC",
-   "player_id": "4433255",
-   "name": "Chet Holmgren",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Quadriceps",
-   "return_date": "2026-10-20",
-   "comment": "Holmgren (quadriceps) has been ruled out for Thursday's preseason game against the Rockets, Justin Martinez of The Oklahoman reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Quadriceps"
   },
   {
    "team": "OKC",
@@ -796,24 +760,12 @@
   },
   {
    "team": "PHI",
-   "player_id": "4870562",
-   "name": "Dominick Barlow",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-20",
-   "comment": "Barlow (back) did not participate in Monday's practice, according to 76ers reporter Paul Hudrick.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "PHI",
    "player_id": "3912848",
    "name": "Dean Wade",
    "espn_status": "Day-To-Day",
    "detail": "Not Specified Leg Ankle",
    "return_date": "2026-10-20",
-   "comment": "Wade (ankle) did not practice Monday, according to 76ers reporter Paul Hudrick.",
+   "comment": "Wade (ankle) is questionable for Tuesday's season opener versus the Knicks, per Adam Aaronson of PhillyVoice.com.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Leg Ankle"
@@ -825,7 +777,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Not Specified Leg Foot",
    "return_date": "2026-10-20",
-   "comment": "Bona (foot) was a full participant in Sunday's practice, Ky Carlin of USA Today reports.",
+   "comment": "Bona (foot) is questionable for Tuesday's meeting in New York, Adam Aaronson of PhillyVoice.com reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Leg Foot"
@@ -835,24 +787,36 @@
    "player_id": "4351851",
    "name": "Anfernee Simons",
    "espn_status": "Day-To-Day",
-   "detail": "Leg Hamstring",
+   "detail": "Not Specified Leg Hamstring",
    "return_date": "2026-10-20",
-   "comment": "Simons (hamstring) was a full participant in Sunday's practice, Ky Carlin of USA Today reports.",
+   "comment": "Simons (hamstring) is questionable for Tuesday's game against the Knicks, Adam Aaronson of PhillyVoice.com reports.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Leg Hamstring"
+   "reason": "Not Specified Leg Hamstring"
   },
   {
    "team": "PHI",
    "player_id": "3904625",
    "name": "Tacko Fall",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Torso Hip",
-   "return_date": "2026-10-20",
-   "comment": "Fall (hip) didn't participate in Sunday's practice, Ky Carlin of USA Today reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-22",
+   "comment": "Fall (hip) is out for Tuesday's regular-season opener against the Knicks, Adam Aaronson of PhillyVoice.com reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Torso Hip"
+  },
+  {
+   "team": "PHI",
+   "player_id": "4870562",
+   "name": "Dominick Barlow",
+   "espn_status": "Out",
+   "detail": "Torso Back",
+   "return_date": "2026-11-02",
+   "comment": "Barlow will miss at least the next two weeks of action due to a lumbar spine bone stress response, Adam Aaronson of PhillyVoice.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Torso Back"
   },
   {
    "team": "PHI",
@@ -873,7 +837,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Knee",
    "return_date": "2026-10-21",
-   "comment": "Kennard (knee) has been ruled out for the Suns' final game of the preseason Friday against Utah, John Gambadoro of Arizona Sports 98.7 FM reports.",
+   "comment": "Kennard (knee) increased his activity in practice Monday, Duane Rankin of the Arizona Republic reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -1550,11 +1514,6 @@
     "position": "F"
    },
    {
-    "player_id": "4432117",
-    "name": "Isaiah Stevens",
-    "position": "G"
-   },
-   {
     "player_id": "4848625",
     "name": "Dailyn Swain",
     "position": "G"
@@ -2052,11 +2011,6 @@
     "position": "F"
    },
    {
-    "player_id": "4709131",
-    "name": "Sean Pedulla",
-    "position": "G"
-   },
-   {
     "player_id": "5105553",
     "name": "Julian Phillips",
     "position": "F"
@@ -2323,11 +2277,6 @@
     "position": "C"
    },
    {
-    "player_id": "4897943",
-    "name": "Dalton Knecht",
-    "position": "F"
-   },
-   {
     "player_id": "4592691",
     "name": "Jake LaRavia",
     "position": "F"
@@ -2390,11 +2339,6 @@
     "position": "F"
    },
    {
-    "player_id": "4896372",
-    "name": "Walter Clayton Jr.",
-    "position": "G"
-   },
-   {
     "player_id": "5105817",
     "name": "Carson Cooper",
     "position": "C"
@@ -2443,11 +2387,6 @@
     "player_id": "4594326",
     "name": "Kris Murray",
     "position": "F"
-   },
-   {
-    "player_id": "4432185",
-    "name": "Micah Peavy",
-    "position": "G"
    },
    {
     "player_id": "4431785",
@@ -2627,11 +2566,6 @@
     "player_id": "5214989",
     "name": "Bogoljub Markovic",
     "position": "F"
-   },
-   {
-    "player_id": "4397140",
-    "name": "Kevin Porter Jr.",
-    "position": "G"
    },
    {
     "player_id": "4591725",
@@ -3198,11 +3132,6 @@
     "position": "G"
    },
    {
-    "player_id": "4591259",
-    "name": "Koby Brea",
-    "position": "G"
-   },
-   {
     "player_id": "4066383",
     "name": "Miles Bridges",
     "position": "F"
@@ -3238,11 +3167,6 @@
     "position": "G"
    },
    {
-    "player_id": "4702602",
-    "name": "CJ Huntley",
-    "position": "F"
-   },
-   {
     "player_id": "4601023",
     "name": "Oso Ighodaro",
     "position": "F"
@@ -3271,6 +3195,11 @@
     "player_id": "4592714",
     "name": "Pat Spencer",
     "position": "G"
+   },
+   {
+    "player_id": "4431695",
+    "name": "Drew Timme",
+    "position": "F"
    },
    {
     "player_id": "4701232",
@@ -3476,11 +3405,6 @@
    {
     "player_id": "4702384",
     "name": "Nique Clifford",
-    "position": "G"
-   },
-   {
-    "player_id": "4397654",
-    "name": "Adam Flagler",
     "position": "G"
    },
    {
