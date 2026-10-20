@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-19T21:08:00-04:00",
- "official_report": "2026-10-19T21:00:00-04:00",
+ "fetched_at": "2026-10-20T11:38:55-04:00",
+ "official_report": "2026-10-20T11:30:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -172,6 +172,18 @@
   },
   {
    "team": "CLE",
+   "player_id": "5106268",
+   "name": "Nae'Qwan Tomlin",
+   "espn_status": "Out",
+   "detail": "Torso Back",
+   "return_date": "2026-11-16",
+   "comment": "Tomlin is set to miss several weeks with a lower back stress reaction, Chris Fedor of The Cleveland Plain Dealer reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Torso Back"
+  },
+  {
+   "team": "CLE",
    "player_id": "4066757",
    "name": "Sam Merrill",
    "espn_status": "Day-To-Day",
@@ -181,18 +193,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Arm Elbow"
-  },
-  {
-   "team": "CLE",
-   "player_id": "5106268",
-   "name": "Nae'Qwan Tomlin",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-22",
-   "comment": "Tomlin (back) won't play in Tuesday's preseason game against the Magic, Serena Winters of FanDuel Sports Network Ohio reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
   },
   {
    "team": "CLE",
@@ -282,11 +282,11 @@
    "team": "DET",
    "player_id": "2990962",
    "name": "Taurean Prince",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Other Personal",
-   "return_date": "2026-10-20",
-   "comment": "Prince is questionable for Tuesday's season opener against the Celtics for personal reasons.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-23",
+   "comment": "Prince (personal) is out for Tuesday's game against the Celtics.",
+   "status": "Out",
    "official_status": null,
    "reason": "Other Personal"
   },
