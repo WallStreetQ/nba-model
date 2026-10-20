@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-20T11:38:55-04:00",
- "official_report": "2026-10-20T11:30:00-04:00",
+ "fetched_at": "2026-10-20T15:58:46-04:00",
+ "official_report": "2026-10-20T15:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -124,15 +124,75 @@
   },
   {
    "team": "CHI",
+   "player_id": "5044385",
+   "name": "Leonard Miller",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Groin Groin",
+   "return_date": "2026-10-21",
+   "comment": "Miller is probable for Wednesday's game against the Raptors with a right adductor strain.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Groin Groin"
+  },
+  {
+   "team": "CHI",
+   "player_id": "4432822",
+   "name": "Isaac Okoro",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-21",
+   "comment": "Okoro (knee) is probable for Wednesday's season opener against Toronto.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "CHI",
+   "player_id": "4848625",
+   "name": "Dailyn Swain",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-21",
+   "comment": "Swain (illness) is officially doubtful for Wednesday's season opener in Toronto.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "CHI",
    "player_id": "4066650",
    "name": "Zach Collins",
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Toe",
    "return_date": "2026-10-21",
-   "comment": "Collins (toe) is hopeful to play Wednesday against the Raptors, K.C. Johnson of Chicago Sports Network reports.",
+   "comment": "Collins (toe) is probable for Wednesday's game against the Raptors.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Toe"
+  },
+  {
+   "team": "CHI",
+   "player_id": "5105555",
+   "name": "Tobe Awaka",
+   "espn_status": "Day-To-Day",
+   "detail": "Not Specified Leg Knee",
+   "return_date": "2026-10-21",
+   "comment": "Awaka (knee) is probable for Wednesday's game against the Raptors.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Not Specified Leg Knee"
+  },
+  {
+   "team": "CHI",
+   "player_id": "4683750",
+   "name": "Jordan Hawkins",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-21",
+   "comment": "Hawkins (illness) is out for Wednesday's game against the Raptors, K.C. Johnson of Chicago Sports Network reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
   },
   {
    "team": "CHI",
@@ -147,28 +207,16 @@
    "reason": "Not Specified Leg Hamstring"
   },
   {
-   "team": "CHI",
-   "player_id": "5105555",
-   "name": "Tobe Awaka",
+   "team": "CLE",
+   "player_id": "4066757",
+   "name": "Sam Merrill",
    "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Knee",
-   "return_date": "2026-10-21",
-   "comment": "Awaka (knee) is out for Friday's preseason finale versus Minnesota, K.C. Johnson of Chicago Sports Network reports.",
+   "detail": "Right Arm Elbow",
+   "return_date": "2026-10-22",
+   "comment": "Head coach Kenny Atkinson said Tuesday that Merrill (elbow) went through a full practice, per Danny Cunningham of Sports Radio 92.3 The Fan Cleveland.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Not Specified Leg Knee"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4432822",
-   "name": "Isaac Okoro",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Undisclosed",
-   "return_date": "2026-10-21",
-   "comment": "Okoro (undisclosed) is out for Friday's preseason finale versus the Timberwolves, K.C. Johnson of Chicago Sports Network reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Undisclosed"
+   "reason": "Right Arm Elbow"
   },
   {
    "team": "CLE",
@@ -184,18 +232,6 @@
   },
   {
    "team": "CLE",
-   "player_id": "4066757",
-   "name": "Sam Merrill",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Arm Elbow",
-   "return_date": "2026-10-22",
-   "comment": "Merrill (elbow) isn't participating in Saturday's scrimmage, Danny Cunningham of Sports Radio 92.3 The Fan Cleveland reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Arm Elbow"
-  },
-  {
-   "team": "CLE",
    "player_id": "4997530",
    "name": "Khalifa Diop",
    "espn_status": "Day-To-Day",
@@ -208,27 +244,27 @@
   },
   {
    "team": "DAL",
-   "player_id": "4593125",
-   "name": "Santi Aldama",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Knee",
-   "return_date": "2026-10-21",
-   "comment": "Aldama (knee) remains without a timetable to return, and head coach Dusty May said he \"doesn't know yet\" if the forward will play in Wednesday's regular-season opener against Houston, Mike Curtis of The Dallas Morning News reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Leg Knee"
-  },
-  {
-   "team": "DAL",
    "player_id": "5148538",
    "name": "Tarik Biberovic",
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Heel",
    "return_date": "2026-10-21",
-   "comment": "Biberovic is out for Friday's exhibition against the Hawks due to right heel bursitis.",
+   "comment": "Biberovic (heel) is unlikely to play in Wednesday's season opener against the Rockets, per Grant Afseth of DallasHoopsJournal.com.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Heel"
+  },
+  {
+   "team": "DAL",
+   "player_id": "4593125",
+   "name": "Santi Aldama",
+   "espn_status": "Day-To-Day",
+   "detail": "Not Specified Leg Knee",
+   "return_date": "2026-10-21",
+   "comment": "Aldama (knee) is doubtful for Wednesday's game against Houston, Grant Afseth of DallasHoopsJournal.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Not Specified Leg Knee"
   },
   {
    "team": "DAL",
@@ -292,6 +328,30 @@
   },
   {
    "team": "GS",
+   "player_id": "4397886",
+   "name": "Charles Bassey",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-21",
+   "comment": "Bassey (knee) is questionable for Wednesday's season opener versus the Lakers, per Nick Friedell of The Athletic.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "GS",
+   "player_id": "4709138",
+   "name": "Brandin Podziemski",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-10-21",
+   "comment": "Podziemski (back) was unable to practice Tuesday, Nick Friedell of The Athletic reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
+  },
+  {
+   "team": "GS",
    "player_id": "3975",
    "name": "Stephen Curry",
    "espn_status": "Day-To-Day",
@@ -316,30 +376,6 @@
   },
   {
    "team": "GS",
-   "player_id": "4397886",
-   "name": "Charles Bassey",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-10-21",
-   "comment": "Bassey (knee) didn't practice Monday, per Nick Friedell of The Athletic.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
-  },
-  {
-   "team": "GS",
-   "player_id": "4709138",
-   "name": "Brandin Podziemski",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-21",
-   "comment": "Podziemski (back) is questionable for Wednesday's season opener against the Lakers, per Dalton Johnson of NBC Sports Bay Area.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "GS",
    "player_id": "4432171",
    "name": "Moses Moody",
    "espn_status": "Out",
@@ -361,6 +397,30 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
+  },
+  {
+   "team": "HOU",
+   "player_id": "5105553",
+   "name": "Julian Phillips",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-21",
+   "comment": "The Rockets converted Phillips' deal to a two-way contract Monday, per Michael Scotto of HoopsHype.com.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "HOU",
+   "player_id": "2991235",
+   "name": "Steven Adams",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Calf",
+   "return_date": "2026-10-21",
+   "comment": "Adams (calf) is listed as questionable for Wednesday's game against the Mavericks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Calf"
   },
   {
    "team": "IND",
@@ -472,15 +532,15 @@
   },
   {
    "team": "LAL",
-   "player_id": "4683774",
-   "name": "Bronny James",
+   "player_id": "5060631",
+   "name": "Adou Thiero",
    "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
+   "detail": "Other Undisclosed",
    "return_date": "2026-10-21",
-   "comment": "James (illness) was excused from practice Monday, per Jovan Buha of The Athletic.",
+   "comment": "Thiero (undisclosed) didn't practice Tuesday, Law Murray of The Athletic reports.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Other Illness"
+   "reason": "Other Undisclosed"
   },
   {
    "team": "LAL",
@@ -489,22 +549,22 @@
    "espn_status": "Day-To-Day",
    "detail": "Other Undisclosed",
    "return_date": "2026-10-21",
-   "comment": "Carr (undisclosed) didn't practice Monday, per Thuc Nhi Nguyen of the Los Angeles Times.",
+   "comment": "Carr (undisclosed) didn't practice Tuesday, per Law Murray of The Athletic.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Undisclosed"
   },
   {
    "team": "LAL",
-   "player_id": "5060631",
-   "name": "Adou Thiero",
+   "player_id": "4683774",
+   "name": "Bronny James",
    "espn_status": "Day-To-Day",
-   "detail": "Other Undisclosed",
+   "detail": "Other Illness",
    "return_date": "2026-10-21",
-   "comment": "Thiero (undisclosed) didn't practice Monday, per Thuc Nhi Nguyen of the Los Angeles Times.",
+   "comment": "James (illness) participated in Tuesday's practice, Dan Woike of The Athletic reports.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Other Undisclosed"
+   "reason": "Other Illness"
   },
   {
    "team": "LAL",
@@ -568,27 +628,15 @@
   },
   {
    "team": "MIA",
-   "player_id": "4066993",
-   "name": "Dru Smith",
+   "player_id": "4700818",
+   "name": "Vladislav Goldin",
    "espn_status": "Day-To-Day",
-   "detail": "Right Leg Calf",
+   "detail": "Not Specified Leg Ankle",
    "return_date": "2026-10-21",
-   "comment": "Smith (calf) participated in practice Monday, Anthony Chiang of the Miami Herald reports.",
+   "comment": "Goldin is questionable for Wednesday's season opener against Minnesota with a right ankle sprain.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Right Leg Calf"
-  },
-  {
-   "team": "MIA",
-   "player_id": "4066261",
-   "name": "Bam Adebayo",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Groin Groin",
-   "return_date": "2026-10-21",
-   "comment": "Adebayo (groin) participated in Monday's practice, Anthony Chiang of the Miami Herald reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Groin Groin"
+   "reason": "Not Specified Leg Ankle"
   },
   {
    "team": "MIA",
@@ -693,7 +741,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Ankle",
    "return_date": "2026-10-21",
-   "comment": "Black (ankle) participated in Sunday's practice, and head coach Sean Sweeney said he will continue ramping up, Jason Beede of the Orlando Sentinel reports.",
+   "comment": "Black (ankle) said Tuesday that he doesn't know if he will play in Wednesday's season opener against the Hawks, Jason Beede of the Orlando Sentinel reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Ankle"
@@ -705,7 +753,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Arm Shoulder",
    "return_date": "2026-10-21",
-   "comment": "Head coach Sean Sweeney said the team will continue to evaluate Wagner's right shoulder, and he was limited to \"light work\" in Sunday's practice, Jason Beede of the Orlando Sentinel reports.",
+   "comment": "Wagner (shoulder) practiced in full Tuesday and is planning to play in Wednesday's game against the Hawks, Jason Beede of the Orlando Sentinel reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Arm Shoulder"
@@ -990,11 +1038,11 @@
    "team": "TOR",
    "player_id": "4432586",
    "name": "Nate Bittle",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Foot",
-   "return_date": "2026-10-21",
-   "comment": "Bittle (foot) agreed to a two-way contract with Toronto on Saturday, Michael Scotto of HoopsHype.com reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-28",
+   "comment": "Bittle (foot) is out for Wednesday's season opener against the Bulls.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
   },
@@ -1050,11 +1098,11 @@
    "team": "WSH",
    "player_id": "5142718",
    "name": "AJ Dybantsa",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-10-21",
-   "comment": "Dybantsa (ankle) participated in shooting drills during Monday's practice but remains day-to-day, Ben Strober of 106-7 The Fan Washington reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-23",
+   "comment": "Dybantsa (ankle) will not debut Wednesday against the Bucks, Josh Robbins of The Athletic reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
   },
