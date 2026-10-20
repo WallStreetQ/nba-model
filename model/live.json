@@ -1,6 +1,32 @@
 {
- "games": {},
+ "games": {
+  "401909088": {
+   "game_id": "401909088",
+   "date": "2026-10-20",
+   "start_utc": "2026-10-20T19:00Z",
+   "home": "DET",
+   "away": "BOS",
+   "priced_at": "2026-10-20T16:09:38-04:00",
+   "late": false,
+   "pre_source": "prediction log",
+   "h1_home": 45.0,
+   "h1_away": 58.0,
+   "pre_2h": 105.18329918463414,
+   "pre_2hm": 2.1290441844667853,
+   "mu_2h": 104.35723183715211,
+   "sd_2h": 13.866945781746747,
+   "mu_2hm": 3.626758986704561,
+   "sd_2hm": 10.973261422344319,
+   "p_home_win": 0.19889372680975737,
+   "h2_total_line": null,
+   "h2_spread_home": null,
+   "book": null,
+   "h1_line": "BOS 58 \u2013 45 DET",
+   "markets": [],
+   "picks": []
+  }
+ },
  "model_through": "2026-06-13",
  "halftime_fitted": true,
- "updated_at": "2026-10-19T15:16:58-04:00"
+ "updated_at": "2026-10-20T16:09:38-04:00"
 }
