@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-21T11:56:22-04:00",
- "official_report": "2026-10-21T11:45:00-04:00",
+ "fetched_at": "2026-10-21T15:35:40-04:00",
+ "official_report": "2026-10-21T15:30:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -100,6 +100,30 @@
   },
   {
    "team": "CHI",
+   "player_id": "4848625",
+   "name": "Dailyn Swain",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2026-10-24",
+   "comment": "Swain is out for Wednesday's season opener against Toronto with an illness.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "CHI",
+   "player_id": "4683750",
+   "name": "Jordan Hawkins",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2026-10-24",
+   "comment": "Hawkins is out for Wednesday's season opener against Toronto with an illness.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "CHI",
    "player_id": "5044385",
    "name": "Leonard Miller",
    "espn_status": "Day-To-Day",
@@ -124,18 +148,6 @@
   },
   {
    "team": "CHI",
-   "player_id": "4848625",
-   "name": "Dailyn Swain",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
-   "return_date": "2026-10-21",
-   "comment": "Swain (illness) is officially doubtful for Wednesday's season opener in Toronto.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Illness"
-  },
-  {
-   "team": "CHI",
    "player_id": "4066650",
    "name": "Zach Collins",
    "espn_status": "Day-To-Day",
@@ -157,18 +169,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Leg Knee"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4683750",
-   "name": "Jordan Hawkins",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
-   "return_date": "2026-10-21",
-   "comment": "Hawkins (illness) is out for Wednesday's game against the Raptors, K.C. Johnson of Chicago Sports Network reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Illness"
   },
   {
    "team": "CHI",
@@ -225,7 +225,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Calf",
    "return_date": "2026-10-21",
-   "comment": "Howard (calf) is listed as questionable for Wednesday's game against the Rockets.",
+   "comment": "Howard (calf) is now doubtful for Wednesday against the Rockets.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Calf"
@@ -316,6 +316,30 @@
   },
   {
    "team": "GS",
+   "player_id": "3102531",
+   "name": "Kristaps Porzingis",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2026-12-01",
+   "comment": "Porzingis is contemplating his future in basketball as he deals with recurring symptoms from the autoimmune condition termed as postural orthostatic tachycardia syndrome, per Shams Charania of ESPN.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "GS",
+   "player_id": "4397886",
+   "name": "Charles Bassey",
+   "espn_status": "Out",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-23",
+   "comment": "Bassey (knee) is out for Wednesday's season opener versus the Lakers.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "GS",
    "player_id": "3975",
    "name": "Stephen Curry",
    "espn_status": "Day-To-Day",
@@ -337,30 +361,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
-  },
-  {
-   "team": "GS",
-   "player_id": "4397886",
-   "name": "Charles Bassey",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-10-21",
-   "comment": "Bassey (knee) is questionable for Wednesday's season opener versus the Lakers, per Nick Friedell of The Athletic.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
-  },
-  {
-   "team": "GS",
-   "player_id": "3102531",
-   "name": "Kristaps Porzingis",
-   "espn_status": "Out",
-   "detail": "Other Undisclosed",
-   "return_date": "2026-12-01",
-   "comment": "Porzingis (undisclosed) won't travel with the Warriors and remains out indefinitely, Luca Evans of the San Francisco Chronicle reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Other Undisclosed"
   },
   {
    "team": "GS",
