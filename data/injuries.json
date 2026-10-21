@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-20T20:42:02-04:00",
- "official_report": "2026-10-20T20:30:00-04:00",
+ "fetched_at": "2026-10-21T08:15:33-04:00",
+ "official_report": "2026-10-21T08:15:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -217,6 +217,18 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "DAL",
+   "player_id": "5105806",
+   "name": "Jett Howard",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Calf",
+   "return_date": "2026-10-21",
+   "comment": "Howard (calf) is listed as questionable for Wednesday's game against the Rockets.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Calf"
   },
   {
    "team": "DAL",
@@ -666,11 +678,11 @@
    "team": "PHI",
    "player_id": "3912848",
    "name": "Dean Wade",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Not Specified Leg Ankle",
    "return_date": "2026-10-22",
    "comment": "Wade (ankle) is out for Tuesday's game against the Knicks.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Leg Ankle"
   },
@@ -796,6 +808,18 @@
   },
   {
    "team": "SAC",
+   "player_id": "3907387",
+   "name": "Ben Simmons",
+   "espn_status": "Out",
+   "detail": "Leg Achilles",
+   "return_date": "2027-10-01",
+   "comment": "Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Leg Achilles"
+  },
+  {
+   "team": "SAC",
    "player_id": "4066262",
    "name": "Malik Monk",
    "espn_status": "Day-To-Day",
@@ -805,18 +829,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Ankle"
-  },
-  {
-   "team": "SAC",
-   "player_id": "3907387",
-   "name": "Ben Simmons",
-   "espn_status": "Out",
-   "detail": "Leg Achilles",
-   "return_date": "2027-10-01",
-   "comment": "Simmons is believed to have suffered a season-ending Achilles tear during practice Sunday, Shams Charania of ESPN reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Leg Achilles"
   },
   {
    "team": "SAC",
