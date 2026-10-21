@@ -23,10 +23,40 @@
    "book": null,
    "h1_line": "BOS 58 \u2013 45 DET",
    "markets": [],
+   "picks": [],
+   "final": {
+    "home": 121.0,
+    "away": 113.0
+   },
+   "act_2h": 131.0
+  },
+  "401909089": {
+   "game_id": "401909089",
+   "date": "2026-10-20",
+   "start_utc": "2026-10-20T23:00Z",
+   "home": "NY",
+   "away": "PHI",
+   "priced_at": "2026-10-20T21:50:06-04:00",
+   "late": true,
+   "pre_source": "prediction log",
+   "h1_home": 58.0,
+   "h1_away": 54.0,
+   "pre_2h": 107.37006880428345,
+   "pre_2hm": 4.933451337197177,
+   "mu_2h": 106.96865003143758,
+   "sd_2h": 13.836413176385767,
+   "mu_2hm": 5.466413995297334,
+   "sd_2hm": 10.951963158459874,
+   "p_home_win": 0.808190629467726,
+   "h2_total_line": null,
+   "h2_spread_home": null,
+   "book": null,
+   "h1_line": "PHI 54 \u2013 58 NY",
+   "markets": [],
    "picks": []
   }
  },
- "model_through": "2026-06-13",
+ "model_through": "2026-10-20",
  "halftime_fitted": true,
- "updated_at": "2026-10-20T16:09:38-04:00"
+ "updated_at": "2026-10-20T21:50:06-04:00"
 }
