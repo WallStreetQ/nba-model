@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-21T09:31:45-04:00",
- "official_report": "2026-10-21T09:30:00-04:00",
+ "fetched_at": "2026-10-21T11:56:22-04:00",
+ "official_report": "2026-10-21T11:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -306,11 +306,11 @@
    "team": "DET",
    "player_id": "2990962",
    "name": "Taurean Prince",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Other Personal",
    "return_date": "2026-10-23",
    "comment": "Prince (personal) is out for Tuesday's game against the Celtics.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Personal"
   },
@@ -594,11 +594,11 @@
    "team": "OKC",
    "player_id": "5061603",
    "name": "Thomas Sorber",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Right Leg Knee",
    "return_date": "2026-10-22",
    "comment": "Sorber (knee) won't play in Tuesday's season opener against the Spurs, Justin Martinez of The Oklahoman reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Knee"
   },
@@ -606,11 +606,11 @@
    "team": "OKC",
    "player_id": "5159925",
    "name": "Nikola Topic",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Not Specified Torso Back",
    "return_date": "2026-10-22",
    "comment": "Topic (back) won't play in Tuesday's season opener against the Spurs, Justin Martinez of The Oklahoman reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Torso Back"
   },
@@ -676,6 +676,18 @@
   },
   {
    "team": "PHI",
+   "player_id": "3904625",
+   "name": "Tacko Fall",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Torso Hip",
+   "return_date": "2026-10-22",
+   "comment": "Fall (hip) is out for Tuesday's regular-season opener against the Knicks, Adam Aaronson of PhillyVoice.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Torso Hip"
+  },
+  {
+   "team": "PHI",
    "player_id": "3912848",
    "name": "Dean Wade",
    "espn_status": "Day-To-Day",
@@ -685,18 +697,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Leg Ankle"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3904625",
-   "name": "Tacko Fall",
-   "espn_status": "Out",
-   "detail": "Left Torso Hip",
-   "return_date": "2026-10-22",
-   "comment": "Fall (hip) is out for Tuesday's regular-season opener against the Knicks, Adam Aaronson of PhillyVoice.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Torso Hip"
   },
   {
    "team": "PHI",
@@ -858,11 +858,11 @@
    "team": "SA",
    "player_id": "6440",
    "name": "Tobias Harris",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Leg Calf",
    "return_date": "2026-10-23",
    "comment": "Harris (calf) will not be ready for the season opener Wednesday against the Thunder, Matt Guzman of SI.com reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Calf"
   },
@@ -889,18 +889,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "UTAH",
-   "player_id": "4396963",
-   "name": "Blake Hinson",
-   "espn_status": "Out",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-10-23",
-   "comment": "Hinson (hamstring) is out for Wednesday's game against the Grizzlies.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Hamstring"
   },
   {
    "team": "UTAH",
