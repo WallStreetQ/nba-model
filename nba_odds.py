@@ -23,7 +23,7 @@ import requests
 from nba_common import ODDS_PATH, TEAM_NAME_TO_ABBR as NAME_TO_ABBR, TZ, today_et
 
 API = "https://api.the-odds-api.com/v4/sports/basketball_nba"
-BOOK_PRIORITY = ["hardrockbet", "fanduel", "betmgm", "caesars", "espnbet", "betrivers", "bovada"]
+BOOK_PRIORITY = ["hardrock", "fanduel", "betmgm", "caesars", "espnbet", "betrivers", "bovada"]
 
 
 def _get(url, key, **params):
