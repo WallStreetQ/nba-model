@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-21T15:35:45-04:00",
+ "fetched_at": "2026-10-21T16:03:52-04:00",
  "games": [
   {
    "home_team": "WSH",
@@ -12,8 +12,8 @@
    "spread_home_price": -115,
    "spread_away_price": -105,
    "total_line": 238.5,
-   "total_over_price": -110,
-   "total_under_price": -110
+   "total_over_price": -105,
+   "total_under_price": -115
   },
   {
    "home_team": "ORL",

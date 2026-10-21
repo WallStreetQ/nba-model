@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-21T15:35:40-04:00",
- "official_report": "2026-10-21T15:30:00-04:00",
+ "fetched_at": "2026-10-21T16:03:47-04:00",
+ "official_report": "2026-10-21T16:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -508,6 +508,18 @@
   },
   {
    "team": "LAL",
+   "player_id": "4277811",
+   "name": "Collin Sexton",
+   "espn_status": "Out",
+   "detail": "Right Leg Calf",
+   "return_date": "2026-10-23",
+   "comment": "Sexton (calf) won't play in Wednesday's regular-season opener against the Warriors, per Khobi Price of The California Post.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Calf"
+  },
+  {
+   "team": "LAL",
    "player_id": "5113969",
    "name": "Cameron Carr",
    "espn_status": "Out",
@@ -517,18 +529,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Torso Oblique"
-  },
-  {
-   "team": "LAL",
-   "player_id": "4277811",
-   "name": "Collin Sexton",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Calf",
-   "return_date": "2026-10-21",
-   "comment": "Sexton (calf) is questionable for Wednesday's regular-season opener against the Warriors.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Calf"
   },
   {
    "team": "LAL",
