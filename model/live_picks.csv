@@ -1,0 +1,2 @@
+pick_id,game_id,date,start_utc,home,away,matchup,market,selection,side,team,line,price,model_proj,model_prob,push_prob,book_prob,edge,ev,kelly,kelly_solo,n_same_game,corr_with,stars,book,depends_on,status,actual,profit,logged_at
+401909091|lh2t,401909091,2026-10-21,2026-10-21T23:30Z,MIA,MIN,MIN @ MIA,Live 2H Total,2H Under 123.5,under,,123.5,-115.0,121.00929581226428,0.5714586933387382,0.0,0.5,0.0714586933387382,0.0683792962419888,0.0196590476695717,0.0196590476695717,1,,2,draftkings,,pending,,,2026-10-21T20:45:07-04:00
