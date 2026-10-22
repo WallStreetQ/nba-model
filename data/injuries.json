@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-22T11:52:41-04:00",
- "official_report": "2026-10-22T11:45:00-04:00",
+ "fetched_at": "2026-10-22T15:58:25-04:00",
+ "official_report": "2026-10-22T15:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -261,7 +261,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Other Personal",
    "return_date": "2026-10-23",
-   "comment": "Prince (personal) is out for Tuesday's game against the Celtics.",
+   "comment": "Prince (personal) is listed as probable for Friday's game against the Heat.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Personal"
@@ -433,6 +433,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Arm Shoulder"
+  },
+  {
+   "team": "LAL",
+   "player_id": "4592691",
+   "name": "Jake LaRavia",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-23",
+   "comment": "LaRavia logged 10 points (4-5 FG, 2-3 3Pt), two rebounds, two assists and one steal in 18 minutes during Wednesday's 127-105 win over the Warriors.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
   },
   {
    "team": "LAL",
@@ -822,11 +834,11 @@
    "team": "WSH",
    "player_id": "5142718",
    "name": "AJ Dybantsa",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-10-23",
-   "comment": "Dybantsa (ankle) will not debut Wednesday against the Bucks, Josh Robbins of The Athletic reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-24",
+   "comment": "Dybantsa (ankle) is out for Friday's game against the Raptors, Josh Robbins of The Athletic reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
   },

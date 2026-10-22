@@ -7,8 +7,8 @@
   "neutral": false,
   "home_team": "PHI",
   "away_team": "CLE",
-  "total_line": 237.5,
-  "spread_home": -3.5,
+  "total_line": 236.5,
+  "spread_home": -2.5,
   "ml_home": -142.0,
   "ml_away": 120.0,
   "odds_provider": "Draft Kings"
@@ -35,7 +35,7 @@
   "neutral": false,
   "home_team": "MIL",
   "away_team": "CHI",
-  "total_line": 238.5,
+  "total_line": 237.5,
   "spread_home": -1.5,
   "ml_home": -115.0,
   "ml_away": -105.0,
@@ -64,7 +64,7 @@
   "home_team": "CHA",
   "away_team": "ATL",
   "total_line": 226.5,
-  "spread_home": 3.5,
+  "spread_home": 2.5,
   "ml_home": 114.0,
   "ml_away": -135.0,
   "odds_provider": "Draft Kings"
@@ -91,7 +91,7 @@
   "neutral": false,
   "home_team": "ORL",
   "away_team": "MIN",
-  "total_line": 239.5,
+  "total_line": 237.5,
   "spread_home": 1.5,
   "ml_home": 105.0,
   "ml_away": -125.0,
@@ -106,9 +106,9 @@
   "home_team": "WSH",
   "away_team": "TOR",
   "total_line": 236.5,
-  "spread_home": 4.5,
-  "ml_home": 160.0,
-  "ml_away": -192.0,
+  "spread_home": 5.5,
+  "ml_home": 170.0,
+  "ml_away": -205.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -121,8 +121,8 @@
   "away_team": "DET",
   "total_line": 237.5,
   "spread_home": -1.5,
-  "ml_home": -130.0,
-  "ml_away": 110.0,
+  "ml_home": -125.0,
+  "ml_away": 105.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -148,9 +148,9 @@
   "home_team": "UTAH",
   "away_team": "NO",
   "total_line": 241.5,
-  "spread_home": -4.5,
-  "ml_home": -166.0,
-  "ml_away": 140.0,
+  "spread_home": -3.5,
+  "ml_home": -142.0,
+  "ml_away": 120.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -177,8 +177,8 @@
   "away_team": "LAC",
   "total_line": 228.5,
   "spread_home": -9.5,
-  "ml_home": -425.0,
-  "ml_away": 330.0,
+  "ml_home": -395.0,
+  "ml_away": 310.0,
   "odds_provider": "Draft Kings"
  },
  {
