@@ -1,19 +1,5 @@
 [
  {
-  "game_id": "401909093",
-  "game_date": "2026-10-22",
-  "start_utc": "2026-10-22T23:00Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "PHI",
-  "away_team": "CLE",
-  "total_line": 236.5,
-  "spread_home": -2.5,
-  "ml_home": -142.0,
-  "ml_away": 120.0,
-  "odds_provider": "Draft Kings"
- },
- {
   "game_id": "401909094",
   "game_date": "2026-10-22",
   "start_utc": "2026-10-23T01:30Z",
@@ -22,7 +8,7 @@
   "home_team": "OKC",
   "away_team": "DEN",
   "total_line": 236.5,
-  "spread_home": -8.5,
+  "spread_home": -7.5,
   "ml_home": -340.0,
   "ml_away": 270.0,
   "odds_provider": "Draft Kings"
@@ -49,10 +35,10 @@
   "neutral": false,
   "home_team": "BOS",
   "away_team": "NY",
-  "total_line": 223.5,
+  "total_line": 224.5,
   "spread_home": -2.5,
-  "ml_home": -135.0,
-  "ml_away": 114.0,
+  "ml_home": -142.0,
+  "ml_away": 120.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -63,10 +49,10 @@
   "neutral": false,
   "home_team": "CHA",
   "away_team": "ATL",
-  "total_line": 226.5,
+  "total_line": 225.5,
   "spread_home": 2.5,
-  "ml_home": 114.0,
-  "ml_away": -135.0,
+  "ml_home": 120.0,
+  "ml_away": -142.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -78,7 +64,7 @@
   "home_team": "IND",
   "away_team": "DAL",
   "total_line": 236.5,
-  "spread_home": -5.5,
+  "spread_home": -6.5,
   "ml_home": -225.0,
   "ml_away": 185.0,
   "odds_provider": "Draft Kings"
@@ -91,7 +77,7 @@
   "neutral": false,
   "home_team": "ORL",
   "away_team": "MIN",
-  "total_line": 237.5,
+  "total_line": 236.5,
   "spread_home": 1.5,
   "ml_home": 105.0,
   "ml_away": -125.0,
@@ -107,8 +93,8 @@
   "away_team": "TOR",
   "total_line": 236.5,
   "spread_home": 5.5,
-  "ml_home": 170.0,
-  "ml_away": -205.0,
+  "ml_home": 180.0,
+  "ml_away": -218.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -120,9 +106,9 @@
   "home_team": "MIA",
   "away_team": "DET",
   "total_line": 237.5,
-  "spread_home": -1.5,
-  "ml_home": -125.0,
-  "ml_away": 105.0,
+  "spread_home": 1.5,
+  "ml_home": -110.0,
+  "ml_away": -110.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -133,10 +119,10 @@
   "neutral": false,
   "home_team": "SA",
   "away_team": "HOU",
-  "total_line": 227.5,
-  "spread_home": -6.5,
-  "ml_home": -230.0,
-  "ml_away": 190.0,
+  "total_line": 226.5,
+  "spread_home": -5.5,
+  "ml_home": -218.0,
+  "ml_away": 180.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -147,10 +133,10 @@
   "neutral": false,
   "home_team": "UTAH",
   "away_team": "NO",
-  "total_line": 241.5,
-  "spread_home": -3.5,
-  "ml_home": -142.0,
-  "ml_away": 120.0,
+  "total_line": 238.5,
+  "spread_home": -2.5,
+  "ml_home": -135.0,
+  "ml_away": 114.0,
   "odds_provider": "Draft Kings"
  },
  {
