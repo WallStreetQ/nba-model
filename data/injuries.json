@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-22T20:45:02-04:00",
- "official_report": "2026-10-22T20:45:00-04:00",
+ "fetched_at": "2026-10-22T23:09:44-04:00",
+ "official_report": "2026-10-22T23:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -103,12 +103,12 @@
    "player_id": "4848625",
    "name": "Dailyn Swain",
    "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
+   "detail": "Not Specified Other Illness",
    "return_date": "2026-10-23",
    "comment": "Swain (illness) is questionable for Friday's game against the Bucks.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Other Illness"
+   "reason": "Not Specified Other Illness"
   },
   {
    "team": "CHI",
@@ -199,12 +199,12 @@
    "player_id": "4593125",
    "name": "Santi Aldama",
    "espn_status": "Out",
-   "detail": "Not Specified Leg Knee",
+   "detail": "Right Leg Knee",
    "return_date": "2026-10-24",
    "comment": "Aldama (knee) has been ruled out for Friday's game against the Pacers.",
    "status": "Out",
    "official_status": null,
-   "reason": "Not Specified Leg Knee"
+   "reason": "Right Leg Knee"
   },
   {
    "team": "DAL",
@@ -403,12 +403,12 @@
    "player_id": "6580",
    "name": "Bradley Beal",
    "espn_status": "Out",
-   "detail": "Not Specified Leg Knee",
+   "detail": "Right Leg Knee",
    "return_date": "2026-11-08",
    "comment": "Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports.",
    "status": "Out",
    "official_status": null,
-   "reason": "Not Specified Leg Knee"
+   "reason": "Right Leg Knee"
   },
   {
    "team": "LAC",
@@ -439,24 +439,24 @@
    "player_id": "3913176",
    "name": "Brandon Ingram",
    "espn_status": "Out",
-   "detail": "Not Specified Leg Achilles",
+   "detail": "Right Leg Heel",
    "return_date": "2026-11-08",
    "comment": "Ingram won't be ready for the start of the season due to a partially torn Achilles, per Joey Linn of SI.com.",
    "status": "Out",
    "official_status": null,
-   "reason": "Not Specified Leg Achilles"
+   "reason": "Right Leg Heel"
   },
   {
    "team": "LAC",
    "player_id": "4396818",
    "name": "Jordan Miller",
    "espn_status": "Out",
-   "detail": "Arm Shoulder",
+   "detail": "Left Arm Shoulder",
    "return_date": "2027-03-02",
    "comment": "Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.",
    "status": "Out",
    "official_status": null,
-   "reason": "Arm Shoulder"
+   "reason": "Left Arm Shoulder"
   },
   {
    "team": "LAL",
@@ -499,12 +499,12 @@
    "player_id": "4903027",
    "name": "Cedric Coward",
    "espn_status": "Day-To-Day",
-   "detail": "Arm Wrist",
+   "detail": "Left Arm Wrist",
    "return_date": "2026-10-23",
    "comment": "Coward is doubtful for Friday's game against the Warriors due to a left wrist sprain.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Arm Wrist"
+   "reason": "Left Arm Wrist"
   },
   {
    "team": "MEM",
@@ -619,12 +619,12 @@
    "player_id": "3912848",
    "name": "Dean Wade",
    "espn_status": "Out",
-   "detail": "Not Specified Leg Ankle",
+   "detail": "Left Leg Ankle",
    "return_date": "2026-10-24",
    "comment": "Wade (ankle) is out for Thursday's game against the Cavaliers.",
    "status": "Out",
    "official_status": null,
-   "reason": "Not Specified Leg Ankle"
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "PHI",
@@ -643,12 +643,12 @@
    "player_id": "4870562",
    "name": "Dominick Barlow",
    "espn_status": "Out",
-   "detail": "Torso Back",
+   "detail": "Not Specified Torso Back",
    "return_date": "2026-11-02",
    "comment": "Barlow will miss at least the next two weeks of action due to a lumbar spine bone stress response, Adam Aaronson of PhillyVoice.com reports.",
    "status": "Out",
    "official_status": null,
-   "reason": "Torso Back"
+   "reason": "Not Specified Torso Back"
   },
   {
    "team": "PHI",
@@ -703,12 +703,12 @@
    "player_id": "4592435",
    "name": "Branden Carlson",
    "espn_status": "Out",
-   "detail": "Head Concussion",
+   "detail": "Not Specified Head Concussion",
    "return_date": "2026-10-27",
    "comment": "Carlson (concussion) has been ruled out for Friday's game against Sacramento.",
    "status": "Out",
    "official_status": null,
-   "reason": "Head Concussion"
+   "reason": "Not Specified Head Concussion"
   },
   {
    "team": "POR",
@@ -751,12 +751,12 @@
    "player_id": "3907387",
    "name": "Ben Simmons",
    "espn_status": "Out",
-   "detail": "Leg Achilles",
+   "detail": "Right Leg Achilles",
    "return_date": "2027-10-01",
    "comment": "Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.",
    "status": "Out",
    "official_status": null,
-   "reason": "Leg Achilles"
+   "reason": "Right Leg Achilles"
   },
   {
    "team": "SAC",
@@ -883,12 +883,12 @@
    "player_id": "5105841",
    "name": "Felix Okpara",
    "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
+   "detail": "Not Specified Other Illness",
    "return_date": "2026-10-23",
    "comment": "Okpara (illness) is questionable for Friday's game against Toronto.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Other Illness"
+   "reason": "Not Specified Other Illness"
   },
   {
    "team": "WSH",
