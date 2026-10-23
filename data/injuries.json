@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-22T23:09:44-04:00",
- "official_report": "2026-10-22T23:00:00-04:00",
+ "fetched_at": "2026-10-23T11:43:56-04:00",
+ "official_report": "2026-10-23T11:30:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -100,24 +100,24 @@
   },
   {
    "team": "CHI",
-   "player_id": "4848625",
-   "name": "Dailyn Swain",
+   "player_id": "4683750",
+   "name": "Jordan Hawkins",
    "espn_status": "Day-To-Day",
    "detail": "Not Specified Other Illness",
    "return_date": "2026-10-23",
-   "comment": "Swain (illness) is questionable for Friday's game against the Bucks.",
+   "comment": "Hawkins (illness) is probable for Friday's game against the Hawks.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Other Illness"
   },
   {
    "team": "CHI",
-   "player_id": "4683750",
-   "name": "Jordan Hawkins",
+   "player_id": "4848625",
+   "name": "Dailyn Swain",
    "espn_status": "Day-To-Day",
    "detail": "Not Specified Other Illness",
    "return_date": "2026-10-23",
-   "comment": "Hawkins (illness) is questionable for Friday's game against the Bucks.",
+   "comment": "Swain (illness) is now probable for Friday against the Bucks.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Other Illness"
@@ -234,13 +234,25 @@
    "team": "DEN",
    "player_id": "4592427",
    "name": "Spencer Jones",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Not Specified Leg Hamstring",
    "return_date": "2026-10-24",
    "comment": "Jones (hamstring) has been ruled out for Thursday's game against Oklahoma City, Justin Martinez of The Oklahoman reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Leg Hamstring"
+  },
+  {
+   "team": "DEN",
+   "player_id": "3138196",
+   "name": "Cameron Johnson",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-24",
+   "comment": "Johnson (ankle) didn't return to Thursday's game against Oklahoma City. He ended with five points (2-3 FG, 1-1 3Pt), two rebounds and one assist in 11 minutes.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
   },
   {
    "team": "DEN",
@@ -616,27 +628,39 @@
   },
   {
    "team": "PHI",
-   "player_id": "3912848",
-   "name": "Dean Wade",
-   "espn_status": "Out",
-   "detail": "Left Leg Ankle",
+   "player_id": "3059318",
+   "name": "Joel Embiid",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Rest",
    "return_date": "2026-10-24",
-   "comment": "Wade (ankle) is out for Thursday's game against the Cavaliers.",
-   "status": "Out",
+   "comment": "Embiid recorded 24 points (8-16 FG, 1-4 3Pt, 7-9 FT), seven rebounds and one assist in 34 minutes during Thursday's 114-106 win over the Cavaliers.",
+   "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Left Leg Ankle"
+   "reason": "Other Rest"
   },
   {
    "team": "PHI",
    "player_id": "3904625",
    "name": "Tacko Fall",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Leg Quadriceps",
    "return_date": "2026-10-24",
    "comment": "Fall (quadriceps) is out for Thursday's game against Cleveland.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Quadriceps"
+  },
+  {
+   "team": "PHI",
+   "player_id": "3912848",
+   "name": "Dean Wade",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-10-24",
+   "comment": "Wade (ankle) is out for Thursday's game against the Cavaliers.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "PHI",
