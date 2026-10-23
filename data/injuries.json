@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-23T11:43:56-04:00",
- "official_report": "2026-10-23T11:30:00-04:00",
+ "fetched_at": "2026-10-23T15:55:12-04:00",
+ "official_report": "2026-10-23T15:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -97,66 +97,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4683750",
-   "name": "Jordan Hawkins",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Other Illness",
-   "return_date": "2026-10-23",
-   "comment": "Hawkins (illness) is probable for Friday's game against the Hawks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Other Illness"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4848625",
-   "name": "Dailyn Swain",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Other Illness",
-   "return_date": "2026-10-23",
-   "comment": "Swain (illness) is now probable for Friday against the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Other Illness"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4066650",
-   "name": "Zach Collins",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Quadriceps",
-   "return_date": "2026-10-23",
-   "comment": "Collins (quadriceps) is probable for Friday's game against the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Quadriceps"
-  },
-  {
-   "team": "CHI",
-   "player_id": "5105555",
-   "name": "Tobe Awaka",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-23",
-   "comment": "Awaka (knee) is probable for Friday's game against the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Knee"
-  },
-  {
-   "team": "CHI",
-   "player_id": "4871145",
-   "name": "Josh Giddey",
-   "espn_status": "Day-To-Day",
-   "detail": "Arm Wrist",
-   "return_date": "2026-10-23",
-   "comment": "Giddey (wrist) is probable for Friday's game against the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Arm Wrist"
   },
   {
    "team": "CHI",
@@ -265,18 +205,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "DET",
-   "player_id": "2990962",
-   "name": "Taurean Prince",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Personal",
-   "return_date": "2026-10-23",
-   "comment": "Prince (personal) is listed as probable for Friday's game against the Heat.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Personal"
   },
   {
    "team": "GS",
@@ -544,6 +472,18 @@
   },
   {
    "team": "OKC",
+   "player_id": "5106270",
+   "name": "Otega Oweh",
+   "espn_status": "Out",
+   "detail": "Right Leg Achilles",
+   "return_date": "2027-07-01",
+   "comment": "The Thunder plan to waive Oweh (Achilles) on Friday.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Achilles"
+  },
+  {
+   "team": "OKC",
    "player_id": "5159925",
    "name": "Nikola Topic",
    "espn_status": "Out",
@@ -567,25 +507,13 @@
    "reason": "Right Leg Knee"
   },
   {
-   "team": "OKC",
-   "player_id": "5106270",
-   "name": "Otega Oweh",
-   "espn_status": "Out",
-   "detail": "Right Leg Achilles",
-   "return_date": "2027-07-01",
-   "comment": "Oweh (Achilles) underwent surgery Wednesday and will miss the entirety of the 2026-27 season, Brandon Rahbar of DailyThunder.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Achilles"
-  },
-  {
    "team": "ORL",
    "player_id": "4712849",
    "name": "Anthony Black",
    "espn_status": "Out",
    "detail": "Right Leg Ankle",
    "return_date": "2026-10-25",
-   "comment": "Black (ankle) has been ruled out for Friday's game against the Timberwolves.",
+   "comment": "Black (ankle) has been ruled out for Friday's game against Minnesota but participated in shootaround and has experienced no setbacks in his recovery, Jason Beede of the Orlando Sentinel reports.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
@@ -763,12 +691,12 @@
    "player_id": "4066262",
    "name": "Malik Monk",
    "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-10-23",
+   "detail": null,
+   "return_date": null,
    "comment": "Monk (ankle) is probable for Friday's game against Portland.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Left Leg Ankle"
+   "reason": null
   },
   {
    "team": "SAC",
@@ -808,27 +736,27 @@
   },
   {
    "team": "SA",
-   "player_id": "4066259",
-   "name": "De'Aaron Fox",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Arm Wrist",
-   "return_date": "2026-10-23",
-   "comment": "Fox (wrist) is questionable to play in Friday's game against the Rockets.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Arm Wrist"
-  },
-  {
-   "team": "SA",
    "player_id": "4395723",
    "name": "Keldon Johnson",
    "espn_status": "Day-To-Day",
    "detail": "Head Mouth",
    "return_date": "2026-10-23",
-   "comment": "Johnson is listed as questionable for Friday's game against the Rockets due to a mouth laceration.",
+   "comment": "Johnson (mouth) participated in shooting drills after Friday's morning shootaround, per Tom Orsborn of the San Antonio Express-News.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Head Mouth"
+  },
+  {
+   "team": "SA",
+   "player_id": "4066259",
+   "name": "De'Aaron Fox",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Arm Wrist",
+   "return_date": "2026-10-23",
+   "comment": "Fox (wrist) participated in Friday's morning shootaround, Tom Orsborn of the San Antonio Express-News reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Arm Wrist"
   },
   {
    "team": "SA",
@@ -877,18 +805,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "UTAH",
-   "player_id": "4065673",
-   "name": "Tony Bradley",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Quadriceps",
-   "return_date": "2026-10-23",
-   "comment": "Bradley (quadriceps) is questionable for Friday's game against New Orleans.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Quadriceps"
   },
   {
    "team": "UTAH",
@@ -2685,6 +2601,11 @@
     "player_id": "3062679",
     "name": "Josh Hart",
     "position": "G"
+   },
+   {
+    "player_id": "4897943",
+    "name": "Dalton Knecht",
+    "position": "F"
    },
    {
     "player_id": "4433225",
