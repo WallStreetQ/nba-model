@@ -853,9 +853,34 @@
     "2H Over 115.5",
     "MEM 2H +5.5"
    ]
+  },
+  "401909853": {
+   "game_id": "401909853",
+   "date": "2026-10-24",
+   "start_utc": "2026-10-24T22:00Z",
+   "home": "CHA",
+   "away": "MIA",
+   "priced_at": "2026-10-24T19:34:09-04:00",
+   "late": true,
+   "pre_source": "prediction log",
+   "h1_home": 66.0,
+   "h1_away": 58.0,
+   "pre_2h": 117.6737010793911,
+   "pre_2hm": 1.477099125229259,
+   "mu_2h": 117.73443468068365,
+   "sd_2h": 13.844246512381282,
+   "mu_2hm": 0.4390024517206661,
+   "sd_2hm": 10.989356970034146,
+   "p_home_win": 0.7807984173460001,
+   "h2_total_line": null,
+   "h2_spread_home": null,
+   "book": null,
+   "h1_line": "MIA 58 \u2013 66 CHA",
+   "markets": [],
+   "picks": []
   }
  },
- "model_through": "2026-10-22",
+ "model_through": "2026-10-23",
  "halftime_fitted": true,
- "updated_at": "2026-10-24T00:00:06-04:00"
+ "updated_at": "2026-10-24T19:34:09-04:00"
 }
