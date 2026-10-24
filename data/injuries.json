@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-23T15:55:12-04:00",
- "official_report": "2026-10-23T15:45:00-04:00",
+ "fetched_at": "2026-10-23T20:49:43-04:00",
+ "official_report": "2026-10-23T20:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -42,11 +42,11 @@
    "team": "BKN",
    "player_id": "5105626",
    "name": "Tyler Bilodeau",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Not Specified Arm Shoulder",
-   "return_date": "2026-10-24",
-   "comment": "Bilodeau will miss the season opener against the Hornets on Wednesday due to a shoulder sprain, Sharif Phillips-Keaton of USA Today reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-25",
+   "comment": "Bilodeau (shoulder) has been ruled out for Saturday's game in Cleveland.",
+   "status": "Out",
    "official_status": null,
    "reason": "Not Specified Arm Shoulder"
   },
@@ -112,13 +112,25 @@
   },
   {
    "team": "DAL",
+   "player_id": "5041939",
+   "name": "Cooper Flagg",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Arm Shoulder",
+   "return_date": "2026-10-23",
+   "comment": "Flagg exited to the locker room in the second quarter of Friday's game against Indiana due to an apparent left shoulder injury, Grant Afseth of DallasHoopsJournal.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Arm Shoulder"
+  },
+  {
+   "team": "DAL",
    "player_id": "5105806",
    "name": "Jett Howard",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Calf",
-   "return_date": "2026-10-23",
-   "comment": "Howard (calf) is listed as doubtful for Friday's game against the Pacers.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-24",
+   "comment": "Howard (calf) is out for Friday's game in Indiana.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Calf"
   },
@@ -174,11 +186,11 @@
    "team": "DEN",
    "player_id": "4592427",
    "name": "Spencer Jones",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Not Specified Leg Hamstring",
-   "return_date": "2026-10-24",
-   "comment": "Jones (hamstring) has been ruled out for Thursday's game against Oklahoma City, Justin Martinez of The Oklahoman reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-26",
+   "comment": "Jones (hamstring) is out for Saturday's game against the Pelicans.",
+   "status": "Out",
    "official_status": null,
    "reason": "Not Specified Leg Hamstring"
   },
@@ -186,13 +198,25 @@
    "team": "DEN",
    "player_id": "3138196",
    "name": "Cameron Johnson",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Ankle",
-   "return_date": "2026-10-24",
-   "comment": "Johnson (ankle) didn't return to Thursday's game against Oklahoma City. He ended with five points (2-3 FG, 1-1 3Pt), two rebounds and one assist in 11 minutes.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-26",
+   "comment": "Johnson (ankle) has been ruled out for Saturday's game against New Orleans.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
+  },
+  {
+   "team": "DEN",
+   "player_id": "4065813",
+   "name": "Alpha Diallo",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Arm Wrist",
+   "return_date": "2026-10-24",
+   "comment": "Diallo is questionable for Saturday's game versus the Pelicans due to a right wrist sprain.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Arm Wrist"
   },
   {
    "team": "DEN",
@@ -210,25 +234,13 @@
    "team": "GS",
    "player_id": "4397886",
    "name": "Charles Bassey",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Leg Knee",
-   "return_date": "2026-10-23",
-   "comment": "Bassey (knee) is listed as questionable for Friday's game against Memphis.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-24",
+   "comment": "Bassey (knee) is out for Friday's game versus the Grizzlies.",
+   "status": "Out",
    "official_status": null,
    "reason": "Leg Knee"
-  },
-  {
-   "team": "GS",
-   "player_id": "4709138",
-   "name": "Brandin Podziemski",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-23",
-   "comment": "Podziemski (back) is questionable for Friday's game against the Grizzlies.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
   },
   {
    "team": "GS",
@@ -268,51 +280,39 @@
   },
   {
    "team": "HOU",
-   "player_id": "2991235",
-   "name": "Steven Adams",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Calf",
-   "return_date": "2026-10-23",
-   "comment": "Adams (calf) is questionable to play in Friday's game against the Spurs.",
-   "status": "Day-To-Day",
+   "player_id": "4711272",
+   "name": "Reed Sheppard",
+   "espn_status": "Out",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-10-24",
+   "comment": "Sheppard (knee) is out for Friday's game in San Antonio.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Right Leg Calf"
+   "reason": "Left Leg Knee"
   },
   {
    "team": "HOU",
-   "player_id": "4711272",
-   "name": "Reed Sheppard",
+   "player_id": "2991235",
+   "name": "Steven Adams",
    "espn_status": "Day-To-Day",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-23",
-   "comment": "Sheppard (knee) is listed as questionable for Friday's game against the Spurs.",
+   "detail": null,
+   "return_date": null,
+   "comment": "Adams (calf) is questionable to play in Friday's game against the Spurs.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Left Leg Knee"
+   "reason": null
   },
   {
    "team": "IND",
    "player_id": "4433076",
    "name": "Ben Sheppard",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Knee",
-   "return_date": "2026-10-23",
-   "comment": "Sheppard (knee) is listed as questionable for Friday's game against the Mavericks.",
-   "status": "Day-To-Day",
+   "return_date": "2026-12-01",
+   "comment": "Sheppard has been diagnosed with a torn meniscus in his left knee and is without a timetable for a return to game action, Scott Agness of FieldhouseFiles.com reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "IND",
-   "player_id": "4396909",
-   "name": "Aaron Nesmith",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-10-23",
-   "comment": "Nesmith (hamstring) is listed as questionable for Friday's game against the Mavericks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Hamstring"
   },
   {
    "team": "IND",
@@ -400,6 +400,18 @@
   },
   {
    "team": "LAL",
+   "player_id": "4592691",
+   "name": "Jake LaRavia",
+   "espn_status": "Out",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-25",
+   "comment": "LaRavia (ankle) has been ruled out for Friday's game against the Clippers, Mark Medina of TheSportingTribune.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
+  },
+  {
+   "team": "LAL",
    "player_id": "5060631",
    "name": "Adou Thiero",
    "espn_status": "Out",
@@ -421,18 +433,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Torso Oblique"
-  },
-  {
-   "team": "LAL",
-   "player_id": "4592691",
-   "name": "Jake LaRavia",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Ankle",
-   "return_date": "2026-10-23",
-   "comment": "LaRavia (ankle) is listed as questionable for Friday's game against the Clippers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Ankle"
   },
   {
    "team": "MEM",
@@ -556,25 +556,13 @@
   },
   {
    "team": "PHI",
-   "player_id": "3059318",
-   "name": "Joel Embiid",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-10-24",
-   "comment": "Embiid recorded 24 points (8-16 FG, 1-4 3Pt, 7-9 FT), seven rebounds and one assist in 34 minutes during Thursday's 114-106 win over the Cavaliers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
-  },
-  {
-   "team": "PHI",
    "player_id": "3904625",
    "name": "Tacko Fall",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Quadriceps",
-   "return_date": "2026-10-24",
-   "comment": "Fall (quadriceps) is out for Thursday's game against Cleveland.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-25",
+   "comment": "Fall (quadriceps) is out for Saturday's game against the Bucks.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Quadriceps"
   },
@@ -585,10 +573,22 @@
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Ankle",
    "return_date": "2026-10-24",
-   "comment": "Wade (ankle) is out for Thursday's game against the Cavaliers.",
+   "comment": "Wade is listed as questionable for Saturday's game against the Bucks due to a left ankle sprain.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "PHI",
+   "player_id": "1966",
+   "name": "LeBron James",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-10-24",
+   "comment": "James (back) is questionable for Saturday's game against the Bucks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
   },
   {
    "team": "PHI",
@@ -621,7 +621,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Knee",
    "return_date": "2026-10-24",
-   "comment": "Kennard (knee) won't play Wednesday versus Portland, Duane Rankin of The Arizona Republic reports.",
+   "comment": "Kennard (knee) is questionable to play Saturday against the Warriors.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -631,12 +631,12 @@
    "player_id": "4601023",
    "name": "Oso Ighodaro",
    "espn_status": "Day-To-Day",
-   "detail": "Right Torso Hip",
+   "detail": "Not Specified Torso Oblique",
    "return_date": "2026-10-24",
-   "comment": "Ighodaro (hip) didn't return to Wednesday's 124-83 loss to Portland, Duane Rankin reports. He finished with eight points (4-7 FG, 0-2 FT), three rebounds and three assists over 15 minutes.",
+   "comment": "Ighodaro (oblique) is listed as doubtful for Saturday's game against Golden State.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Right Torso Hip"
+   "reason": "Not Specified Torso Oblique"
   },
   {
    "team": "PHX",
@@ -688,18 +688,6 @@
   },
   {
    "team": "SAC",
-   "player_id": "4066262",
-   "name": "Malik Monk",
-   "espn_status": "Day-To-Day",
-   "detail": null,
-   "return_date": null,
-   "comment": "Monk (ankle) is probable for Friday's game against Portland.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": null
-  },
-  {
-   "team": "SAC",
    "player_id": "3907387",
    "name": "Ben Simmons",
    "espn_status": "Out",
@@ -733,30 +721,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "SA",
-   "player_id": "4395723",
-   "name": "Keldon Johnson",
-   "espn_status": "Day-To-Day",
-   "detail": "Head Mouth",
-   "return_date": "2026-10-23",
-   "comment": "Johnson (mouth) participated in shooting drills after Friday's morning shootaround, per Tom Orsborn of the San Antonio Express-News.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Head Mouth"
-  },
-  {
-   "team": "SA",
-   "player_id": "4066259",
-   "name": "De'Aaron Fox",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Arm Wrist",
-   "return_date": "2026-10-23",
-   "comment": "Fox (wrist) participated in Friday's morning shootaround, Tom Orsborn of the San Antonio Express-News reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Arm Wrist"
   },
   {
    "team": "SA",
@@ -817,18 +781,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "WSH",
-   "player_id": "5105841",
-   "name": "Felix Okpara",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Other Illness",
-   "return_date": "2026-10-23",
-   "comment": "Okpara (illness) is questionable for Friday's game against Toronto.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Other Illness"
   },
   {
    "team": "WSH",
@@ -3220,6 +3172,11 @@
     "player_id": "4594327",
     "name": "Keegan Murray",
     "position": "F"
+   },
+   {
+    "player_id": "4709131",
+    "name": "Sean Pedulla",
+    "position": "G"
    },
    {
     "player_id": "4279318",
