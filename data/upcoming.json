@@ -7,10 +7,10 @@
   "neutral": false,
   "home_team": "UTAH",
   "away_team": "LAL",
-  "total_line": 237.5,
+  "total_line": 236.5,
   "spread_home": 6.5,
-  "ml_home": 200.0,
-  "ml_away": -245.0,
+  "ml_home": 205.0,
+  "ml_away": -250.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -23,8 +23,8 @@
   "away_team": "IND",
   "total_line": 231.5,
   "spread_home": 6.5,
-  "ml_home": 220.0,
-  "ml_away": -270.0,
+  "ml_home": 200.0,
+  "ml_away": -245.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -37,8 +37,8 @@
   "away_team": "ORL",
   "total_line": 224.5,
   "spread_home": -7.5,
-  "ml_home": -298.0,
-  "ml_away": 240.0,
+  "ml_home": -285.0,
+  "ml_away": 230.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -49,7 +49,7 @@
   "neutral": false,
   "home_team": "MIN",
   "away_team": "TOR",
-  "total_line": 230.5,
+  "total_line": 228.5,
   "spread_home": -1.5,
   "ml_home": -115.0,
   "ml_away": -105.0,
@@ -64,9 +64,9 @@
   "home_team": "OKC",
   "away_team": "LAC",
   "total_line": 224.5,
-  "spread_home": -15.5,
-  "ml_home": -1350.0,
-  "ml_away": 800.0,
+  "spread_home": -16.5,
+  "ml_home": -1450.0,
+  "ml_away": 850.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -79,8 +79,8 @@
   "away_team": "DET",
   "total_line": 227.5,
   "spread_home": 1.5,
-  "ml_home": -102.0,
-  "ml_away": -118.0,
+  "ml_home": -108.0,
+  "ml_away": -112.0,
   "odds_provider": "Draft Kings"
  },
  {

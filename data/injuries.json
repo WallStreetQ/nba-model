@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-25T10:56:30-04:00",
- "official_report": "2026-10-25T10:45:00-04:00",
+ "fetched_at": "2026-10-25T14:54:53-04:00",
+ "official_report": "2026-10-25T14:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -42,13 +42,13 @@
    "team": "BKN",
    "player_id": "5105626",
    "name": "Tyler Bilodeau",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Arm Shoulder",
-   "return_date": "2026-10-25",
-   "comment": "Bilodeau (shoulder) has been ruled out for Saturday's game in Cleveland.",
-   "status": "Day-To-Day",
+   "espn_status": "Out",
+   "detail": "Right Arm Shoulder",
+   "return_date": "2026-10-27",
+   "comment": "Bilodeau (shoulder) has been ruled out for Sunday's game against Indiana.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Not Specified Arm Shoulder"
+   "reason": "Right Arm Shoulder"
   },
   {
    "team": "BKN",
@@ -117,7 +117,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Groin Groin",
    "return_date": "2026-10-26",
-   "comment": "Williams (groin) is out for Saturday's game versus the Wizards, Joel Lorenzi of The Athletic reports.",
+   "comment": "Williams (groin) is listed as questionable for Monday's game against Boston.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Groin Groin"
@@ -129,7 +129,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Head Head",
    "return_date": "2026-10-26",
-   "comment": "Essengue (head) won't suit up for Saturday's game against the Wizards, Joel Lorenzi of The Athletic reports.",
+   "comment": "Essengue (head) is listed as questionable for Monday's game against Boston.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Head Head"
@@ -273,7 +273,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Ankle",
    "return_date": "2026-10-25",
-   "comment": "Thompson (ankle) is listed as questionable for Sunday's game against Philadelphia.",
+   "comment": "Thompson (ankle) did not participate in Sunday morning's shootaround, Coty M. Davis of The Detroit News reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Ankle"
@@ -284,8 +284,8 @@
    "name": "Jalen Duren",
    "espn_status": "Out",
    "detail": "Right Leg Hamstring",
-   "return_date": "2026-10-27",
-   "comment": "Duren has been ruled out for Sunday's game against the 76ers due to a right hamstring strain, Eric Vincent of ClutchPoints.com reports.",
+   "return_date": "2026-11-09",
+   "comment": "Duren will be re-evaluated in two weeks due to a right hamstring strain, Eric Vincent of ClutchPoints.com reports.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Hamstring"
@@ -712,51 +712,39 @@
   },
   {
    "team": "PHI",
-   "player_id": "1966",
-   "name": "LeBron James",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-25",
-   "comment": "James (back) has been ruled out for Saturday's game against the Bucks, Adam Aaronson of PhillyVoice.com reports.",
-   "status": "Day-To-Day",
+   "player_id": "3904625",
+   "name": "Tacko Fall",
+   "espn_status": "Out",
+   "detail": "Left Leg Quadriceps",
+   "return_date": "2026-10-28",
+   "comment": "Fall (quadriceps) has been ruled out for Sunday's game against Detroit.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3059318",
-   "name": "Joel Embiid",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-10-25",
-   "comment": "Embiid produced 28 points (8-20 FG, 0-3 3Pt, 12-14 FT), 11 rebounds, 10 assists, one steal and four turnovers across 36 minutes in Saturday's 127-116 win over the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
+   "reason": "Left Leg Quadriceps"
   },
   {
    "team": "PHI",
    "player_id": "4432446",
    "name": "Jabari Walker",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-10-25",
-   "comment": "Walker (ankle) exited Saturday's 127-116 win over the Bucks in the third quarter and did not return, finishing with six points (2-3 FG, 2-3 FT), three rebounds, one assist and one steal across 12 minutes.",
-   "status": "Day-To-Day",
+   "espn_status": "Out",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-10-28",
+   "comment": "Walker has been ruled out for Sunday's game against the Pistons due to left knee soreness.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Right Leg Knee"
+   "reason": "Left Leg Knee"
   },
   {
    "team": "PHI",
-   "player_id": "3904625",
-   "name": "Tacko Fall",
+   "player_id": "3059318",
+   "name": "Joel Embiid",
    "espn_status": "Out",
-   "detail": "Left Leg Quadriceps",
-   "return_date": "2026-10-25",
-   "comment": "Fall (quadriceps) is out for Saturday's game against the Bucks.",
+   "detail": "Right Leg Heel",
+   "return_date": "2026-10-28",
+   "comment": "Embiid has been ruled out for Sunday's game against Detroit due to right plantar fasciitis management.",
    "status": "Out",
    "official_status": null,
-   "reason": "Left Leg Quadriceps"
+   "reason": "Right Leg Heel"
   },
   {
    "team": "PHI",
@@ -849,7 +837,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Leg Ankle",
    "return_date": "2026-10-25",
-   "comment": "Murray is questionable to play Sunday against the Grizzlies due to left ankle capsulitis.",
+   "comment": "Murray (ankle) has been downgraded to doubtful for Sunday's game against Memphis.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Ankle"
