@@ -1,75 +1,5 @@
 [
  {
-  "game_id": "401909853",
-  "game_date": "2026-10-24",
-  "start_utc": "2026-10-24T22:00Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "CHA",
-  "away_team": "MIA",
-  "total_line": 229.5,
-  "spread_home": 3.5,
-  "ml_home": 120.0,
-  "ml_away": -142.0,
-  "odds_provider": "Draft Kings"
- },
- {
-  "game_id": "401909854",
-  "game_date": "2026-10-24",
-  "start_utc": "2026-10-24T23:30Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "CLE",
-  "away_team": "BKN",
-  "total_line": 228.5,
-  "spread_home": -11.5,
-  "ml_home": -500.0,
-  "ml_away": 380.0,
-  "odds_provider": "Draft Kings"
- },
- {
-  "game_id": "401909855",
-  "game_date": "2026-10-24",
-  "start_utc": "2026-10-24T23:30Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "PHI",
-  "away_team": "MIL",
-  "total_line": 235.5,
-  "spread_home": -12.5,
-  "ml_home": -575.0,
-  "ml_away": 425.0,
-  "odds_provider": "Draft Kings"
- },
- {
-  "game_id": "401909857",
-  "game_date": "2026-10-24",
-  "start_utc": "2026-10-25T00:00Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "CHI",
-  "away_team": "WSH",
-  "total_line": 244.5,
-  "spread_home": -2.5,
-  "ml_home": -130.0,
-  "ml_away": 110.0,
-  "odds_provider": "Draft Kings"
- },
- {
-  "game_id": "401909858",
-  "game_date": "2026-10-24",
-  "start_utc": "2026-10-25T00:00Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "DAL",
-  "away_team": "SA",
-  "total_line": 229.5,
-  "spread_home": 14.5,
-  "ml_home": 600.0,
-  "ml_away": -900.0,
-  "odds_provider": "Draft Kings"
- },
- {
   "game_id": "401909856",
   "game_date": "2026-10-24",
   "start_utc": "2026-10-25T00:30Z",
@@ -78,10 +8,10 @@
   "home_team": "ATL",
   "away_team": "HOU",
   "total_line": 227.5,
-  "spread_home": -1.5,
-  "ml_home": -110.0,
-  "ml_away": -110.0,
-  "odds_provider": "Draft Kings"
+  "spread_home": 1.5,
+  "ml_home": -108.0,
+  "ml_away": -112.0,
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909859",
@@ -95,7 +25,7 @@
   "spread_home": -11.5,
   "ml_home": -485.0,
   "ml_away": 370.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909860",
@@ -105,11 +35,11 @@
   "neutral": false,
   "home_team": "PHX",
   "away_team": "GS",
-  "total_line": 222.5,
+  "total_line": 221.5,
   "spread_home": -9.5,
-  "ml_home": -375.0,
-  "ml_away": 295.0,
-  "odds_provider": "Draft Kings"
+  "ml_home": -410.0,
+  "ml_away": 320.0,
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909861",
