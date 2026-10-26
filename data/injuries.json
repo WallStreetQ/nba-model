@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-26T13:19:21-04:00",
- "official_report": "2026-10-26T13:15:00-04:00",
+ "fetched_at": "2026-10-26T14:50:25-04:00",
+ "official_report": "2026-10-26T14:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -164,7 +164,7 @@
    "name": "Caleb Martin",
    "espn_status": "Out",
    "detail": "Right Arm Thumb",
-   "return_date": "2026-10-26",
+   "return_date": "2026-11-02",
    "comment": "Martin (thumb) is out for Monday's game against the Heat, Mike Curtis of The Dallas Morning News reports.",
    "status": "Out",
    "official_status": null,
@@ -212,7 +212,7 @@
    "name": "Santi Aldama",
    "espn_status": "Out",
    "detail": "Right Leg Knee",
-   "return_date": "2026-10-28",
+   "return_date": "2026-11-02",
    "comment": "Aldama (knee) has been ruled out for Saturday's game against the Spurs.",
    "status": "Out",
    "official_status": null,
@@ -224,7 +224,7 @@
    "name": "Dereck Lively II",
    "espn_status": "Out",
    "detail": "Right Leg Foot",
-   "return_date": "2026-10-28",
+   "return_date": "2026-11-02",
    "comment": "Lively (foot) has been ruled out for Friday's game against the Pacers.",
    "status": "Out",
    "official_status": null,
@@ -412,15 +412,15 @@
   },
   {
    "team": "IND",
-   "player_id": "4017837",
-   "name": "Ivica Zubac",
+   "player_id": "4395712",
+   "name": "Andrew Nembhard",
    "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
+   "detail": "Head Neck",
    "return_date": "2026-10-26",
-   "comment": "Head coach Rick Carlisle said that X-rays on Zubac's sprained left ankle came back negative, but he's got some swelling and is unlikely to play Monday in Milwaukee, Scott Agness of FieldhouseFiles.com reports.",
+   "comment": "Nembhard (neck) is questionable for Monday's game against the Bucks.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Left Leg Ankle"
+   "reason": "Head Neck"
   },
   {
    "team": "IND",
@@ -428,11 +428,35 @@
    "name": "T.J. McConnell",
    "espn_status": "Out",
    "detail": "Right Leg Hamstring",
-   "return_date": "2026-10-26",
-   "comment": "McConnell (hamstring) is out for Sunday's game against the Nets.",
+   "return_date": "2026-10-28",
+   "comment": "McConnell (hamstring) is out for Monday's game against the Bucks.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Hamstring"
+  },
+  {
+   "team": "IND",
+   "player_id": "4396909",
+   "name": "Aaron Nesmith",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Hamstring",
+   "return_date": "2026-10-26",
+   "comment": "Nesmith (hamstring) is probable for Monday's game against the Bucks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Hamstring"
+  },
+  {
+   "team": "IND",
+   "player_id": "4017837",
+   "name": "Ivica Zubac",
+   "espn_status": "Out",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-10-28",
+   "comment": "Zubac (ankle) is out for Monday's game against the Bucks.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "IND",
@@ -616,6 +640,30 @@
   },
   {
    "team": "OKC",
+   "player_id": "4683692",
+   "name": "Cason Wallace",
+   "espn_status": "Out",
+   "detail": "Left Arm Shoulder",
+   "return_date": "2026-10-28",
+   "comment": "Wallace (shoulder) is out for Monday's game versus the Suns.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Arm Shoulder"
+  },
+  {
+   "team": "OKC",
+   "player_id": "4433255",
+   "name": "Chet Holmgren",
+   "espn_status": "Out",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-28",
+   "comment": "Holmgren (knee) is out for Monday's game versus the Suns.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "OKC",
    "player_id": "4593803",
    "name": "Jalen Williams",
    "espn_status": "Out",
@@ -628,30 +676,6 @@
   },
   {
    "team": "OKC",
-   "player_id": "4432823",
-   "name": "Jaylin Williams",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Arm Wrist",
-   "return_date": "2026-10-26",
-   "comment": "Williams won't return to Sunday's game against the Clippers due to right wrist soreness, Nick Crain of SLAM reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Arm Wrist"
-  },
-  {
-   "team": "OKC",
-   "player_id": "4683692",
-   "name": "Cason Wallace",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Arm Shoulder",
-   "return_date": "2026-10-26",
-   "comment": "Wallace (shoulder) will not return to Sunday's game against the Clippers, Rylan Stiles of SI.com  reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Arm Shoulder"
-  },
-  {
-   "team": "OKC",
    "player_id": "5106270",
    "name": "Otega Oweh",
    "espn_status": "Out",
@@ -661,30 +685,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Achilles"
-  },
-  {
-   "team": "OKC",
-   "player_id": "5159925",
-   "name": "Nikola Topic",
-   "espn_status": "Out",
-   "detail": "Not Specified Torso Back",
-   "return_date": "2026-10-26",
-   "comment": "Topic (back) won't play in Thursday's game against the Nuggets.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Not Specified Torso Back"
-  },
-  {
-   "team": "OKC",
-   "player_id": "5061603",
-   "name": "Thomas Sorber",
-   "espn_status": "Out",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-10-26",
-   "comment": "Sorber (knee) is listed as out for Thursday's game against Denver.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Knee"
   },
   {
    "team": "ORL",
@@ -822,11 +822,11 @@
    "team": "PHX",
    "player_id": "4601023",
    "name": "Oso Ighodaro",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Not Specified Torso Oblique",
-   "return_date": "2026-10-26",
-   "comment": "Ighodaro (oblique) is doubtful for Monday's matchup with the Thunder, Duane Rankin of The Arizona Republic reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-30",
+   "comment": "Ighodaro (oblique) is out for Monday's matchup with the Thunder.",
+   "status": "Out",
    "official_status": null,
    "reason": "Not Specified Torso Oblique"
   },

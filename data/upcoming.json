@@ -9,8 +9,8 @@
   "away_team": "WSH",
   "total_line": 227.5,
   "spread_home": -2.5,
-  "ml_home": -135.0,
-  "ml_away": 114.0,
+  "ml_home": -142.0,
+  "ml_away": 120.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -23,8 +23,8 @@
   "away_team": "MIN",
   "total_line": 232.5,
   "spread_home": -5.5,
-  "ml_home": -205.0,
-  "ml_away": 170.0,
+  "ml_home": -192.0,
+  "ml_away": 160.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -35,7 +35,7 @@
   "neutral": false,
   "home_team": "BOS",
   "away_team": "CHI",
-  "total_line": 231.5,
+  "total_line": 233.5,
   "spread_home": -14.5,
   "ml_home": -750.0,
   "ml_away": 525.0,
@@ -49,7 +49,7 @@
   "neutral": false,
   "home_team": "MIA",
   "away_team": "DAL",
-  "total_line": 241.5,
+  "total_line": 240.5,
   "spread_home": -7.5,
   "ml_home": -285.0,
   "ml_away": 230.0,
@@ -77,10 +77,10 @@
   "neutral": false,
   "home_team": "OKC",
   "away_team": "PHX",
-  "total_line": 220.5,
-  "spread_home": -10.5,
-  "ml_home": -410.0,
-  "ml_away": 320.0,
+  "total_line": 221.5,
+  "spread_home": -8.5,
+  "ml_home": -325.0,
+  "ml_away": 260.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -231,11 +231,11 @@
   "neutral": false,
   "home_team": "IND",
   "away_team": "PHI",
-  "total_line": null,
-  "spread_home": null,
-  "ml_home": null,
-  "ml_away": null,
-  "odds_provider": null
+  "total_line": 237.5,
+  "spread_home": 1.5,
+  "ml_home": 105.0,
+  "ml_away": -125.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909885",
@@ -352,7 +352,7 @@
  {
   "game_id": "401909893",
   "game_date": "2026-10-29",
-  "start_utc": "2026-10-29T23:00Z",
+  "start_utc": "2026-10-30T00:00Z",
   "game_type": 2,
   "neutral": false,
   "home_team": "ATL",
