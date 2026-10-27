@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-27T12:32:58-04:00",
- "official_report": "2026-10-27T12:30:00-04:00",
+ "fetched_at": "2026-10-27T16:36:22-04:00",
+ "official_report": "2026-10-27T16:30:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -25,6 +25,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
+  },
+  {
+   "team": "BOS",
+   "player_id": "3078576",
+   "name": "Derrick White",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Torso Hip",
+   "return_date": "2026-10-27",
+   "comment": "White (right hip) is probable for Tuesday's game against the Nets.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Torso Hip"
   },
   {
    "team": "BOS",
@@ -316,6 +328,18 @@
   },
   {
    "team": "HOU",
+   "player_id": "4871144",
+   "name": "Alperen Sengun",
+   "espn_status": "Out",
+   "detail": "Torso Back",
+   "return_date": "2026-10-30",
+   "comment": "Sengun (back) has been ruled out for Wednesday's game against the Bucks.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Torso Back"
+  },
+  {
+   "team": "HOU",
    "player_id": "2990992",
    "name": "Marcus Smart",
    "espn_status": "Day-To-Day",
@@ -400,6 +424,18 @@
   },
   {
    "team": "LAC",
+   "player_id": "4066648",
+   "name": "Rui Hachimura",
+   "espn_status": "Out",
+   "detail": "Left Leg Quadriceps",
+   "return_date": "2026-10-30",
+   "comment": "Hachimura (quadriceps) has been ruled out for Wednesday's game against the Lakers, Joey Linn of SI.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Quadriceps"
+  },
+  {
+   "team": "LAC",
    "player_id": "6580",
    "name": "Bradley Beal",
    "espn_status": "Out",
@@ -471,6 +507,30 @@
    "reason": "Left Leg Knee"
   },
   {
+   "team": "MIA",
+   "player_id": "4601025",
+   "name": "Pelle Larsson",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-28",
+   "comment": "Larsson is listed as probable for Wednesday's game at Atlanta due to a right ankle sprain.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
+  },
+  {
+   "team": "MIA",
+   "player_id": "3899664",
+   "name": "Simone Fontecchio",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-11-04",
+   "comment": "Fontecchio is doubtful for Wednesday's game in Atlanta due to an illness, per Tim Reynolds of Associated Press.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
    "team": "MIN",
    "player_id": "3934673",
    "name": "Donte DiVincenzo",
@@ -481,6 +541,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Achilles"
+  },
+  {
+   "team": "NO",
+   "player_id": "4277956",
+   "name": "Jordan Poole",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-28",
+   "comment": "Poole (illness) is listed as probable for Wednesday's game against Denver.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
   },
   {
    "team": "NO",
@@ -592,6 +664,18 @@
   },
   {
    "team": "ORL",
+   "player_id": "4065654",
+   "name": "Jonathan Isaac",
+   "espn_status": "Out",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-10-30",
+   "comment": "Isaac (knee) has been ruled out ahead of Wednesday's game against the Raptors.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Knee"
+  },
+  {
+   "team": "ORL",
    "player_id": "4432165",
    "name": "Jalen Suggs",
    "espn_status": "Out",
@@ -601,18 +685,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "ORL",
-   "player_id": "4065654",
-   "name": "Jonathan Isaac",
-   "espn_status": "Out",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-28",
-   "comment": "Isaac (knee) has been ruled out ahead of Sunday's game against the Knicks.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Knee"
   },
   {
    "team": "ORL",
@@ -652,6 +724,30 @@
   },
   {
    "team": "PHI",
+   "player_id": "3904625",
+   "name": "Tacko Fall",
+   "espn_status": "Out",
+   "detail": "Left Leg Quadriceps",
+   "return_date": "2026-10-28",
+   "comment": "Fall (quadriceps) was able to practice on Tuesday, Keith Pompey of The Philadelphia Inquirer reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Quadriceps"
+  },
+  {
+   "team": "PHI",
+   "player_id": "5124612",
+   "name": "VJ Edgecombe",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Abdomen",
+   "return_date": "2026-10-28",
+   "comment": "Edgecombe (abdomen) practiced in full Tuesday, Keith Pompey of The Philadelphia Inquirer reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Abdomen"
+  },
+  {
+   "team": "PHI",
    "player_id": "4432446",
    "name": "Jabari Walker",
    "espn_status": "Day-To-Day",
@@ -664,18 +760,6 @@
   },
   {
    "team": "PHI",
-   "player_id": "5124612",
-   "name": "VJ Edgecombe",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Abdomen",
-   "return_date": "2026-10-28",
-   "comment": "Edgecombe (abdomen) is out for Sunday's game against the Pistons, Adam Aaronson of PhillyVoice.com reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Abdomen"
-  },
-  {
-   "team": "PHI",
    "player_id": "3059318",
    "name": "Joel Embiid",
    "espn_status": "Day-To-Day",
@@ -685,18 +769,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Heel"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3904625",
-   "name": "Tacko Fall",
-   "espn_status": "Out",
-   "detail": "Left Leg Quadriceps",
-   "return_date": "2026-10-28",
-   "comment": "Fall (quadriceps) has been ruled out for Sunday's game against Detroit.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Quadriceps"
   },
   {
    "team": "PHI",
@@ -757,18 +829,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
-  },
-  {
-   "team": "POR",
-   "player_id": "4592435",
-   "name": "Branden Carlson",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Head Concussion",
-   "return_date": "2026-10-27",
-   "comment": "Carlson (concussion) is listed as questionable for Tuesday's game against the Lakers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Head Concussion"
   },
   {
    "team": "POR",
@@ -868,6 +928,18 @@
   },
   {
    "team": "TOR",
+   "player_id": "4432586",
+   "name": "Nate Bittle",
+   "espn_status": "Out",
+   "detail": "Right Leg Foot",
+   "return_date": "2026-11-02",
+   "comment": "Bittle (foot) has been ruled out for Wednesday's game against the Magic, Cody Taylor of USA Today reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Foot"
+  },
+  {
+   "team": "TOR",
    "player_id": "6450",
    "name": "Kawhi Leonard",
    "espn_status": "Out",
@@ -879,16 +951,28 @@
    "reason": "Left Leg Knee"
   },
   {
-   "team": "TOR",
-   "player_id": "4432586",
-   "name": "Nate Bittle",
-   "espn_status": "Out",
-   "detail": "Right Leg Foot",
+   "team": "UTAH",
+   "player_id": "4066336",
+   "name": "Lauri Markkanen",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Arm Wrist",
    "return_date": "2026-10-28",
-   "comment": "Bittle (foot) is out for Wednesday's season opener against the Bulls.",
+   "comment": "Markkanen is day-to-day with a right wrist sprain, per NBA reporter Marc Stein.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Arm Wrist"
+  },
+  {
+   "team": "UTAH",
+   "player_id": "4277961",
+   "name": "Jaren Jackson Jr.",
+   "espn_status": "Out",
+   "detail": "Right Leg Knee",
+   "return_date": "2026-12-14",
+   "comment": "Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.",
    "status": "Out",
    "official_status": null,
-   "reason": "Right Leg Foot"
+   "reason": "Right Leg Knee"
   },
   {
    "team": "UTAH",
@@ -901,30 +985,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Arm Shoulder"
-  },
-  {
-   "team": "UTAH",
-   "player_id": "4066336",
-   "name": "Lauri Markkanen",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Arm Wrist",
-   "return_date": "2026-10-28",
-   "comment": "Markkanen (wrist) won't return to Monday's game against Memphis.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Arm Wrist"
-  },
-  {
-   "team": "UTAH",
-   "player_id": "4277961",
-   "name": "Jaren Jackson Jr.",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-10-28",
-   "comment": "Jackson has been ruled out for the rest of Monday's game against the Grizzlies due to a right knee injury.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Knee"
   },
   {
    "team": "UTAH",

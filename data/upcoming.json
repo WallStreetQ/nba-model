@@ -7,10 +7,10 @@
   "neutral": false,
   "home_team": "BOS",
   "away_team": "BKN",
-  "total_line": 223.5,
-  "spread_home": -11.5,
-  "ml_home": -575.0,
-  "ml_away": 425.0,
+  "total_line": 222.5,
+  "spread_home": -12.5,
+  "ml_home": -625.0,
+  "ml_away": 455.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -22,9 +22,9 @@
   "home_team": "NY",
   "away_team": "DET",
   "total_line": 219.5,
-  "spread_home": -3.5,
-  "ml_home": -155.0,
-  "ml_away": 130.0,
+  "spread_home": -4.5,
+  "ml_home": -170.0,
+  "ml_away": 142.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -37,8 +37,8 @@
   "away_team": "SAC",
   "total_line": 232.5,
   "spread_home": -18.5,
-  "ml_home": -1650.0,
-  "ml_away": 950.0,
+  "ml_home": -1800.0,
+  "ml_away": 1000.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -50,9 +50,9 @@
   "home_team": "LAL",
   "away_team": "POR",
   "total_line": 233.5,
-  "spread_home": -2.5,
-  "ml_home": -135.0,
-  "ml_away": 114.0,
+  "spread_home": -1.5,
+  "ml_home": -125.0,
+  "ml_away": 105.0,
   "odds_provider": "Draft Kings"
  },
  {
@@ -105,10 +105,10 @@
   "neutral": false,
   "home_team": "IND",
   "away_team": "PHI",
-  "total_line": 240.5,
-  "spread_home": 1.5,
-  "ml_home": 110.0,
-  "ml_away": -130.0,
+  "total_line": 239.5,
+  "spread_home": 2.5,
+  "ml_home": 120.0,
+  "ml_away": -142.0,
   "odds_provider": "Draft Kings"
  },
  {
