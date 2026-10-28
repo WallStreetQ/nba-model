@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-27T21:28:39-04:00",
- "official_report": "2026-10-27T21:15:00-04:00",
+ "fetched_at": "2026-10-28T13:09:08-04:00",
+ "official_report": "2026-10-28T13:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -9,7 +9,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Knee",
    "return_date": "2026-10-28",
-   "comment": "Wiggins is questionable for Wednesday's game against the Heat due to a left knee contusion.",
+   "comment": "Wiggins (knee) is probable for Wednesday against Miami.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -57,7 +57,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Leg",
    "return_date": "2026-10-30",
-   "comment": "Demin (leg) won't return to Tuesday's game against Boston, C.J. Holmes of the New York Daily News reports. He finished with two points (1-3 FG, 0-2 3Pt), one rebound, two assists and one steal over 10 minutes.",
+   "comment": "Demin (leg) stated he isn't sure if he will be able to play in Friday's game against Detroit, Erik Slater of ClutchPoints.com reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Leg"
@@ -296,11 +296,23 @@
    "name": "Isaiah Joe",
    "espn_status": "Out",
    "detail": "Right Torso Hip",
-   "return_date": "2026-10-28",
-   "comment": "Joe (hip) has been ruled out for Tuesday's game against the Knicks.",
+   "return_date": "2026-10-30",
+   "comment": "Joe (hip) is out for Wednesday's game against the Hornets.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Torso Hip"
+  },
+  {
+   "team": "DET",
+   "player_id": "4684742",
+   "name": "Ausar Thompson",
+   "espn_status": "Day-To-Day",
+   "detail": "Not Specified Leg Ankle",
+   "return_date": "2026-10-28",
+   "comment": "Thompson (ankle) is probable for Wednesday against the Hornets.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Not Specified Leg Ankle"
   },
   {
    "team": "DET",
@@ -316,6 +328,18 @@
   },
   {
    "team": "GS",
+   "player_id": "3102531",
+   "name": "Kristaps Porzingis",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2026-12-01",
+   "comment": "The Warriors are exploring potential trades involving Porzingis (personal), who remains away from the team indefinitely while dealing with ongoing health concerns, Anthony Slater of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "GS",
    "player_id": "5175737",
    "name": "Yaxel Lendeborg",
    "espn_status": "Day-To-Day",
@@ -325,18 +349,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Foot"
-  },
-  {
-   "team": "GS",
-   "player_id": "3102531",
-   "name": "Kristaps Porzingis",
-   "espn_status": "Out",
-   "detail": "Other Illness",
-   "return_date": "2026-12-01",
-   "comment": "Porzingis is contemplating his future in basketball as he deals with recurring symptoms from the autoimmune condition termed as postural orthostatic tachycardia syndrome, per Shams Charania of ESPN.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Other Illness"
   },
   {
    "team": "GS",
@@ -592,25 +604,13 @@
   },
   {
    "team": "MIA",
-   "player_id": "4601025",
-   "name": "Pelle Larsson",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Ankle",
-   "return_date": "2026-10-28",
-   "comment": "Larsson is listed as probable for Wednesday's game at Atlanta due to a right ankle sprain.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Ankle"
-  },
-  {
-   "team": "MIA",
    "player_id": "3899664",
    "name": "Simone Fontecchio",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Other Illness",
-   "return_date": "2026-10-28",
-   "comment": "Fontecchio is doubtful for Wednesday's game in Atlanta due to an illness, per Tim Reynolds of Associated Press.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-30",
+   "comment": "Fontecchio (illness) is out for Wednesday's game against the Hawks.",
+   "status": "Out",
    "official_status": null,
    "reason": "Other Illness"
   },
@@ -666,11 +666,11 @@
    "team": "NY",
    "player_id": "4277869",
    "name": "Jose Alvarado",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Leg Ankle",
    "return_date": "2026-10-28",
    "comment": "Alvarado (ankle) is out for Tuesday's game against the Pistons.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Ankle"
   },
@@ -772,6 +772,18 @@
   },
   {
    "team": "ORL",
+   "player_id": "4712849",
+   "name": "Anthony Black",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Personal",
+   "return_date": "2026-10-28",
+   "comment": "Black (personal) was not present at Wednesday's morning shootaround, Jason Beede of the Orlando Sentinel reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Personal"
+  },
+  {
+   "team": "ORL",
    "player_id": "4065654",
    "name": "Jonathan Isaac",
    "espn_status": "Out",
@@ -860,7 +872,7 @@
    "name": "Dominick Barlow",
    "espn_status": "Out",
    "detail": "Not Specified Torso Back",
-   "return_date": "2026-11-02",
+   "return_date": "2026-11-04",
    "comment": "Barlow will miss at least the next two weeks of action due to a lumbar spine bone stress response, Adam Aaronson of PhillyVoice.com reports.",
    "status": "Out",
    "official_status": null,
@@ -911,18 +923,6 @@
    "return_date": "2026-10-29",
    "comment": "Youngblood (ankle/two-way player) is out for Tuesday's game against the Lakers.",
    "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
-  },
-  {
-   "team": "POR",
-   "player_id": "4683678",
-   "name": "Scoot Henderson",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-10-27",
-   "comment": "Henderson is questionable for Tuesday's game against the Lakers due to left ankle soreness.",
-   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Ankle"
   },
@@ -1105,18 +1105,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "WSH",
-   "player_id": "5142718",
-   "name": "AJ Dybantsa",
-   "espn_status": "Out",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-10-28",
-   "comment": "Dybantsa (ankle) is questionable for Wednesday's game versus Cleveland.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
   },
   {
    "team": "WSH",
@@ -2687,6 +2675,11 @@
    {
     "player_id": "5061585",
     "name": "Isaiah Evans",
+    "position": "F"
+   },
+   {
+    "player_id": "4592699",
+    "name": "Enrique Freeman",
     "position": "F"
    },
    {
