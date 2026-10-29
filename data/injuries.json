@@ -1,19 +1,7 @@
 {
- "fetched_at": "2026-10-28T16:57:32-04:00",
- "official_report": "2026-10-28T16:45:00-04:00",
+ "fetched_at": "2026-10-28T21:52:25-04:00",
+ "official_report": "2026-10-28T21:45:00-04:00",
  "players": [
-  {
-   "team": "ATL",
-   "player_id": "4397183",
-   "name": "Aaron Wiggins",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-28",
-   "comment": "Wiggins (knee) is probable for Wednesday against Miami.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Knee"
-  },
   {
    "team": "ATL",
    "player_id": "4712863",
@@ -124,27 +112,27 @@
   },
   {
    "team": "CHI",
-   "player_id": "4431687",
-   "name": "Patrick Williams",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Groin Groin",
-   "return_date": "2026-10-28",
-   "comment": "Williams (groin) is questionable for Wednesday's game against the Knicks.",
-   "status": "Day-To-Day",
+   "player_id": "5105555",
+   "name": "Tobe Awaka",
+   "espn_status": "Out",
+   "detail": "Leg Ankle",
+   "return_date": "2026-10-30",
+   "comment": "Awaka (ankle) is out for Wednesday's game against the Knicks, Joel Lorenzi of The Athletic reports.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Right Groin Groin"
+   "reason": "Leg Ankle"
   },
   {
    "team": "CHI",
-   "player_id": "5105555",
-   "name": "Tobe Awaka",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Ankle",
-   "return_date": "2026-10-28",
-   "comment": "Awaka (ankle) is questionable for Wednesday's game against the Knicks.",
-   "status": "Day-To-Day",
+   "player_id": "4431687",
+   "name": "Patrick Williams",
+   "espn_status": "Out",
+   "detail": "Right Groin Groin",
+   "return_date": "2026-10-30",
+   "comment": "Williams (adductor) won't play in Wednesday's game against the Knicks, Joel Lorenzi of The Athletic reports.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Leg Ankle"
+   "reason": "Right Groin Groin"
   },
   {
    "team": "CHI",
@@ -162,11 +150,11 @@
    "team": "DAL",
    "player_id": "4278594",
    "name": "Naji Marshall",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Other Illness",
-   "return_date": "2026-10-28",
-   "comment": "Marshall (illness) is now doubtful for Wednesday against the Thunder.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-30",
+   "comment": "Marshall (illness) won't play in Wednesday's game against Oklahoma City.",
+   "status": "Out",
    "official_status": null,
    "reason": "Other Illness"
   },
@@ -208,30 +196,6 @@
   },
   {
    "team": "DAL",
-   "player_id": "3138160",
-   "name": "Caleb Martin",
-   "espn_status": "Out",
-   "detail": "Right Arm Thumb",
-   "return_date": "2026-10-28",
-   "comment": "Martin (thumb) is questionable for Wednesday's game against the Thunder.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Arm Thumb"
-  },
-  {
-   "team": "DAL",
-   "player_id": "6442",
-   "name": "Kyrie Irving",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-10-28",
-   "comment": "Irving (knee) is questionable for Wednesday's game against the Thunder.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
-  },
-  {
-   "team": "DAL",
    "player_id": "4683688",
    "name": "Dereck Lively II",
    "espn_status": "Out",
@@ -244,6 +208,18 @@
   },
   {
    "team": "DEN",
+   "player_id": "3138196",
+   "name": "Cameron Johnson",
+   "espn_status": "Out",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-30",
+   "comment": "Johnson (ankle) is listed as out for Wednesday's game against the Pelicans.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
+  },
+  {
+   "team": "DEN",
    "player_id": "4592427",
    "name": "Spencer Jones",
    "espn_status": "Out",
@@ -253,18 +229,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Not Specified Leg Hamstring"
-  },
-  {
-   "team": "DEN",
-   "player_id": "3138196",
-   "name": "Cameron Johnson",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Ankle",
-   "return_date": "2026-10-28",
-   "comment": "Johnson (ankle) is doubtful to face the Pelicans on Wednesday.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Ankle"
   },
   {
    "team": "DEN",
@@ -304,18 +268,6 @@
   },
   {
    "team": "DET",
-   "player_id": "4684742",
-   "name": "Ausar Thompson",
-   "espn_status": "Day-To-Day",
-   "detail": "Not Specified Leg Ankle",
-   "return_date": "2026-10-28",
-   "comment": "Thompson (ankle) is probable for Wednesday against the Hornets.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Not Specified Leg Ankle"
-  },
-  {
-   "team": "DET",
    "player_id": "4433621",
    "name": "Jalen Duren",
    "espn_status": "Out",
@@ -328,15 +280,15 @@
   },
   {
    "team": "GS",
-   "player_id": "5175737",
-   "name": "Yaxel Lendeborg",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Foot",
-   "return_date": "2026-10-28",
-   "comment": "Lendeborg (foot) went through Wednesday's morning shootaround, per Nick Friedell of The Athletic.",
-   "status": "Day-To-Day",
+   "player_id": "4997536",
+   "name": "Gui Santos",
+   "espn_status": "Out",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-10-30",
+   "comment": "Santos has been ruled out for Wednesday's game against the Timberwolves due to left knee tendinitis.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Leg Foot"
+   "reason": "Left Leg Knee"
   },
   {
    "team": "GS",
@@ -412,63 +364,39 @@
   },
   {
    "team": "IND",
-   "player_id": "4396993",
-   "name": "Tyrese Haliburton",
-   "espn_status": "Out",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-11-09",
-   "comment": "Haliburton (hamstring) will miss time, though his timetable has yet to be announced, Shams Charania of ESPN reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Hamstring"
-  },
-  {
-   "team": "IND",
-   "player_id": "4395712",
-   "name": "Andrew Nembhard",
-   "espn_status": "Day-To-Day",
-   "detail": "Head Neck",
-   "return_date": "2026-10-28",
-   "comment": "Nembhard (neck) is listed as questionable for Wednesday's game against Philadelphia.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Head Neck"
-  },
-  {
-   "team": "IND",
-   "player_id": "4278355",
-   "name": "Obi Toppin",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Arm Hand",
-   "return_date": "2026-10-28",
-   "comment": "Toppin is probable to play Wednesday against the 76ers due to a left hand sprain.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Arm Hand"
-  },
-  {
-   "team": "IND",
-   "player_id": "4396909",
-   "name": "Aaron Nesmith",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-10-28",
-   "comment": "Nesmith (hamstring) is probable for Wednesday's game against the 76ers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Hamstring"
-  },
-  {
-   "team": "IND",
    "player_id": "2530530",
    "name": "T.J. McConnell",
    "espn_status": "Out",
    "detail": "Right Leg Hamstring",
-   "return_date": "2026-10-30",
-   "comment": "McConnell (hamstring) is out for Wednesday's game against the 76ers.",
+   "return_date": "2026-11-02",
+   "comment": "Pacers head coach Rick Carlisle stated McConnell (hamstring) is \"doing better\" and \"getting closer\" to a return, Alex Golden of SI.com reports.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Hamstring"
+  },
+  {
+   "team": "IND",
+   "player_id": "4433076",
+   "name": "Ben Sheppard",
+   "espn_status": "Out",
+   "detail": "Left Leg Knee",
+   "return_date": "2027-01-02",
+   "comment": "Head coach Rick Carlise confirmed Sheppard will miss \"months\" after undergoing surgery to repair a torn meniscus in his left knee, Tony East of Forbes.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Knee"
+  },
+  {
+   "team": "IND",
+   "player_id": "4396993",
+   "name": "Tyrese Haliburton",
+   "espn_status": "Out",
+   "detail": "Left Leg Hamstring",
+   "return_date": "2026-11-13",
+   "comment": "Haliburton (hamstring) will miss at least the next two weeks of action, Shams Charania of ESPN reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Hamstring"
   },
   {
    "team": "IND",
@@ -484,18 +412,6 @@
   },
   {
    "team": "IND",
-   "player_id": "4433076",
-   "name": "Ben Sheppard",
-   "espn_status": "Out",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-12-01",
-   "comment": "Sheppard is scheduled for surgery to repair a torn meniscus in his left knee Wednesday, Dustin Dopirak of The Indianapolis Star reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Knee"
-  },
-  {
-   "team": "IND",
    "player_id": "5157066",
    "name": "Johnny Furphy",
    "espn_status": "Out",
@@ -505,6 +421,42 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
+  },
+  {
+   "team": "LAC",
+   "player_id": "5108024",
+   "name": "Yanic Konan Niederhauser",
+   "espn_status": "Out",
+   "detail": "Right Leg Foot",
+   "return_date": "2026-11-08",
+   "comment": "Niederhauser (foot) remains out for Wednesday's game against the Lakers. He also won't travel with the team for the upcoming two-game road trip in Minnesota and Golden State, Ohm Youngmisuk of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Foot"
+  },
+  {
+   "team": "LAC",
+   "player_id": "4065778",
+   "name": "Max Strus",
+   "espn_status": "Out",
+   "detail": "Right Leg Foot",
+   "return_date": "2026-11-08",
+   "comment": "Strus (foot) is making progress but is set to miss at least one more week, Ohm Youngmisuk of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Foot"
+  },
+  {
+   "team": "LAC",
+   "player_id": "3913176",
+   "name": "Brandon Ingram",
+   "espn_status": "Out",
+   "detail": "Right Leg Achilles",
+   "return_date": "2026-11-08",
+   "comment": "Ingram (Achilles) is making progress but is set to miss at least one more week, Ohm Youngmisuk of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Achilles"
   },
   {
    "team": "LAC",
@@ -529,42 +481,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "LAC",
-   "player_id": "4065778",
-   "name": "Max Strus",
-   "espn_status": "Out",
-   "detail": "Right Leg Foot",
-   "return_date": "2026-11-08",
-   "comment": "Strus has been diagnosed with a partially torn plantar fascia in his right foot and he will be re-evaluated in four weeks, Ohm Youngmisuk of ESPN.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Foot"
-  },
-  {
-   "team": "LAC",
-   "player_id": "5108024",
-   "name": "Yanic Konan Niederhauser",
-   "espn_status": "Out",
-   "detail": "Right Leg Foot",
-   "return_date": "2026-11-08",
-   "comment": "Niederhauser (foot) won't be ready for the start of the season, Law Murray of The Athletic reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Foot"
-  },
-  {
-   "team": "LAC",
-   "player_id": "3913176",
-   "name": "Brandon Ingram",
-   "espn_status": "Out",
-   "detail": "Right Leg Achilles",
-   "return_date": "2026-11-08",
-   "comment": "Ingram won't be ready for the start of the season due to a partially torn Achilles, per Joey Linn of SI.com.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Achilles"
   },
   {
    "team": "LAC",
@@ -664,6 +580,18 @@
   },
   {
    "team": "NO",
+   "player_id": "4277956",
+   "name": "Jordan Poole",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-10-29",
+   "comment": "Poole (ankle) won't return to Wednesday's game against the Nuggets. He finished with two points (1-3 FG, 0-1 3Pt), one rebound and one steal over seven minutes.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "NO",
    "player_id": "5061589",
    "name": "Yves Missi",
    "espn_status": "Out",
@@ -685,6 +613,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "OKC",
+   "player_id": "4593803",
+   "name": "Jalen Williams",
+   "espn_status": "Out",
+   "detail": "Left Leg Leg",
+   "return_date": "2027-03-02",
+   "comment": "Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Leg"
   },
   {
    "team": "OKC",
@@ -736,30 +676,6 @@
   },
   {
    "team": "OKC",
-   "player_id": "4900671",
-   "name": "Ajay Mitchell",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Ankle",
-   "return_date": "2026-10-28",
-   "comment": "Mitchell (ankle) is questionable for Wednesday's game against Dallas.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Ankle"
-  },
-  {
-   "team": "OKC",
-   "player_id": "4593803",
-   "name": "Jalen Williams",
-   "espn_status": "Out",
-   "detail": "Left Leg Leg",
-   "return_date": "2027-03-02",
-   "comment": "Williams has been diagnosed with a dislocated left ankle and fractured fibula, which will require surgery, Shams Charania of ESPN reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Leg"
-  },
-  {
-   "team": "OKC",
    "player_id": "4683692",
    "name": "Cason Wallace",
    "espn_status": "Out",
@@ -781,18 +697,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Achilles"
-  },
-  {
-   "team": "ORL",
-   "player_id": "4712849",
-   "name": "Anthony Black",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Personal",
-   "return_date": "2026-10-28",
-   "comment": "Black (personal) was not present at Wednesday's morning shootaround, Jason Beede of the Orlando Sentinel reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Personal"
   },
   {
    "team": "ORL",
@@ -1048,25 +952,25 @@
   },
   {
    "team": "UTAH",
-   "player_id": "4397077",
-   "name": "Jaxson Hayes",
+   "player_id": "5041955",
+   "name": "Darryn Peterson",
    "espn_status": "Day-To-Day",
-   "detail": "Right Arm Shoulder",
+   "detail": "Head Head",
    "return_date": "2026-10-28",
-   "comment": "Hayes (shoulder) is listed as questionable for Wednesday's game against the Spurs.",
+   "comment": "Peterson exited to the locker room in the first quarter of Wednesday's game against the Spurs due to an apparent head injury, Shreyas Laddha of The Salt Lake Tribune reports.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Right Arm Shoulder"
+   "reason": "Head Head"
   },
   {
    "team": "UTAH",
    "player_id": "4066336",
    "name": "Lauri Markkanen",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Arm Wrist",
-   "return_date": "2026-10-28",
-   "comment": "Markkanen (wrist) is questionable for Wednesday's game against the Spurs.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-31",
+   "comment": "Markkanen (wrist) is out for Wednesday's tilt against the Spurs.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Arm Wrist"
   },
@@ -1105,6 +1009,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
+  },
+  {
+   "team": "WSH",
+   "player_id": "5238230",
+   "name": "Tre Johnson",
+   "espn_status": "Out",
+   "detail": "Right Leg Achilles",
+   "return_date": "2026-10-30",
+   "comment": "Johnson has been ruled out for Wednesday's game against the Cavaliers due to right Achilles soreness.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Achilles"
   },
   {
    "team": "WSH",
@@ -2335,6 +2251,11 @@
     "player_id": "3155535",
     "name": "Kevon Looney",
     "position": "F"
+   },
+   {
+    "player_id": "4596528",
+    "name": "Lawson Lovering",
+    "position": "C"
    },
    {
     "player_id": "4278580",
