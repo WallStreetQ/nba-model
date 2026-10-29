@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-29T13:24:53-04:00",
- "official_report": "2026-10-29T13:15:00-04:00",
+ "fetched_at": "2026-10-29T17:00:43-04:00",
+ "official_report": "2026-10-29T17:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -45,7 +45,7 @@
    "espn_status": "Out",
    "detail": "Right Leg Leg",
    "return_date": "2026-11-07",
-   "comment": "Demin has been diagnosed with a right leg bone bruise and will be reevaluated in one week, Ian Begley of SportsNet New York reports Thursday. The injury occurred during Tuesday's game against Boston.",
+   "comment": "The Nets exercised Demin's third-year team option for the 2027-28 season, Sharif Phillips-Keaton of USA Today reports Thursday.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Leg"
@@ -56,11 +56,23 @@
    "name": "Tyler Bilodeau",
    "espn_status": "Out",
    "detail": "Right Arm Shoulder",
-   "return_date": "2026-10-30",
+   "return_date": "2026-11-01",
    "comment": "Bilodeau (shoulder) has been ruled out for Sunday's game against Indiana.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Arm Shoulder"
+  },
+  {
+   "team": "CHA",
+   "player_id": "5061575",
+   "name": "Kon Knueppel",
+   "espn_status": "Out",
+   "detail": "Left Leg Hamstring",
+   "return_date": "2026-11-02",
+   "comment": "Knueppel (hamstring) will practice with the G League's Greensboro Swarm on Thursday, the Hornets announced.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Hamstring"
   },
   {
    "team": "CHA",
@@ -73,18 +85,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Calf"
-  },
-  {
-   "team": "CHA",
-   "player_id": "5061575",
-   "name": "Kon Knueppel",
-   "espn_status": "Out",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-11-02",
-   "comment": "Knueppel (hamstring) is without a timetable for a return, Rod Boone of The Charlotte Observer reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Hamstring"
   },
   {
    "team": "CHA",
@@ -112,27 +112,39 @@
   },
   {
    "team": "CHI",
-   "player_id": "5105555",
-   "name": "Tobe Awaka",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Ankle",
-   "return_date": "2026-10-30",
-   "comment": "Awaka (ankle) is out for Wednesday's game against the Knicks, Joel Lorenzi of The Athletic reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Ankle"
-  },
-  {
-   "team": "CHI",
    "player_id": "4431687",
    "name": "Patrick Williams",
    "espn_status": "Out",
    "detail": "Right Groin Groin",
    "return_date": "2026-10-30",
-   "comment": "Williams (adductor) won't play in Wednesday's game against the Knicks, Joel Lorenzi of The Athletic reports.",
+   "comment": "Williams (adductor) is questionable for Friday's game in Boston.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Groin Groin"
+  },
+  {
+   "team": "CHI",
+   "player_id": "4397189",
+   "name": "Jalen Smith",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Arm Finger",
+   "return_date": "2026-10-30",
+   "comment": "Smith is questionable for Friday's game against Boston with a left finger sprain.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Arm Finger"
+  },
+  {
+   "team": "CHI",
+   "player_id": "5105555",
+   "name": "Tobe Awaka",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Ankle",
+   "return_date": "2026-10-30",
+   "comment": "Awaka (ankle) is questionable for Friday's game in Boston.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Ankle"
   },
   {
    "team": "CHI",
@@ -285,7 +297,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Torso Hip",
    "return_date": "2026-10-30",
-   "comment": "Joe (hip) is out for Wednesday's game against the Hornets.",
+   "comment": "Joe (hip) is listed as questionable for Friday's game against Brooklyn.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Torso Hip"
@@ -352,13 +364,13 @@
   },
   {
    "team": "HOU",
-   "player_id": "4871144",
-   "name": "Alperen Sengun",
-   "espn_status": "Day-To-Day",
+   "player_id": "4711272",
+   "name": "Reed Sheppard",
+   "espn_status": "Out",
    "detail": "Torso Back",
-   "return_date": "2026-10-30",
-   "comment": "Sengun (back) has been ruled out for Wednesday's game against the Bucks.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-31",
+   "comment": "Sheppard (back) is out for Friday's game against the Mavericks.",
+   "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
   },
@@ -369,10 +381,22 @@
    "espn_status": "Out",
    "detail": "Left Arm Forearm",
    "return_date": "2026-10-30",
-   "comment": "Smart (forearm) is out for Wednesday's game against the Bucks.",
+   "comment": "Smart (forearm) is questionable for Friday's game against the Mavericks.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Arm Forearm"
+  },
+  {
+   "team": "HOU",
+   "player_id": "4871144",
+   "name": "Alperen Sengun",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-10-30",
+   "comment": "Sengun (back) is questionable for Friday's game against the Mavericks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
   },
   {
    "team": "HOU",
@@ -448,6 +472,18 @@
   },
   {
    "team": "LAC",
+   "player_id": "5108024",
+   "name": "Yanic Konan Niederhauser",
+   "espn_status": "Out",
+   "detail": "Right Leg Foot",
+   "return_date": "2026-11-08",
+   "comment": "Niederhauser (foot) had his third-year team option picked up Thursday by the Clippers, Ohm Youngmisuk of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Foot"
+  },
+  {
+   "team": "LAC",
    "player_id": "4066648",
    "name": "Rui Hachimura",
    "espn_status": "Day-To-Day",
@@ -457,18 +493,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Quadriceps"
-  },
-  {
-   "team": "LAC",
-   "player_id": "5108024",
-   "name": "Yanic Konan Niederhauser",
-   "espn_status": "Out",
-   "detail": "Right Leg Foot",
-   "return_date": "2026-11-08",
-   "comment": "Niederhauser (foot) remains out for Wednesday's game against the Lakers. He also won't travel with the team for the upcoming two-game road trip in Minnesota and Golden State, Ohm Youngmisuk of ESPN.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Foot"
   },
   {
    "team": "LAC",
@@ -573,7 +597,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Other Illness",
    "return_date": "2026-10-30",
-   "comment": "Fontecchio (illness) is out for Wednesday's game against the Hawks.",
+   "comment": "Fontecchio (illness) is listed as questionable for Friday's game against Indiana.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Illness"
@@ -585,7 +609,7 @@
    "espn_status": "Out",
    "detail": "Right Leg Knee",
    "return_date": "2026-12-21",
-   "comment": "Edwards will undergo arthroscopic right knee surgery and is expected to miss up to two months, Shams Charania of ESPN reports.",
+   "comment": "Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
@@ -716,8 +740,8 @@
    "name": "Jonathan Isaac",
    "espn_status": "Out",
    "detail": "Left Leg Knee",
-   "return_date": "2026-10-30",
-   "comment": "Isaac (knee) has been ruled out ahead of Wednesday's game against the Raptors.",
+   "return_date": "2026-11-10",
+   "comment": "Isaac (knee) is out for Friday's game in Toronto.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -841,6 +865,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Arm Shoulder"
+  },
+  {
+   "team": "POR",
+   "player_id": "4066211",
+   "name": "Robert Williams III",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-10-29",
+   "comment": "Williams (knee) is doubtful for Thursday's game against Memphis due to left knee injury management, according to the Trail Blazers.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Knee"
   },
   {
    "team": "POR",

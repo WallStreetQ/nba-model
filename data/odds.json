@@ -1,19 +1,19 @@
 {
- "fetched_at": "2026-10-29T13:24:57-04:00",
+ "fetched_at": "2026-10-29T17:00:49-04:00",
  "games": [
   {
    "home_team": "ATL",
    "away_team": "CLE",
    "game_date": "2026-10-29",
    "book": "draftkings",
-   "ml_home": -115,
-   "ml_away": -105,
+   "ml_home": -112,
+   "ml_away": -108,
    "spread_home": -1.5,
-   "spread_home_price": -105,
-   "spread_away_price": -115,
+   "spread_home_price": -102,
+   "spread_away_price": -118,
    "total_line": 237.5,
-   "total_over_price": -108,
-   "total_under_price": -112
+   "total_over_price": -112,
+   "total_under_price": -108
   },
   {
    "home_team": "NO",
@@ -22,12 +22,12 @@
    "book": "draftkings",
    "ml_home": -238,
    "ml_away": 195,
-   "spread_home": -5.5,
-   "spread_home_price": -118,
-   "spread_away_price": -102,
+   "spread_home": -6.5,
+   "spread_home_price": -110,
+   "spread_away_price": -110,
    "total_line": 235.5,
-   "total_over_price": -115,
-   "total_under_price": -105
+   "total_over_price": -108,
+   "total_under_price": -112
   },
   {
    "home_team": "POR",
@@ -39,9 +39,9 @@
    "spread_home": -7.5,
    "spread_home_price": -115,
    "spread_away_price": -105,
-   "total_line": 233.5,
-   "total_over_price": -105,
-   "total_under_price": -115
+   "total_line": 232.5,
+   "total_over_price": -115,
+   "total_under_price": -105
   },
   {
    "home_team": "WSH",
@@ -53,7 +53,7 @@
    "spread_home": 1.5,
    "spread_home_price": -115,
    "spread_away_price": -105,
-   "total_line": 223.5,
+   "total_line": 222.5,
    "total_over_price": -110,
    "total_under_price": -110
   },
@@ -62,42 +62,42 @@
    "away_team": "CHI",
    "game_date": "2026-10-30",
    "book": "draftkings",
-   "ml_home": -700,
-   "ml_away": 500,
+   "ml_home": -850,
+   "ml_away": 575,
    "spread_home": -15.5,
    "spread_home_price": -110,
    "spread_away_price": -110,
-   "total_line": 230.5,
-   "total_over_price": -110,
-   "total_under_price": -110
+   "total_line": 231.5,
+   "total_over_price": -115,
+   "total_under_price": -105
   },
   {
    "home_team": "BKN",
    "away_team": "DET",
    "game_date": "2026-10-30",
    "book": "draftkings",
-   "ml_home": 280,
-   "ml_away": -355,
-   "spread_home": 8.5,
+   "ml_home": 210,
+   "ml_away": -258,
+   "spread_home": 7.5,
    "spread_home_price": -115,
    "spread_away_price": -105,
-   "total_line": 227.5,
-   "total_over_price": -110,
-   "total_under_price": -110
+   "total_line": 221.5,
+   "total_over_price": -112,
+   "total_under_price": -108
   },
   {
    "home_team": "PHI",
    "away_team": "NY",
    "game_date": "2026-10-30",
    "book": "draftkings",
-   "ml_home": -105,
-   "ml_away": -115,
-   "spread_home": 1.5,
-   "spread_home_price": -115,
-   "spread_away_price": -105,
-   "total_line": 229.5,
-   "total_over_price": -105,
-   "total_under_price": -115
+   "ml_home": -110,
+   "ml_away": -110,
+   "spread_home": -1.5,
+   "spread_home_price": 100,
+   "spread_away_price": -120,
+   "total_line": 228.5,
+   "total_over_price": -115,
+   "total_under_price": -105
   },
   {
    "home_team": "TOR",
@@ -132,11 +132,11 @@
    "away_team": "IND",
    "game_date": "2026-10-30",
    "book": "draftkings",
-   "ml_home": -180,
-   "ml_away": 150,
-   "spread_home": -3.5,
-   "spread_home_price": -112,
-   "spread_away_price": -108,
+   "ml_home": -205,
+   "ml_away": 170,
+   "spread_home": -5.5,
+   "spread_home_price": -105,
+   "spread_away_price": -115,
    "total_line": 239.5,
    "total_over_price": -110,
    "total_under_price": -110
@@ -146,12 +146,12 @@
    "away_team": "LAC",
    "game_date": "2026-10-30",
    "book": "draftkings",
-   "ml_home": -230,
-   "ml_away": 190,
+   "ml_home": -245,
+   "ml_away": 200,
    "spread_home": -7.5,
    "spread_home_price": -110,
    "spread_away_price": -110,
-   "total_line": 222.5,
+   "total_line": 221.5,
    "total_over_price": -110,
    "total_under_price": -110
   },
@@ -165,9 +165,9 @@
    "spread_home": 4.5,
    "spread_home_price": -110,
    "spread_away_price": -110,
-   "total_line": 227.5,
-   "total_over_price": -110,
-   "total_under_price": -110
+   "total_line": 229.5,
+   "total_over_price": -105,
+   "total_under_price": -115
   },
   {
    "home_team": "GS",
