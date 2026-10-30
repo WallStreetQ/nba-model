@@ -802,7 +802,12 @@
    "picks": [
     "OKC 2H -3.5",
     "2H Over 109.5"
-   ]
+   ],
+   "final": {
+    "home": 120.0,
+    "away": 96.0
+   },
+   "act_2h": 92.0
   },
   "401909892": {
    "game_id": "401909892",
@@ -871,10 +876,15 @@
    "picks": [
     "2H Over 106.5",
     "LAC 2H -3.5"
-   ]
+   ],
+   "final": {
+    "home": 87.0,
+    "away": 103.0
+   },
+   "act_2h": 96.0
   }
  },
- "model_through": "2026-10-27",
+ "model_through": "2026-10-28",
  "halftime_fitted": true,
- "updated_at": "2026-10-29T00:00:35-04:00"
+ "updated_at": "2026-10-29T20:22:51-04:00"
 }
