@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-29T22:01:53-04:00",
- "official_report": "2026-10-29T22:00:00-04:00",
+ "fetched_at": "2026-10-30T13:00:10-04:00",
+ "official_report": "2026-10-30T06:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -40,6 +40,18 @@
   },
   {
    "team": "BKN",
+   "player_id": "4712896",
+   "name": "Noah Clowney",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-30",
+   "comment": "Clowney (illness) was downgraded to questionable for Friday's game versus Detroit, Erik Slater of ClutchPoints.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "BKN",
    "player_id": "5175643",
    "name": "Egor Demin",
    "espn_status": "Out",
@@ -69,7 +81,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Leg Foot",
    "return_date": "2026-10-30",
-   "comment": "Schroder (foot) is questionable for Friday's game against the Wizards.",
+   "comment": "Schroder (foot) is probable for Friday against the Wizards.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Foot"
@@ -81,7 +93,7 @@
    "espn_status": "Out",
    "detail": "Left Leg Hamstring",
    "return_date": "2026-11-02",
-   "comment": "Knueppel (hamstring) will practice with the G League's Greensboro Swarm on Thursday, the Hornets announced.",
+   "comment": "Knueppel (hamstring) was recalled from the G League's Greensboro Swarm on Friday. He remains out for Friday's contest against the Wizards.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Hamstring"
@@ -124,18 +136,6 @@
   },
   {
    "team": "CHI",
-   "player_id": "4431687",
-   "name": "Patrick Williams",
-   "espn_status": "Out",
-   "detail": "Right Groin Groin",
-   "return_date": "2026-10-30",
-   "comment": "Williams (adductor) is questionable for Friday's game in Boston.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Groin Groin"
-  },
-  {
-   "team": "CHI",
    "player_id": "4397189",
    "name": "Jalen Smith",
    "espn_status": "Day-To-Day",
@@ -174,11 +174,11 @@
    "team": "CLE",
    "player_id": "5041951",
    "name": "Meleek Thomas",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Leg Foot",
    "return_date": "2026-10-31",
    "comment": "Thomas (foot) has been ruled out for Thursday's game against the Hawks, Serena Winters of FanDuel Sports Network Ohio reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Foot"
   },
@@ -568,18 +568,6 @@
   },
   {
    "team": "LAL",
-   "player_id": "5113969",
-   "name": "Cameron Carr",
-   "espn_status": "Out",
-   "detail": "Right Torso Oblique",
-   "return_date": "2026-11-01",
-   "comment": "Carr (oblique) has been ruled out for Friday's game against Golden State.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Torso Oblique"
-  },
-  {
-   "team": "LAL",
    "player_id": "5060631",
    "name": "Adou Thiero",
    "espn_status": "Out",
@@ -601,6 +589,18 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Foot"
+  },
+  {
+   "team": "MEM",
+   "player_id": "4593016",
+   "name": "Quinten Post",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-10-31",
+   "comment": "Post (ankle) didn't return to Thursday's game against Portland. He recorded 10 points (3-5 FG, 2-3 3Pt, 2-2 FT) and four rebounds in seven minutes before exiting.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
   },
   {
    "team": "MIA",
@@ -640,27 +640,27 @@
   },
   {
    "team": "NO",
-   "player_id": "3907497",
-   "name": "Dejounte Murray",
-   "espn_status": "Out",
-   "detail": "Other Personal",
-   "return_date": "2026-10-31",
-   "comment": "Murray (personal) is out for Thursday's game against the Kings, Jim Eichenhofer of the Pelicans' official site reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Other Personal"
-  },
-  {
-   "team": "NO",
    "player_id": "4277956",
    "name": "Jordan Poole",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Leg Ankle",
    "return_date": "2026-10-31",
    "comment": "Poole (ankle) has been ruled out for Thursday's game against the Kings.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "NO",
+   "player_id": "3907497",
+   "name": "Dejounte Murray",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Personal",
+   "return_date": "2026-10-31",
+   "comment": "Murray (personal) is out for Thursday's game against the Kings, Jim Eichenhofer of the Pelicans' official site reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Personal"
   },
   {
    "team": "NO",
@@ -906,13 +906,25 @@
    "team": "POR",
    "player_id": "4066211",
    "name": "Robert Williams III",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Leg Knee",
    "return_date": "2026-10-31",
    "comment": "Williams (knee) has been ruled out for Thursday's game against Memphis, Casey Holdahl of the Trail Blazers' official site reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "POR",
+   "player_id": "4279888",
+   "name": "Ja Morant",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Hamstring",
+   "return_date": "2026-10-31",
+   "comment": "Morant won't return to Thursday's game against the Grizzlies due to a left hamstring injury. He'll end with 14 points (6-14 FG, 2-5 3Pt), two rebounds and three assists in 23 minutes.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Hamstring"
   },
   {
    "team": "POR",
@@ -2280,6 +2292,11 @@
    {
     "player_id": "5254165",
     "name": "Keaton Wagler",
+    "position": "G"
+   },
+   {
+    "player_id": "4683935",
+    "name": "Blake Wesley",
     "position": "G"
    }
   ],
