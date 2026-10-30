@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-29T17:00:43-04:00",
- "official_report": "2026-10-29T17:00:00-04:00",
+ "fetched_at": "2026-10-29T22:01:53-04:00",
+ "official_report": "2026-10-29T22:00:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -61,6 +61,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Arm Shoulder"
+  },
+  {
+   "team": "CHA",
+   "player_id": "3032979",
+   "name": "Dennis Schroder",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Foot",
+   "return_date": "2026-10-30",
+   "comment": "Schroder (foot) is questionable for Friday's game against the Wizards.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Foot"
   },
   {
    "team": "CHA",
@@ -162,49 +174,13 @@
    "team": "CLE",
    "player_id": "5041951",
    "name": "Meleek Thomas",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Leg Foot",
-   "return_date": "2026-10-29",
-   "comment": "Thomas (foot) is questionable for Thursday's game in Atlanta.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-31",
+   "comment": "Thomas (foot) has been ruled out for Thursday's game against the Hawks, Serena Winters of FanDuel Sports Network Ohio reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Leg Foot"
-  },
-  {
-   "team": "CLE",
-   "player_id": "4683747",
-   "name": "Jaylon Tyson",
-   "espn_status": "Day-To-Day",
-   "detail": "Head Neck",
-   "return_date": "2026-10-29",
-   "comment": "Tyson (neck) is questionable for Thursday's game against the Hawks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Head Neck"
-  },
-  {
-   "team": "DAL",
-   "player_id": "5279129",
-   "name": "Sergio de Larrea",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-10-30",
-   "comment": "De Larrea (knee) has been ruled out for Wednesday's game against the Thunder.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Knee"
-  },
-  {
-   "team": "DAL",
-   "player_id": "4278594",
-   "name": "Naji Marshall",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
-   "return_date": "2026-10-30",
-   "comment": "Marshall (illness) won't play in Wednesday's game against Oklahoma City.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Illness"
   },
   {
    "team": "DAL",
@@ -213,7 +189,7 @@
    "espn_status": "Out",
    "detail": "Right Leg Heel",
    "return_date": "2026-10-30",
-   "comment": "Biberovic (knee) is out for Wednesday's game against the Thunder.",
+   "comment": "Biberovic (heel) is listed as doubtful for Friday's game versus the Rockets.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Heel"
@@ -225,10 +201,34 @@
    "espn_status": "Out",
    "detail": "Right Leg Knee",
    "return_date": "2026-10-30",
-   "comment": "Aldama (knee) is out for Wednesday's game against the Thunder.",
+   "comment": "Aldama (knee) is listed as doubtful for Friday's game against Houston.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
+  },
+  {
+   "team": "DAL",
+   "player_id": "5279129",
+   "name": "Sergio de Larrea",
+   "espn_status": "Out",
+   "detail": "Right Leg Knee",
+   "return_date": "2026-11-02",
+   "comment": "De Larrea (knee) is out for Friday's game against the Rockets.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Knee"
+  },
+  {
+   "team": "DAL",
+   "player_id": "4278594",
+   "name": "Naji Marshall",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-10-30",
+   "comment": "Marshall is questionable for Friday's game against the Rockets with an illness.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
   },
   {
    "team": "DAL",
@@ -244,12 +244,24 @@
   },
   {
    "team": "DEN",
+   "player_id": "4065813",
+   "name": "Alpha Diallo",
+   "espn_status": "Out",
+   "detail": "Right Other Personal",
+   "return_date": "2026-10-30",
+   "comment": "Diallo (personal) is listed as questionable for Friday's game against the Suns.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Other Personal"
+  },
+  {
+   "team": "DEN",
    "player_id": "3138196",
    "name": "Cameron Johnson",
    "espn_status": "Out",
    "detail": "Right Leg Ankle",
    "return_date": "2026-10-30",
-   "comment": "Johnson (ankle) is listed as out for Wednesday's game against the Pelicans.",
+   "comment": "Johnson (ankle) is questionable for Friday's game against Phoenix.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
@@ -265,18 +277,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Not Specified Leg Hamstring"
-  },
-  {
-   "team": "DEN",
-   "player_id": "4065813",
-   "name": "Alpha Diallo",
-   "espn_status": "Out",
-   "detail": "Right Other Personal",
-   "return_date": "2026-10-30",
-   "comment": "Diallo is out for Wednesday's game against the Pelicans due to personal reasons.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Other Personal"
   },
   {
    "team": "DEN",
@@ -321,7 +321,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Knee",
    "return_date": "2026-10-30",
-   "comment": "Santos has been ruled out for Wednesday's game against the Timberwolves due to left knee tendinitis.",
+   "comment": "Santos (knee) is listed as doubtful for Friday's game against the Warriors.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -412,13 +412,37 @@
   },
   {
    "team": "IND",
+   "player_id": "4395712",
+   "name": "Andrew Nembhard",
+   "espn_status": "Day-To-Day",
+   "detail": "Head Neck",
+   "return_date": "2026-10-30",
+   "comment": "Nembhard (neck) is listed as probable for Friday's game against Miami.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Head Neck"
+  },
+  {
+   "team": "IND",
+   "player_id": "4396909",
+   "name": "Aaron Nesmith",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Hamstring",
+   "return_date": "2026-10-30",
+   "comment": "Nesmith (hamstring) is probable for Friday's game against the Heat.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Hamstring"
+  },
+  {
+   "team": "IND",
    "player_id": "4017837",
    "name": "Ivica Zubac",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-10-30",
-   "comment": "Zubac (ankle) is out for Wednesday's game against the 76ers.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-01",
+   "comment": "Zubac (ankle) is out for Friday's game against the Heat.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
   },
@@ -472,6 +496,18 @@
   },
   {
    "team": "LAC",
+   "player_id": "4066648",
+   "name": "Rui Hachimura",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Quadriceps",
+   "return_date": "2026-10-30",
+   "comment": "Hachimura (quadriceps) is questionable for Friday's game against Minnesota, Tomer Azarly of ClutchPoints.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Quadriceps"
+  },
+  {
+   "team": "LAC",
    "player_id": "5108024",
    "name": "Yanic Konan Niederhauser",
    "espn_status": "Out",
@@ -481,18 +517,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "LAC",
-   "player_id": "4066648",
-   "name": "Rui Hachimura",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Quadriceps",
-   "return_date": "2026-10-30",
-   "comment": "Hachimura (quadriceps) has been ruled out for Wednesday's game against the Lakers, Joey Linn of SI.com reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Quadriceps"
   },
   {
    "team": "LAC",
@@ -544,36 +568,12 @@
   },
   {
    "team": "LAL",
-   "player_id": "4433137",
-   "name": "Ziaire Williams",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Foot",
-   "return_date": "2026-10-30",
-   "comment": "Williams (foot) is out for Wednesday's game against the Clippers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Foot"
-  },
-  {
-   "team": "LAL",
-   "player_id": "3945274",
-   "name": "Luka Doncic",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-30",
-   "comment": "Doncic (back) is out for Wednesday's game against the Clippers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "LAL",
    "player_id": "5113969",
    "name": "Cameron Carr",
    "espn_status": "Out",
    "detail": "Right Torso Oblique",
-   "return_date": "2026-10-30",
-   "comment": "Carr (oblique) is out for Wednesday's game against the Clippers.",
+   "return_date": "2026-11-01",
+   "comment": "Carr (oblique) has been ruled out for Friday's game against Golden State.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Torso Oblique"
@@ -584,11 +584,23 @@
    "name": "Adou Thiero",
    "espn_status": "Out",
    "detail": "Left Leg Knee",
-   "return_date": "2026-10-30",
-   "comment": "Thiero (knee) is out for Wednesday's game against the Clippers.",
+   "return_date": "2026-11-01",
+   "comment": "Thiero (knee) has been ruled out for Friday's game against the Warriors.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "LAL",
+   "player_id": "4433137",
+   "name": "Ziaire Williams",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Foot",
+   "return_date": "2026-10-30",
+   "comment": "Williams (foot) is questionable for Friday's game against Golden State.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Foot"
   },
   {
    "team": "MIA",
@@ -628,13 +640,25 @@
   },
   {
    "team": "NO",
+   "player_id": "3907497",
+   "name": "Dejounte Murray",
+   "espn_status": "Out",
+   "detail": "Other Personal",
+   "return_date": "2026-10-31",
+   "comment": "Murray (personal) is out for Thursday's game against the Kings, Jim Eichenhofer of the Pelicans' official site reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Personal"
+  },
+  {
+   "team": "NO",
    "player_id": "4277956",
    "name": "Jordan Poole",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-10-29",
-   "comment": "Poole (ankle) is now doubtful for Thursday against the Kings.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-31",
+   "comment": "Poole (ankle) has been ruled out for Thursday's game against the Kings.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
   },
@@ -656,8 +680,8 @@
    "name": "Jose Alvarado",
    "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-10-30",
-   "comment": "Alvarado (ankle) is out for Wednesday's game against the Bulls.",
+   "return_date": "2026-11-04",
+   "comment": "Alvarado (ankle) has been ruled out for Friday's game against Philadelphia.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
@@ -798,13 +822,25 @@
    "team": "PHI",
    "player_id": "4432446",
    "name": "Jabari Walker",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Knee",
-   "return_date": "2026-10-30",
-   "comment": "Walker (knee) has been ruled out for Wednesday's game against the Pacers.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-31",
+   "comment": "Walker (knee) has been ruled out for Friday's game versus New York.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "PHI",
+   "player_id": "3917376",
+   "name": "Jaylen Brown",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-30",
+   "comment": "Brown (knee) is questionable for Friday's game against the Knicks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
   },
   {
    "team": "PHI",
@@ -849,7 +885,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Not Specified Torso Oblique",
    "return_date": "2026-10-30",
-   "comment": "Ighodaro (oblique) is feeling better and considered day-to-day ahead of Friday's game against the Nuggets, John Gambadoro of Arizona Sports 98.7 FM reports.",
+   "comment": "Ighodaro (oblique) is listed as questionable for Friday's game against Denver.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Not Specified Torso Oblique"
@@ -870,11 +906,11 @@
    "team": "POR",
    "player_id": "4066211",
    "name": "Robert Williams III",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Leg Knee",
-   "return_date": "2026-10-29",
-   "comment": "Williams (knee) is doubtful for Thursday's game against Memphis due to left knee injury management, according to the Trail Blazers.",
-   "status": "Day-To-Day",
+   "return_date": "2026-10-31",
+   "comment": "Williams (knee) has been ruled out for Thursday's game against Memphis, Casey Holdahl of the Trail Blazers' official site reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
   },
@@ -884,7 +920,7 @@
    "name": "Chris Youngblood",
    "espn_status": "Out",
    "detail": "Left Leg Ankle",
-   "return_date": "2026-10-29",
+   "return_date": "2026-10-31",
    "comment": "Youngblood (ankle/two-way player) is out for Tuesday's game against the Lakers.",
    "status": "Out",
    "official_status": null,
@@ -1053,7 +1089,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Leg Achilles",
    "return_date": "2026-10-30",
-   "comment": "Johnson has been ruled out for Wednesday's game against the Cavaliers due to right Achilles soreness.",
+   "comment": "Johnson (Achilles) is listed as questionable for Friday's game against Charlotte.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Achilles"
@@ -1606,6 +1642,11 @@
     "player_id": "4683747",
     "name": "Jaylon Tyson",
     "position": "G"
+   },
+   {
+    "player_id": "5106261",
+    "name": "Ernest Udeh Jr.",
+    "position": "C"
    },
    {
     "player_id": "4576087",
