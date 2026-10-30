@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-30T13:00:10-04:00",
- "official_report": "2026-10-30T06:00:00-04:00",
+ "fetched_at": "2026-10-30T16:41:08-04:00",
+ "official_report": "2026-10-30T16:30:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -249,7 +249,7 @@
    "espn_status": "Out",
    "detail": "Right Other Personal",
    "return_date": "2026-10-30",
-   "comment": "Diallo (personal) is listed as questionable for Friday's game against the Suns.",
+   "comment": "Diallo (personal) is doubtful for Friday's game against the Suns.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Other Personal"
@@ -261,7 +261,7 @@
    "espn_status": "Out",
    "detail": "Right Leg Ankle",
    "return_date": "2026-10-30",
-   "comment": "Johnson (ankle) is questionable for Friday's game against Phoenix.",
+   "comment": "Johnson (ankle) is expected to play in Friday's game against the Suns, per John Gambadoro of Arizona Sports 98.7 FM.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
@@ -369,7 +369,7 @@
    "espn_status": "Out",
    "detail": "Torso Back",
    "return_date": "2026-10-31",
-   "comment": "Sheppard (back) is out for Friday's game against the Mavericks.",
+   "comment": "Houston picked up Sheppard's (back) fourth-year team option Friday, per Lachard Binkley of SI.com.",
    "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
@@ -412,6 +412,30 @@
   },
   {
    "team": "IND",
+   "player_id": "2530530",
+   "name": "T.J. McConnell",
+   "espn_status": "Out",
+   "detail": "Right Leg Hamstring",
+   "return_date": "2026-11-02",
+   "comment": "McConnell (hamstring) is practicing in the G League at Noblesville Boom training camp, per Alex Golden of SI.com.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Hamstring"
+  },
+  {
+   "team": "IND",
+   "player_id": "5157066",
+   "name": "Johnny Furphy",
+   "espn_status": "Out",
+   "detail": "Right Leg Knee",
+   "return_date": "2027-01-02",
+   "comment": "Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Knee"
+  },
+  {
+   "team": "IND",
    "player_id": "4395712",
    "name": "Andrew Nembhard",
    "espn_status": "Day-To-Day",
@@ -448,18 +472,6 @@
   },
   {
    "team": "IND",
-   "player_id": "2530530",
-   "name": "T.J. McConnell",
-   "espn_status": "Out",
-   "detail": "Right Leg Hamstring",
-   "return_date": "2026-11-02",
-   "comment": "Pacers head coach Rick Carlisle stated McConnell (hamstring) is \"doing better\" and \"getting closer\" to a return, Alex Golden of SI.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Hamstring"
-  },
-  {
-   "team": "IND",
    "player_id": "4433076",
    "name": "Ben Sheppard",
    "espn_status": "Out",
@@ -483,25 +495,13 @@
    "reason": "Left Leg Hamstring"
   },
   {
-   "team": "IND",
-   "player_id": "5157066",
-   "name": "Johnny Furphy",
-   "espn_status": "Out",
-   "detail": "Right Leg Knee",
-   "return_date": "2027-01-02",
-   "comment": "Furphy was diagnosed with a torn right ACL on Monday and will miss the remainder of the season, Michael Scotto of USA Today reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Knee"
-  },
-  {
    "team": "LAC",
    "player_id": "4066648",
    "name": "Rui Hachimura",
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Quadriceps",
    "return_date": "2026-10-30",
-   "comment": "Hachimura (quadriceps) is questionable for Friday's game against Minnesota, Tomer Azarly of ClutchPoints.com reports.",
+   "comment": "Hachimura (quadriceps) is probable for Friday's game against Minnesota, per Ohm Youngmisuk of ESPN.com.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Quadriceps"
@@ -568,6 +568,18 @@
   },
   {
    "team": "LAL",
+   "player_id": "4433137",
+   "name": "Ziaire Williams",
+   "espn_status": "Out",
+   "detail": "Left Leg Foot",
+   "return_date": "2026-11-01",
+   "comment": "Williams has been ruled out for Friday's game against the Warriors due to left foot injury management, Mark Medina of TheSportingTribune.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Foot"
+  },
+  {
+   "team": "LAL",
    "player_id": "5060631",
    "name": "Adou Thiero",
    "espn_status": "Out",
@@ -577,18 +589,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "LAL",
-   "player_id": "4433137",
-   "name": "Ziaire Williams",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Foot",
-   "return_date": "2026-10-30",
-   "comment": "Williams (foot) is questionable for Friday's game against Golden State.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Foot"
   },
   {
    "team": "MEM",
@@ -820,6 +820,18 @@
   },
   {
    "team": "PHI",
+   "player_id": "3917376",
+   "name": "Jaylen Brown",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-10-30",
+   "comment": "Brown (knee) is doubtful for Friday's game against the Knicks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "PHI",
    "player_id": "4432446",
    "name": "Jabari Walker",
    "espn_status": "Out",
@@ -829,18 +841,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3917376",
-   "name": "Jaylen Brown",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-10-30",
-   "comment": "Brown (knee) is questionable for Friday's game against the Knicks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
   },
   {
    "team": "PHI",
@@ -904,6 +904,18 @@
   },
   {
    "team": "POR",
+   "player_id": "4279888",
+   "name": "Ja Morant",
+   "espn_status": "Out",
+   "detail": "Left Leg Hamstring",
+   "return_date": "2026-12-01",
+   "comment": "Morant has been diagnosed with a Grade 2 left hamstring strain and is expected to miss four weeks, Portland announced Friday.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Hamstring"
+  },
+  {
+   "team": "POR",
    "player_id": "4066211",
    "name": "Robert Williams III",
    "espn_status": "Day-To-Day",
@@ -913,18 +925,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "POR",
-   "player_id": "4279888",
-   "name": "Ja Morant",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-10-31",
-   "comment": "Morant won't return to Thursday's game against the Grizzlies due to a left hamstring injury. He'll end with 14 points (6-14 FG, 2-5 3Pt), two rebounds and three assists in 23 minutes.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Hamstring"
   },
   {
    "team": "POR",
@@ -2935,6 +2935,11 @@
    }
   ],
   "OKC": [
+   {
+    "player_id": "4397018",
+    "name": "Ochai Agbaji",
+    "position": "G"
+   },
    {
     "player_id": "4684208",
     "name": "Brooks Barnhizer",
