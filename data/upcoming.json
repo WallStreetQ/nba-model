@@ -1,19 +1,5 @@
 [
  {
-  "game_id": "401909896",
-  "game_date": "2026-10-31",
-  "start_utc": "2026-10-31T19:00Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "UTAH",
-  "away_team": "POR",
-  "total_line": 231.5,
-  "spread_home": 7.5,
-  "ml_home": 260.0,
-  "ml_away": -325.0,
-  "odds_provider": "DraftKings"
- },
- {
   "game_id": "401909897",
   "game_date": "2026-10-31",
   "start_utc": "2026-10-31T22:00Z",
@@ -21,11 +7,11 @@
   "neutral": false,
   "home_team": "CHA",
   "away_team": "PHI",
-  "total_line": 215.5,
+  "total_line": 211.5,
   "spread_home": 1.5,
-  "ml_home": 110.0,
-  "ml_away": -130.0,
-  "odds_provider": "DraftKings"
+  "ml_home": -108.0,
+  "ml_away": -112.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909898",
@@ -37,9 +23,9 @@
   "away_team": "ATL",
   "total_line": 240.5,
   "spread_home": 4.5,
-  "ml_home": 150.0,
-  "ml_away": -180.0,
-  "odds_provider": "DraftKings"
+  "ml_home": 154.0,
+  "ml_away": -185.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909899",
@@ -51,9 +37,9 @@
   "away_team": "SAC",
   "total_line": 230.5,
   "spread_home": -8.5,
-  "ml_home": -375.0,
-  "ml_away": 295.0,
-  "odds_provider": "DraftKings"
+  "ml_home": -360.0,
+  "ml_away": 285.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909900",
@@ -67,7 +53,7 @@
   "spread_home": 9.5,
   "ml_home": 310.0,
   "ml_away": -395.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909901",
@@ -77,11 +63,11 @@
   "neutral": false,
   "home_team": "SA",
   "away_team": "MIN",
-  "total_line": 227.5,
+  "total_line": 228.5,
   "spread_home": -12.5,
   "ml_home": -600.0,
   "ml_away": 440.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909902",
@@ -91,11 +77,11 @@
   "neutral": false,
   "home_team": "HOU",
   "away_team": "OKC",
-  "total_line": 218.5,
+  "total_line": 219.5,
   "spread_home": -2.5,
   "ml_home": -142.0,
   "ml_away": 120.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909903",

@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-10-31T12:03:57-04:00",
- "official_report": "2026-10-31T12:00:00-04:00",
+ "fetched_at": "2026-10-31T15:53:52-04:00",
+ "official_report": "2026-10-31T15:45:00-04:00",
  "players": [
   {
    "team": "ATL",
@@ -136,6 +136,18 @@
   },
   {
    "team": "CLE",
+   "player_id": "5041951",
+   "name": "Meleek Thomas",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Foot",
+   "return_date": "2026-10-31",
+   "comment": "Thomas (foot) has been upgraded to probable ahead of Saturday's meeting in Milwaukee.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Foot"
+  },
+  {
+   "team": "CLE",
    "player_id": "4683747",
    "name": "Jaylon Tyson",
    "espn_status": "Out",
@@ -145,18 +157,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
-  },
-  {
-   "team": "CLE",
-   "player_id": "5041951",
-   "name": "Meleek Thomas",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Foot",
-   "return_date": "2026-10-31",
-   "comment": "Thomas (foot) is questionable for Saturday's game against the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Foot"
   },
   {
    "team": "DAL",
@@ -268,6 +268,18 @@
   },
   {
    "team": "GS",
+   "player_id": "3975",
+   "name": "Stephen Curry",
+   "espn_status": "Out",
+   "detail": "Other Rest",
+   "return_date": "2026-11-02",
+   "comment": "Curry recorded 31 points (11-23 FG, 8-14 3Pt, 1-1 FT), four rebounds, six assists, one block and one steal over 31 minutes during Friday's 112-95 win over the Lakers.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Rest"
+  },
+  {
+   "team": "GS",
    "player_id": "3102531",
    "name": "Kristaps Porzingis",
    "espn_status": "Out",
@@ -306,25 +318,25 @@
    "team": "HOU",
    "player_id": "4711272",
    "name": "Reed Sheppard",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Torso Back",
-   "return_date": "2026-10-31",
-   "comment": "Houston picked up Sheppard's (back) fourth-year team option Friday, per Lachard Binkley of SI.com.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-02",
+   "comment": "Sheppard (back) is out for Saturday's game against the Thunder.",
+   "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
   },
   {
    "team": "HOU",
-   "player_id": "4871144",
-   "name": "Alperen Sengun",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-10-31",
-   "comment": "Sengun (back) has been ruled out for Friday's game against the Mavericks, Mike Curtis of The Dallas Morning News reports.",
-   "status": "Day-To-Day",
+   "player_id": "2991230",
+   "name": "Fred VanVleet",
+   "espn_status": "Out",
+   "detail": "Right Leg Knee",
+   "return_date": "2026-11-02",
+   "comment": "VanVleet (knee) won't play Saturday against the Thunder.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Torso Back"
+   "reason": "Right Leg Knee"
   },
   {
    "team": "HOU",
@@ -532,6 +544,18 @@
   },
   {
    "team": "MIN",
+   "player_id": "3032976",
+   "name": "Rudy Gobert",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-10-31",
+   "comment": "Gobert (back) is listed as questionable for Saturday's game at San Antonio.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
+  },
+  {
+   "team": "MIN",
    "player_id": "4594268",
    "name": "Anthony Edwards",
    "espn_status": "Out",
@@ -724,51 +748,27 @@
   },
   {
    "team": "PHI",
-   "player_id": "3059318",
-   "name": "Joel Embiid",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-10-31",
-   "comment": "Embiid (rest) closed Friday's 98-93 victory over the Knicks with 10 points (3-12 FG, 0-4 3Pt, 4-4 FT), seven rebounds, seven assists, one block and one steal in 33 minutes.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
-  },
-  {
-   "team": "PHI",
-   "player_id": "1966",
-   "name": "LeBron James",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-10-31",
-   "comment": "James (rest) closed with 20 points (8-15 FG, 2-6 3Pt, 2-3 FT), nine rebounds, eight assists, one block and one steal across 34 minutes during Friday's 98-93 win over the Knicks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3917376",
-   "name": "Jaylen Brown",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-10-31",
-   "comment": "Brown (knee) is out for Friday's game against the Knicks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
-  },
-  {
-   "team": "PHI",
    "player_id": "4432446",
    "name": "Jabari Walker",
    "espn_status": "Out",
    "detail": "Left Leg Knee",
    "return_date": "2026-10-31",
-   "comment": "Walker (knee) has been ruled out for Friday's game versus New York.",
+   "comment": "Walker (knee) is questionable for Saturday's game in Charlotte.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "PHI",
+   "player_id": "1966",
+   "name": "LeBron James",
+   "espn_status": "Out",
+   "detail": "Torso Back",
+   "return_date": "2026-11-02",
+   "comment": "James (back) has been ruled out for Saturday's meeting in Charlotte.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Torso Back"
   },
   {
    "team": "PHI",
@@ -776,11 +776,35 @@
    "name": "Tacko Fall",
    "espn_status": "Out",
    "detail": "Left Leg Quadriceps",
-   "return_date": "2026-11-04",
-   "comment": "Fall (quadriceps) is out for Wednesday's game in Indiana.",
+   "return_date": "2026-10-31",
+   "comment": "Fall (quad) is questionable to face the Hornets on Saturday.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Quadriceps"
+  },
+  {
+   "team": "PHI",
+   "player_id": "3059318",
+   "name": "Joel Embiid",
+   "espn_status": "Out",
+   "detail": "Right Leg Foot",
+   "return_date": "2026-11-02",
+   "comment": "Embiid (foot) is out for Saturday's game in Charlotte.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Foot"
+  },
+  {
+   "team": "PHI",
+   "player_id": "3917376",
+   "name": "Jaylen Brown",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-10-31",
+   "comment": "Brown (knee) is questionable for Saturday's game in Charlotte.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Knee"
   },
   {
    "team": "PHI",
@@ -817,30 +841,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Arm Shoulder"
-  },
-  {
-   "team": "POR",
-   "player_id": "4066211",
-   "name": "Robert Williams III",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-31",
-   "comment": "Williams (knee) is questionable for Saturday's game against the Jazz.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Knee"
-  },
-  {
-   "team": "POR",
-   "player_id": "4706557",
-   "name": "Chris Youngblood",
-   "espn_status": "Out",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-10-31",
-   "comment": "Youngblood (ankle) is questionable for Saturday's game against Utah.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
   },
   {
    "team": "POR",
@@ -916,6 +916,18 @@
   },
   {
    "team": "SA",
+   "player_id": "4845367",
+   "name": "Stephon Castle",
+   "espn_status": "Day-To-Day",
+   "detail": "Head Head",
+   "return_date": "2026-10-31",
+   "comment": "Castle (migraine) is questionable for Saturday's game against the Timberwolves, Paul Garcia of ProjectSpurs.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Head Head"
+  },
+  {
+   "team": "SA",
    "player_id": "6440",
    "name": "Tobias Harris",
    "espn_status": "Out",
@@ -961,18 +973,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "UTAH",
-   "player_id": "4066336",
-   "name": "Lauri Markkanen",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Arm Wrist",
-   "return_date": "2026-10-31",
-   "comment": "Markkanen (wrist) is listed as questionable for Saturday's game against Portland.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Arm Wrist"
   },
   {
    "team": "UTAH",
@@ -2840,11 +2840,6 @@
   ],
   "OKC": [
    {
-    "player_id": "4397018",
-    "name": "Ochai Agbaji",
-    "position": "G"
-   },
-   {
     "player_id": "4684208",
     "name": "Brooks Barnhizer",
     "position": "F"
@@ -3556,6 +3551,11 @@
     "position": "C"
    },
    {
+    "player_id": "4683736",
+    "name": "Kobe Bufkin",
+    "position": "G"
+   },
+   {
     "player_id": "4683766",
     "name": "Isaiah Collier",
     "position": "G"
@@ -3579,11 +3579,6 @@
     "player_id": "4397077",
     "name": "Jaxson Hayes",
     "position": "C"
-   },
-   {
-    "player_id": "4396963",
-    "name": "Blake Hinson",
-    "position": "F"
    },
    {
     "player_id": "4433618",
