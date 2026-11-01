@@ -1,7 +1,19 @@
 {
- "fetched_at": "2026-10-31T15:53:52-04:00",
- "official_report": "2026-10-31T15:45:00-04:00",
+ "fetched_at": "2026-10-31T21:17:21-04:00",
+ "official_report": "2026-10-31T21:15:00-04:00",
  "players": [
+  {
+   "team": "ATL",
+   "player_id": "3146557",
+   "name": "Jock Landale",
+   "espn_status": "Out",
+   "detail": "Left Torso Hip",
+   "return_date": "2026-11-02",
+   "comment": "Landale (hip) won't return to Saturday's game against the Pelicans.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Torso Hip"
+  },
   {
    "team": "ATL",
    "player_id": "4712863",
@@ -28,6 +40,18 @@
   },
   {
    "team": "BOS",
+   "player_id": "4351852",
+   "name": "Mitchell Robinson",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Rest",
+   "return_date": "2026-11-01",
+   "comment": "Robinson (rest) is questionable for Sunday's game in Orlando, Jay King of The Athletic reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Rest"
+  },
+  {
+   "team": "BOS",
    "player_id": "4433188",
    "name": "Devin Carter",
    "espn_status": "Out",
@@ -37,6 +61,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Other Illness"
+  },
+  {
+   "team": "BKN",
+   "player_id": "5101761",
+   "name": "Mikel Brown Jr.",
+   "espn_status": "Out",
+   "detail": "Other Rest",
+   "return_date": "2026-11-02",
+   "comment": "Brown (rest) is out for Sunday's game in Indiana.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Rest"
   },
   {
    "team": "BKN",
@@ -133,18 +169,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Not Specified Leg Hamstring"
-  },
-  {
-   "team": "CLE",
-   "player_id": "5041951",
-   "name": "Meleek Thomas",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Foot",
-   "return_date": "2026-10-31",
-   "comment": "Thomas (foot) has been upgraded to probable ahead of Saturday's meeting in Milwaukee.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Foot"
   },
   {
    "team": "CLE",
@@ -268,12 +292,36 @@
   },
   {
    "team": "GS",
+   "player_id": "4997536",
+   "name": "Gui Santos",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-11-01",
+   "comment": "Santos (knee) is probable for Sunday's game against the Clippers.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Knee"
+  },
+  {
+   "team": "GS",
+   "player_id": "6589",
+   "name": "Draymond Green",
+   "espn_status": "Out",
+   "detail": "Other Rest",
+   "return_date": "2026-11-02",
+   "comment": "Green (back) is out for Sunday's game against the Clippers.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Rest"
+  },
+  {
+   "team": "GS",
    "player_id": "3975",
    "name": "Stephen Curry",
    "espn_status": "Out",
    "detail": "Other Rest",
    "return_date": "2026-11-02",
-   "comment": "Curry recorded 31 points (11-23 FG, 8-14 3Pt, 1-1 FT), four rebounds, six assists, one block and one steal over 31 minutes during Friday's 112-95 win over the Lakers.",
+   "comment": "Curry (rest) won't play Sunday against the Clippers, Brett Siegel of ClutchPoints.com reports.",
    "status": "Out",
    "official_status": null,
    "reason": "Other Rest"
@@ -352,12 +400,36 @@
   },
   {
    "team": "IND",
+   "player_id": "4017837",
+   "name": "Ivica Zubac",
+   "espn_status": "Out",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-02",
+   "comment": "Zubac (ankle) will remain on the inactive list for Sunday's game against the Nets.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "IND",
+   "player_id": "4396909",
+   "name": "Aaron Nesmith",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Hamstring",
+   "return_date": "2026-11-01",
+   "comment": "Nesmith (hamstring) is listed as probable for Sunday's game against Brooklyn.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Hamstring"
+  },
+  {
+   "team": "IND",
    "player_id": "4278355",
    "name": "Obi Toppin",
    "espn_status": "Day-To-Day",
    "detail": "Torso Back",
    "return_date": "2026-11-01",
-   "comment": "Toppin (back) has been ruled out for Friday's game against Miami.",
+   "comment": "Toppin (back) is questionable for Sunday's game against the Nets.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Torso Back"
@@ -385,18 +457,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "IND",
-   "player_id": "4017837",
-   "name": "Ivica Zubac",
-   "espn_status": "Out",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-01",
-   "comment": "Zubac (ankle) is out for Friday's game against the Heat.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
   },
   {
    "team": "IND",
@@ -489,7 +549,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Foot",
    "return_date": "2026-11-01",
-   "comment": "Williams has been ruled out for Friday's game against the Warriors due to left foot injury management, Mark Medina of TheSportingTribune.com reports.",
+   "comment": "Williams (foot) is questionable for Sunday's game against the Raptors, Law Murray of The Athletic reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Foot"
@@ -508,25 +568,25 @@
   },
   {
    "team": "MEM",
-   "player_id": "4431785",
-   "name": "Scotty Pippen Jr.",
-   "espn_status": "Day-To-Day",
+   "player_id": "4065733",
+   "name": "Ty Jerome",
+   "espn_status": "Out",
    "detail": "Torso Back",
-   "return_date": "2026-10-31",
-   "comment": "Pippen (back) is listed as questionable for Saturday's game against the Kings.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-02",
+   "comment": "Jerome (back) won't play in Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian.",
+   "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
   },
   {
    "team": "MEM",
-   "player_id": "4065733",
-   "name": "Ty Jerome",
-   "espn_status": "Day-To-Day",
+   "player_id": "4431785",
+   "name": "Scotty Pippen Jr.",
+   "espn_status": "Out",
    "detail": "Torso Back",
-   "return_date": "2026-10-31",
-   "comment": "Jerome (back) is listed as questionable for Saturday's game against the Kings.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-02",
+   "comment": "Pippen (back) has been ruled out for Saturday's game against the Kings, Chris Herrington of The Daily Memphian reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
   },
@@ -534,11 +594,11 @@
    "team": "MEM",
    "player_id": "4593016",
    "name": "Quinten Post",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Ankle",
-   "return_date": "2026-10-31",
-   "comment": "Post (ankle) is doubtful for Friday's game against the Kings.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-02",
+   "comment": "Post (ankle) has been ruled out for Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
   },
@@ -546,11 +606,11 @@
    "team": "MIN",
    "player_id": "3032976",
    "name": "Rudy Gobert",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Torso Back",
-   "return_date": "2026-10-31",
-   "comment": "Gobert (back) is listed as questionable for Saturday's game at San Antonio.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-02",
+   "comment": "Gobert (back) is out for Saturday's game against the Spurs, Dane Moore of 'The Dane Moore NBA Podcast' reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
   },
@@ -577,6 +637,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Achilles"
+  },
+  {
+   "team": "NO",
+   "player_id": "3907497",
+   "name": "Dejounte Murray",
+   "espn_status": "Out",
+   "detail": "Other Personal",
+   "return_date": "2026-11-02",
+   "comment": "Murray (personal) won't play in Saturday's game against the Hawks, Jim Eichenhofer of the Pelicans' official site reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Personal"
   },
   {
    "team": "NO",
@@ -748,18 +820,6 @@
   },
   {
    "team": "PHI",
-   "player_id": "4432446",
-   "name": "Jabari Walker",
-   "espn_status": "Out",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-31",
-   "comment": "Walker (knee) is questionable for Saturday's game in Charlotte.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Knee"
-  },
-  {
-   "team": "PHI",
    "player_id": "1966",
    "name": "LeBron James",
    "espn_status": "Out",
@@ -772,18 +832,6 @@
   },
   {
    "team": "PHI",
-   "player_id": "3904625",
-   "name": "Tacko Fall",
-   "espn_status": "Out",
-   "detail": "Left Leg Quadriceps",
-   "return_date": "2026-10-31",
-   "comment": "Fall (quad) is questionable to face the Hornets on Saturday.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Quadriceps"
-  },
-  {
-   "team": "PHI",
    "player_id": "3059318",
    "name": "Joel Embiid",
    "espn_status": "Out",
@@ -793,18 +841,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "PHI",
-   "player_id": "3917376",
-   "name": "Jaylen Brown",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-10-31",
-   "comment": "Brown (knee) is questionable for Saturday's game in Charlotte.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Knee"
   },
   {
    "team": "PHI",
@@ -913,18 +949,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Achilles"
-  },
-  {
-   "team": "SA",
-   "player_id": "4845367",
-   "name": "Stephon Castle",
-   "espn_status": "Day-To-Day",
-   "detail": "Head Head",
-   "return_date": "2026-10-31",
-   "comment": "Castle (migraine) is questionable for Saturday's game against the Timberwolves, Paul Garcia of ProjectSpurs.com reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Head Head"
   },
   {
    "team": "SA",
