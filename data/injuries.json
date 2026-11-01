@@ -1,18 +1,30 @@
 {
- "fetched_at": "2026-10-31T21:17:21-04:00",
- "official_report": "2026-10-31T21:15:00-04:00",
+ "fetched_at": "2026-11-01T12:06:18-05:00",
+ "official_report": "2026-11-01T12:00:00-05:00",
  "players": [
   {
    "team": "ATL",
    "player_id": "3146557",
    "name": "Jock Landale",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Torso Hip",
    "return_date": "2026-11-02",
    "comment": "Landale (hip) won't return to Saturday's game against the Pelicans.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Torso Hip"
+  },
+  {
+   "team": "ATL",
+   "player_id": "4701230",
+   "name": "Jalen Johnson",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-02",
+   "comment": "Johnson (ankle) did not return to Saturday's 121-99 loss to the Pelicans. He finished with 13 points (5-11 FG, 1-3 3Pt, 2-2 FT), seven rebounds, four assists and one block over 28 minutes.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "ATL",
@@ -42,13 +54,13 @@
    "team": "BOS",
    "player_id": "4351852",
    "name": "Mitchell Robinson",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-11-01",
-   "comment": "Robinson (rest) is questionable for Sunday's game in Orlando, Jay King of The Athletic reports.",
-   "status": "Day-To-Day",
+   "espn_status": "Out",
+   "detail": "Not Specified Other Rest",
+   "return_date": "2026-11-02",
+   "comment": "Robinson (rest) has been ruled out for Sunday's game against the Magic.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Other Rest"
+   "reason": "Not Specified Other Rest"
   },
   {
    "team": "BOS",
@@ -174,11 +186,11 @@
    "team": "CLE",
    "player_id": "4683747",
    "name": "Jaylon Tyson",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Right Leg Ankle",
    "return_date": "2026-11-02",
    "comment": "Tyson (ankle) has been ruled out for Saturday's game against the Bucks.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Ankle"
   },
@@ -364,27 +376,27 @@
   },
   {
    "team": "HOU",
-   "player_id": "4711272",
-   "name": "Reed Sheppard",
-   "espn_status": "Out",
-   "detail": "Torso Back",
-   "return_date": "2026-11-02",
-   "comment": "Sheppard (back) is out for Saturday's game against the Thunder.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "HOU",
    "player_id": "2991230",
    "name": "Fred VanVleet",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Right Leg Knee",
    "return_date": "2026-11-02",
    "comment": "VanVleet (knee) won't play Saturday against the Thunder.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Knee"
+  },
+  {
+   "team": "HOU",
+   "player_id": "4711272",
+   "name": "Reed Sheppard",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-11-02",
+   "comment": "Sheppard (back) is out for Saturday's game against the Thunder.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
   },
   {
    "team": "HOU",
@@ -392,11 +404,23 @@
    "name": "Steven Adams",
    "espn_status": "Out",
    "detail": "Right Leg Calf",
-   "return_date": "2026-11-02",
+   "return_date": "2026-11-09",
    "comment": "Head coach Ime Udoka said Monday that Adams could be out \"a week or two\" due to his right soleus strain, Lachard Binkley of SI.com reports.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Calf"
+  },
+  {
+   "team": "IND",
+   "player_id": "2530530",
+   "name": "T.J. McConnell",
+   "espn_status": "Out",
+   "detail": "Right Leg Hamstring",
+   "return_date": "2026-11-02",
+   "comment": "Indiana recalled McConnell (hamstring) from the G League's Noblesville Boom on Saturday.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Hamstring"
   },
   {
    "team": "IND",
@@ -436,18 +460,6 @@
   },
   {
    "team": "IND",
-   "player_id": "2530530",
-   "name": "T.J. McConnell",
-   "espn_status": "Out",
-   "detail": "Right Leg Hamstring",
-   "return_date": "2026-11-02",
-   "comment": "McConnell (hamstring) is practicing in the G League at Noblesville Boom training camp, per Alex Golden of SI.com.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Hamstring"
-  },
-  {
-   "team": "IND",
    "player_id": "5157066",
    "name": "Johnny Furphy",
    "espn_status": "Out",
@@ -484,18 +496,6 @@
   },
   {
    "team": "LAC",
-   "player_id": "5108024",
-   "name": "Yanic Konan Niederhauser",
-   "espn_status": "Out",
-   "detail": "Right Leg Foot",
-   "return_date": "2026-11-08",
-   "comment": "Niederhauser (foot) had his third-year team option picked up Thursday by the Clippers, Ohm Youngmisuk of ESPN.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Foot"
-  },
-  {
-   "team": "LAC",
    "player_id": "4065778",
    "name": "Max Strus",
    "espn_status": "Out",
@@ -505,18 +505,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "LAC",
-   "player_id": "3913176",
-   "name": "Brandon Ingram",
-   "espn_status": "Out",
-   "detail": "Right Leg Achilles",
-   "return_date": "2026-11-08",
-   "comment": "Ingram (Achilles) is making progress but is set to miss at least one more week, Ohm Youngmisuk of ESPN.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Achilles"
   },
   {
    "team": "LAC",
@@ -544,6 +532,18 @@
   },
   {
    "team": "LAL",
+   "player_id": "5060631",
+   "name": "Adou Thiero",
+   "espn_status": "Out",
+   "detail": "Left Leg Knee",
+   "return_date": "2026-11-09",
+   "comment": "Thiero (knee) has been ruled out for Sunday's game against the Raptors.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Knee"
+  },
+  {
+   "team": "LAL",
    "player_id": "4433137",
    "name": "Ziaire Williams",
    "espn_status": "Day-To-Day",
@@ -555,62 +555,50 @@
    "reason": "Left Leg Foot"
   },
   {
-   "team": "LAL",
-   "player_id": "5060631",
-   "name": "Adou Thiero",
-   "espn_status": "Out",
-   "detail": "Left Leg Knee",
-   "return_date": "2026-11-01",
-   "comment": "Thiero (knee) has been ruled out for Friday's game against the Warriors.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Knee"
-  },
-  {
    "team": "MEM",
-   "player_id": "4065733",
-   "name": "Ty Jerome",
-   "espn_status": "Out",
-   "detail": "Torso Back",
+   "player_id": "4593016",
+   "name": "Quinten Post",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
    "return_date": "2026-11-02",
-   "comment": "Jerome (back) won't play in Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian.",
-   "status": "Out",
+   "comment": "Post (ankle) has been ruled out for Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian reports.",
+   "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Torso Back"
+   "reason": "Right Leg Ankle"
   },
   {
    "team": "MEM",
    "player_id": "4431785",
    "name": "Scotty Pippen Jr.",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Torso Back",
    "return_date": "2026-11-02",
    "comment": "Pippen (back) has been ruled out for Saturday's game against the Kings, Chris Herrington of The Daily Memphian reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Torso Back"
   },
   {
    "team": "MEM",
-   "player_id": "4593016",
-   "name": "Quinten Post",
-   "espn_status": "Out",
-   "detail": "Right Leg Ankle",
+   "player_id": "4065733",
+   "name": "Ty Jerome",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
    "return_date": "2026-11-02",
-   "comment": "Post (ankle) has been ruled out for Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian reports.",
-   "status": "Out",
+   "comment": "Jerome (back) won't play in Saturday's game versus Sacramento, Chris Herrington of The Daily Memphian.",
+   "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Right Leg Ankle"
+   "reason": "Torso Back"
   },
   {
    "team": "MIN",
    "player_id": "3032976",
    "name": "Rudy Gobert",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Torso Back",
    "return_date": "2026-11-02",
    "comment": "Gobert (back) is out for Saturday's game against the Spurs, Dane Moore of 'The Dane Moore NBA Podcast' reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Torso Back"
   },
@@ -640,13 +628,25 @@
   },
   {
    "team": "NO",
+   "player_id": "4277956",
+   "name": "Jordan Poole",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-02",
+   "comment": "Poole (ankle) has been ruled out for Saturday's game against the Hawks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "NO",
    "player_id": "3907497",
    "name": "Dejounte Murray",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Other Personal",
    "return_date": "2026-11-02",
    "comment": "Murray (personal) won't play in Saturday's game against the Hawks, Jim Eichenhofer of the Pelicans' official site reports.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Personal"
   },
@@ -661,18 +661,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
-  },
-  {
-   "team": "NO",
-   "player_id": "4277956",
-   "name": "Jordan Poole",
-   "espn_status": "Out",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-02",
-   "comment": "Poole (ankle) has been ruled out for Saturday's game against the Hawks.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
   },
   {
    "team": "NY",
@@ -820,27 +808,27 @@
   },
   {
    "team": "PHI",
-   "player_id": "1966",
-   "name": "LeBron James",
-   "espn_status": "Out",
-   "detail": "Torso Back",
-   "return_date": "2026-11-02",
-   "comment": "James (back) has been ruled out for Saturday's meeting in Charlotte.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Torso Back"
-  },
-  {
-   "team": "PHI",
    "player_id": "3059318",
    "name": "Joel Embiid",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Right Leg Foot",
    "return_date": "2026-11-02",
    "comment": "Embiid (foot) is out for Saturday's game in Charlotte.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Foot"
+  },
+  {
+   "team": "PHI",
+   "player_id": "1966",
+   "name": "LeBron James",
+   "espn_status": "Day-To-Day",
+   "detail": "Torso Back",
+   "return_date": "2026-11-02",
+   "comment": "James (back) has been ruled out for Saturday's meeting in Charlotte.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Torso Back"
   },
   {
    "team": "PHI",
@@ -2687,7 +2675,7 @@
    {
     "player_id": "4397136",
     "name": "Saddiq Bey",
-    "position": "G"
+    "position": "F"
    },
    {
     "player_id": "4712862",
