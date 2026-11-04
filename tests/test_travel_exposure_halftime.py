@@ -165,7 +165,7 @@ def test_discrete_spread_and_halftime_rows_price():
     mk = price(halftime_rows(ht, "H", "A", {"h2_total_line": 104.5, "h2_spread_home": -1.5}))
     assert set(mk["type"]) == {"Live 2H Total", "Live 2H Spread"}
     best = mk.sort_values("edge").iloc[-1]
-    assert best["label"] == "2H Over 104.5" and best["edge"] > 0.2
+    assert best["label"] == "2H Over 104.5" and best["p_model"] - best["book"] > 0.2 and best["edge"] > 0.1
 
 
 def test_grade_live_markets():
@@ -175,3 +175,16 @@ def test_grade_live_markets():
     assert grade_one({"market": "Live 2H Total", "side": "under", "line": 105.5, "price": -110, "team": None}, g)[:2] == ("W", 103.0)
     assert grade_one({"market": "Live 2H Spread", "side": "home", "line": -10.5, "price": -110, "team": "H"}, g)[0] == "W"
     assert grade_one({"market": "Live 2H Spread", "side": "away", "line": 10.5, "price": -110, "team": "A"}, g)[0] == "L"
+
+
+def test_first_half_waits_for_a_real_halftime_score():
+    from nba_live import first_half
+    g = {"home_q1": 28.0, "away_q1": 27.0, "home_q2": 0.0, "away_q2": 0.0, "period": 2,
+         "home_score": 28.0, "away_score": 27.0, "completed": False}
+    assert first_half(g) is None                                   # Q2 not in yet (the Oct 2026 bug)
+    g.update(home_q2=30.0, away_q2=25.0)
+    assert first_half(g) is None                                   # quarters don't match the scoreboard yet
+    g.update(home_score=58.0, away_score=52.0)
+    assert first_half(g) == (58.0, 52.0)
+    assert first_half({**g, "period": 1}) is None                  # end of the 1st is not the half
+    assert first_half({**g, "period": 3, "home_score": 70.0, "away_score": 60.0}) == (58.0, 52.0)

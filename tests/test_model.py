@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
+import pytest
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -73,7 +74,11 @@ def test_pricing_devig_and_kelly():
                        {"group": "tot", "label": "Under", "p": 0.45, "push": 0.0, "price": -110}])
     out = price(mk)
     assert np.allclose(out["book"], 0.5)
-    assert out.loc[0, "edge"] > 0.04 and out.loc[0, "kelly"] > 0 and out.loc[1, "kelly"] == 0
+    assert out.loc[0, "edge"] > 0.02 and out.loc[0, "kelly"] > 0 and out.loc[1, "kelly"] == 0
+    # edge is the market-blended one: half the raw 5-point edge at the default weight
+    import nba_picks
+    assert out.loc[0, "edge"] == pytest.approx(nba_picks.MARKET_WEIGHT_MODEL * 0.05)
+    assert out.loc[0, "p_model"] == pytest.approx(0.55)
 
 
 def test_espn_parsing_and_line_persistence():

@@ -19,11 +19,17 @@ from scipy.optimize import minimize
 
 DEFAULT_PRICE = -110          # assumed when a spread/total line has no price
 # A selection needs model win probability (pushes excluded) to beat the no-vig book probability by this much
-MIN_EDGE = {"Total": 0.04, "Spread": 0.04, "Moneyline": 0.04, "Team Total": 0.05, "1H Total": 0.05, "2H Total": 0.05,
-            "Live 2H Total": 0.05, "Live 2H Spread": 0.05}
-STAR_EDGES = (0.04, 0.07, 0.10)   # edge needed for 1, 2, 3 stars
-MAX_EDGE = 0.25                   # bigger "edges" are almost always stale lines or injury news
+# Edges are measured AFTER blending with the market (MARKET_WEIGHT_MODEL = 0.5), so they are half the raw size:
+# these are the old 4 % / 5 % raw thresholds, i.e. the same selections as before, with honest edges and stakes.
+MIN_EDGE = {"Total": 0.02, "Spread": 0.02, "Moneyline": 0.02, "Team Total": 0.025, "1H Total": 0.025,
+            "2H Total": 0.025, "Live 2H Total": 0.025, "Live 2H Spread": 0.025}
+STAR_EDGES = (0.02, 0.035, 0.05)  # edge needed for 1, 2, 3 stars
+MAX_EDGE = 0.125                  # (blended) bigger "edges" are almost always stale lines or injury news
 KELLY_FRACTION = 0.25
+# Share of the win probability that comes from the model; the rest is the no-vig book probability.
+# The market was more accurate than the model on the first 107 games of 2026-27 (total MAE 15.4 vs 15.7,
+# margin 11.1 vs 11.7), so raw model edges overstate the true edge. 1.0 = pure model (old behaviour).
+MARKET_WEIGHT_MODEL = 0.5
 MAX_GAME_EXPOSURE = 0.05          # most of the bankroll staked on one game, all its selections combined
 CORR_SHOW = 0.30                  # outcome correlation before a card names the pick it moves with
 N_SIMS = 20000
@@ -86,10 +92,14 @@ def price(mk, odds=None):
     over = mk.groupby("group")["implied"].transform("sum").replace(0, np.nan)
     mk["book"] = np.where(full, mk["implied"] / over, mk["implied"])
     p_res = 1 - mk["push"]
-    mk["p_cond"] = mk["p"] / p_res.where(p_res > 0, 1)
+    mk["p_model"] = mk["p"] / p_res.where(p_res > 0, 1)
+    w = MARKET_WEIGHT_MODEL
+    # blend only where the book probability is no-vig (both sides priced); one-sided prices keep the model
+    mk["p_cond"] = np.where(full & mk["book"].notna(), w * mk["p_model"] + (1 - w) * mk["book"], mk["p_model"])
     mk["edge"] = mk["p_cond"] - mk["book"]
-    lose = (1 - mk["p"] - mk["push"]).clip(lower=0)
-    mk["ev"] = mk["p"] * (mk["dec"] - 1) - lose
+    p_win = mk["p_cond"] * p_res
+    lose = (1 - p_win - mk["push"]).clip(lower=0)
+    mk["ev"] = p_win * (mk["dec"] - 1) - lose
     b = mk["dec"] - 1
     mk["kelly"] = ((b * mk["p_cond"] - (1 - mk["p_cond"])) / b).clip(lower=0) * KELLY_FRACTION
     return mk

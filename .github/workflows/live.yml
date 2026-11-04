@@ -21,6 +21,8 @@ name: Halftime pricing
 on:
   schedule:
     - cron: "30 23 * * *"            # watch mode (default)
+    - cron: "45 1 * * *"             # backup start (8:45 PM EST / 9:45 PM EDT) for nights the first run starts
+                                     # very late or dies; it queues behind a live run and exits once games are final
     # - cron: "*/10 23 * * *"        # private-repo alternative: one pass every 10 minutes...
     # - cron: "*/10 0-5 * * *"       # ...from 7 PM to 1 AM Eastern. Also change WATCH_MINUTES to 0 below.
   workflow_dispatch:

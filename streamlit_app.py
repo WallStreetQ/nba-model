@@ -672,6 +672,8 @@ with tab_track:
             st.dataframe(cal.round(3), hide_index=True, width="stretch")
 
     hs_ = htlog[htlog["act_2h"].notna()] if not htlog.empty and "act_2h" in htlog else pd.DataFrame()
+    if not hs_.empty and "bad_h1" in hs_:    # priced off a wrong first-half score: not a fair accuracy test
+        hs_ = hs_[hs_["bad_h1"].astype(str).str.lower() != "true"]
     if not hs_.empty:
         st.markdown("#### Halftime projections")
         b1, b2, b3, b4 = st.columns(4)

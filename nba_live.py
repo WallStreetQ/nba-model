@@ -76,10 +76,33 @@ def past_half(g) -> bool:
 
 
 def first_half(g):
+    """(home, away) first-half points, or None until they are trustworthy.
+    ESPN sometimes lists Q2 as 0 (or flags the break) before the 2nd quarter's points are in; pricing that
+    as a half priced 10 games off their Q1 score in Oct 2026. So: both quarters must be scored, we must be
+    in period 2+, and at the break the quarters must add up to the scoreboard."""
     try:
-        return float(g["home_q1"] + g["home_q2"]), float(g["away_q1"] + g["away_q2"])
-    except (TypeError, KeyError):
+        q = [float(g[k]) for k in ("home_q1", "home_q2", "away_q1", "away_q2")]
+    except (TypeError, KeyError, ValueError):
         return None
+    if any(np.isnan(x) for x in q) or q[1] <= 0 or q[3] <= 0 or q[0] <= 0 or q[2] <= 0:
+        return None
+    if not g.get("completed") and (g.get("period") or 0) < 2:
+        return None
+    h1h, h1a = q[0] + q[1], q[2] + q[3]
+    if not g.get("completed") and (g.get("period") or 0) == 2:
+        hs, as_ = g.get("home_score"), g.get("away_score")
+        if hs is None or as_ is None or abs(float(hs) - h1h) > 0.5 or abs(float(as_) - h1a) > 0.5:
+            return None
+    return h1h, h1a
+
+
+def second_half_actual(g):
+    """Final 2H points (incl. OT) from the final box: total and home margin, independent of what was logged."""
+    fh = first_half(g)
+    if fh is None:
+        return None
+    hs, as_ = float(g["home_score"]), float(g["away_score"])
+    return hs + as_ - fh[0] - fh[1], (hs - as_) - (fh[0] - fh[1]), fh
 
 
 # ------------------------------------------------------------------ pre-game numbers
@@ -226,9 +249,13 @@ def settle(htlog, picks, finals):
             g = finals.get(r["game_id"])
             if g is None:
                 continue
+            act = second_half_actual(g)
+            if act is None:
+                continue
             hs, as_ = float(g["home_score"]), float(g["away_score"])
-            htlog.loc[i, ["home_score", "away_score", "act_2h", "act_2hm"]] = [
-                hs, as_, hs + as_ - r["h1_home"] - r["h1_away"], (hs - as_) - (r["h1_home"] - r["h1_away"])]
+            htlog.loc[i, ["home_score", "away_score", "act_2h", "act_2hm"]] = [hs, as_, act[0], act[1]]
+            if abs(act[2][0] - r["h1_home"]) > 0.5 or abs(act[2][1] - r["h1_away"]) > 0.5:
+                htlog.loc[i, "bad_h1"] = True      # priced off a wrong 1H score: keep the row, leave it out of accuracy
     if not picks.empty:
         for i, p in picks[picks["status"] == "pending"].iterrows():
             g = finals.get(p["game_id"])

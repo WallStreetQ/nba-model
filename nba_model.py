@@ -49,7 +49,7 @@ from nba_common import DATA_DIR, competitive_only, read_table, season_of
 ARTIFACT_VERSION = 2
 DEFAULT_HALF_LIFE = 90      # days
 DEFAULT_PRIOR_GAMES = 2      # ridge prior strength, in games of league-average play
-DEFAULT_CARRYOVER = 0.6      # weight multiplier per season boundary crossed (1 = off)
+DEFAULT_CARRYOVER = 0.3      # weight multiplier per season boundary crossed (1 = off)
 DEFAULT_TRAVEL = 0           # 1 = use the travel terms below, 0 = back-to-backs only
 DEFAULT_PLAYOFF_WEIGHT = 0.7
 
