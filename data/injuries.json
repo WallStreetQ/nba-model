@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-04T13:36:35-05:00",
- "official_report": "2026-11-04T13:30:00-05:00",
+ "fetched_at": "2026-11-04T16:48:53-05:00",
+ "official_report": "2026-11-04T16:45:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -189,7 +189,7 @@
    "espn_status": "Out",
    "detail": "Right Leg Knee",
    "return_date": "2026-11-04",
-   "comment": "Aldama (knee) was spotted at Wednesday's morning shootaround, Brad Townsend of The Dallas Morning News reports.",
+   "comment": "Aldama (knee) is doubtful for Wednesday's game against the Spurs, per NBA reporter Marc Stein.",
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
@@ -390,11 +390,11 @@
    "team": "HOU",
    "player_id": "3102529",
    "name": "Clint Capela",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Ankle",
-   "return_date": "2026-11-04",
-   "comment": "Capela (ankle) is listed as questionable for Wednesday's game against the Timberwolves.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-07",
+   "comment": "Capela (ankle) is out for Wednesday's game against the Timberwolves.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
   },
@@ -496,6 +496,18 @@
   },
   {
    "team": "LAC",
+   "player_id": "4432170",
+   "name": "Isaiah Jackson",
+   "espn_status": "Day-To-Day",
+   "detail": "Groin Groin",
+   "return_date": "2026-11-04",
+   "comment": "Jackson is questionable for Wednesday's game against the Heat with left groin soreness, per Law Murray of The Athletic.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Groin Groin"
+  },
+  {
+   "team": "LAC",
    "player_id": "5108024",
    "name": "Yanic Konan Niederhauser",
    "espn_status": "Out",
@@ -549,7 +561,7 @@
    "espn_status": "Out",
    "detail": "Left Leg Knee",
    "return_date": "2026-11-06",
-   "comment": "Head coach JJ Redick said Monday that Thiero (knee) has participated in live action, and the hope is that he'll be available by the end of the week, Khobi Price of The California Post reports.",
+   "comment": "The Lakers assigned Thiero (knee) to the G League's Coachella Valley Lakers on Wednesday, per Khobi Price of The California Post.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -577,18 +589,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
-  },
-  {
-   "team": "MIA",
-   "player_id": "4431772",
-   "name": "Myron Gardner",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Quadriceps",
-   "return_date": "2026-11-04",
-   "comment": "Gardner (quadriceps) is listed as questionable for Wednesday's game against the Clippers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Quadriceps"
   },
   {
    "team": "MIA",
@@ -652,6 +652,18 @@
   },
   {
    "team": "NO",
+   "player_id": "4397688",
+   "name": "Trey Murphy III",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-11-04",
+   "comment": "Murphy (knees) is now questionable for Wednesday against the Jazz.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
+  },
+  {
+   "team": "NO",
    "player_id": "4277956",
    "name": "Jordan Poole",
    "espn_status": "Out",
@@ -661,18 +673,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Ankle"
-  },
-  {
-   "team": "NO",
-   "player_id": "4397688",
-   "name": "Trey Murphy III",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-11-04",
-   "comment": "Murphy (knee) is probable for Wednesday's game versus the Jazz.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
   },
   {
    "team": "NO",
@@ -772,18 +772,6 @@
   },
   {
    "team": "ORL",
-   "player_id": "4712849",
-   "name": "Anthony Black",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-11-05",
-   "comment": "Black will be rested Monday against the Wizards.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
-  },
-  {
-   "team": "ORL",
    "player_id": "4065654",
    "name": "Jonathan Isaac",
    "espn_status": "Out",
@@ -868,6 +856,18 @@
   },
   {
    "team": "PHX",
+   "player_id": "5105977",
+   "name": "Rasheer Fleming",
+   "espn_status": "Out",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-05",
+   "comment": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "PHX",
    "player_id": "4278402",
    "name": "Jordan Goodwin",
    "espn_status": "Day-To-Day",
@@ -877,18 +877,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Calf"
-  },
-  {
-   "team": "PHX",
-   "player_id": "5105977",
-   "name": "Rasheer Fleming",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-04",
-   "comment": "Fleming is questionable for Wednesday's game against the Trail Blazers due to a sprained left ankle, Duane Rankin of The Arizona Republic reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
   },
   {
    "team": "PHX",
@@ -928,15 +916,15 @@
   },
   {
    "team": "SAC",
-   "player_id": "4431679",
-   "name": "Precious Achiuwa",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-04",
-   "comment": "Achiuwa (ankle) is listed as probable for Wednesday's game against the Lakers.",
-   "status": "Day-To-Day",
+   "player_id": "4279318",
+   "name": "Daeqwon Plowden",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2026-11-06",
+   "comment": "Plowden (illness) is out for Wednesday's game against the Lakers.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Left Leg Ankle"
+   "reason": "Other Illness"
   },
   {
    "team": "SAC",
@@ -1036,6 +1024,18 @@
   },
   {
    "team": "UTAH",
+   "player_id": "4277919",
+   "name": "Mo Bamba",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-11-04",
+   "comment": "Bamba (ankle) participated in Wednesday's morning shootaround, per Shreyas Laddha of The Salt Lake Tribune.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
+  },
+  {
+   "team": "UTAH",
    "player_id": "3102530",
    "name": "Jusuf Nurkic",
    "espn_status": "Out",
@@ -1045,18 +1045,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Foot"
-  },
-  {
-   "team": "UTAH",
-   "player_id": "4277919",
-   "name": "Mo Bamba",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Ankle",
-   "return_date": "2026-11-04",
-   "comment": "Bamba is questionable for Wednesday's game in New Orleans due to a sprained right ankle.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Ankle"
   },
   {
    "team": "UTAH",
@@ -1093,18 +1081,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Illness"
-  },
-  {
-   "team": "WSH",
-   "player_id": "2581184",
-   "name": "Anthony Gill",
-   "espn_status": "Day-To-Day",
-   "detail": "Torso Back",
-   "return_date": "2026-11-04",
-   "comment": "Gill (back) is questionable for Wednesday against the Hawks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Torso Back"
   },
   {
    "team": "WSH",
