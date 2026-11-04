@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-03T21:27:55-05:00",
- "official_report": "2026-11-03T21:15:00-05:00",
+ "fetched_at": "2026-11-04T13:36:35-05:00",
+ "official_report": "2026-11-04T13:30:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -52,6 +52,18 @@
   },
   {
    "team": "BOS",
+   "player_id": "4065648",
+   "name": "Jayson Tatum",
+   "espn_status": "Out",
+   "detail": "Other Rest",
+   "return_date": "2026-11-06",
+   "comment": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Rest"
+  },
+  {
+   "team": "BOS",
    "player_id": "4066354",
    "name": "Payton Pritchard",
    "espn_status": "Day-To-Day",
@@ -61,18 +73,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Arm Shoulder"
-  },
-  {
-   "team": "BOS",
-   "player_id": "4065648",
-   "name": "Jayson Tatum",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-11-04",
-   "comment": "Tatum (rest) is questionable for Wednesday against the Bucks, Taylor Snow of the Celtics' official site reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
   },
   {
    "team": "BOS",
@@ -112,15 +112,15 @@
   },
   {
    "team": "CHA",
-   "player_id": "5061575",
-   "name": "Kon Knueppel",
+   "player_id": "4066218",
+   "name": "Grant Williams",
    "espn_status": "Out",
-   "detail": "Left Leg Hamstring",
-   "return_date": "2026-11-04",
-   "comment": "Knueppel (hamstring) is listed as probable for Wednesday's game against the Nets.",
+   "detail": "Right Leg Hamstring",
+   "return_date": "2026-11-09",
+   "comment": "Charlotte assigned Williams (hamstring) to the G League's Greensboro Swarm on Wednesday.",
    "status": "Out",
    "official_status": null,
-   "reason": "Left Leg Hamstring"
+   "reason": "Right Leg Hamstring"
   },
   {
    "team": "CHA",
@@ -133,18 +133,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Calf"
-  },
-  {
-   "team": "CHA",
-   "player_id": "4066218",
-   "name": "Grant Williams",
-   "espn_status": "Out",
-   "detail": "Right Leg Hamstring",
-   "return_date": "2026-11-09",
-   "comment": "Williams (hamstring) is listed as out for Monday's game against the Pistons.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Hamstring"
   },
   {
    "team": "CHI",
@@ -196,6 +184,18 @@
   },
   {
    "team": "DAL",
+   "player_id": "4593125",
+   "name": "Santi Aldama",
+   "espn_status": "Out",
+   "detail": "Right Leg Knee",
+   "return_date": "2026-11-04",
+   "comment": "Aldama (knee) was spotted at Wednesday's morning shootaround, Brad Townsend of The Dallas Morning News reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Knee"
+  },
+  {
+   "team": "DAL",
    "player_id": "4432582",
    "name": "Max Christie",
    "espn_status": "Out",
@@ -205,18 +205,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Torso Hip"
-  },
-  {
-   "team": "DAL",
-   "player_id": "4593125",
-   "name": "Santi Aldama",
-   "espn_status": "Out",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-11-04",
-   "comment": "Aldama (knee) is questionable for Wednesday's game against the Spurs.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Knee"
   },
   {
    "team": "DAL",
@@ -328,6 +316,18 @@
   },
   {
    "team": "GS",
+   "player_id": "3102531",
+   "name": "Kristaps Porzingis",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2026-12-01",
+   "comment": "The Warriors have stopped issuing salary payments to Porzingis, who remains away from the team and is considering retirement, Anthony Slater and Shams Charania of ESPN reported Wednesday.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "GS",
    "player_id": "4397040",
    "name": "Brandon Williams",
    "espn_status": "Day-To-Day",
@@ -361,18 +361,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Other Rest"
-  },
-  {
-   "team": "GS",
-   "player_id": "3102531",
-   "name": "Kristaps Porzingis",
-   "espn_status": "Out",
-   "detail": "Other Illness",
-   "return_date": "2026-12-01",
-   "comment": "The Warriors are exploring potential trades involving Porzingis (personal), who remains away from the team indefinitely while dealing with ongoing health concerns, Anthony Slater of ESPN.com reports.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Other Illness"
   },
   {
    "team": "GS",
@@ -615,14 +603,26 @@
    "reason": "Right Arm Wrist"
   },
   {
+   "team": "MIL",
+   "player_id": "4697268",
+   "name": "Kam Jones",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Ankle",
+   "return_date": "2026-11-04",
+   "comment": "Jones (ankle) is questionable for Wednesday against the Celtics.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Ankle"
+  },
+  {
    "team": "MIN",
    "player_id": "4432847",
    "name": "Terrence Shannon Jr.",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Torso Hip",
-   "return_date": "2026-11-04",
-   "comment": "Shannon (hip) is listed as questionable for Wednesday's game in Houston.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-06",
+   "comment": "Shannon (hip) is out for Wednesday against the Rockets.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Torso Hip"
   },
@@ -690,11 +690,11 @@
    "team": "NY",
    "player_id": "3062679",
    "name": "Josh Hart",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Leg Ankle",
-   "return_date": "2026-11-04",
-   "comment": "Hart is questionable for Wednesday's game against the Bulls due to right ankle soreness.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-07",
+   "comment": "Hart is out for Wednesday's game against the Bulls due to right ankle soreness.",
+   "status": "Out",
    "official_status": null,
    "reason": "Leg Ankle"
   },
@@ -1081,6 +1081,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "WSH",
+   "player_id": "5104155",
+   "name": "Bilal Coulibaly",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-11-04",
+   "comment": "Coulibaly (illness) is questionable for Wednesday against the Hawks.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
   },
   {
    "team": "WSH",
@@ -2717,11 +2729,6 @@
     "position": "F"
    },
    {
-    "player_id": "4592699",
-    "name": "Enrique Freeman",
-    "position": "F"
-   },
-   {
     "player_id": "3032976",
     "name": "Rudy Gobert",
     "position": "C"
@@ -3005,6 +3012,11 @@
    {
     "player_id": "5241364",
     "name": "Bennett Stirtz",
+    "position": "G"
+   },
+   {
+    "player_id": "4433159",
+    "name": "Dalen Terry",
     "position": "G"
    },
    {
