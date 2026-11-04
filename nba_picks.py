@@ -30,6 +30,8 @@ KELLY_FRACTION = 0.25
 # The market was more accurate than the model on the first 107 games of 2026-27 (total MAE 15.4 vs 15.7,
 # margin 11.1 vs 11.7), so raw model edges overstate the true edge. 1.0 = pure model (old behaviour).
 MARKET_WEIGHT_MODEL = 0.5
+MARKET_WEIGHT = {"Moneyline": 0.25}   # per-market override; ML: market beat model on Brier, optimal weight 0-0.2
+ML_PRICE_RANGE = (-250, 250)          # no moneyline selections outside this range (long dogs went 0-9)
 MAX_GAME_EXPOSURE = 0.05          # most of the bankroll staked on one game, all its selections combined
 CORR_SHOW = 0.30                  # outcome correlation before a card names the pick it moves with
 N_SIMS = 20000
@@ -93,7 +95,7 @@ def price(mk, odds=None):
     mk["book"] = np.where(full, mk["implied"] / over, mk["implied"])
     p_res = 1 - mk["push"]
     mk["p_model"] = mk["p"] / p_res.where(p_res > 0, 1)
-    w = MARKET_WEIGHT_MODEL
+    w = mk["type"].map(MARKET_WEIGHT).fillna(MARKET_WEIGHT_MODEL) if "type" in mk else MARKET_WEIGHT_MODEL
     # blend only where the book probability is no-vig (both sides priced); one-sided prices keep the model
     mk["p_cond"] = np.where(full & mk["book"].notna(), w * mk["p_model"] + (1 - w) * mk["book"], mk["p_model"])
     mk["edge"] = mk["p_cond"] - mk["book"]
@@ -198,6 +200,8 @@ def game_lines_args(lines):
 
 
 def _passes(m):
+    if m["type"] == "Moneyline" and not (ML_PRICE_RANGE[0] <= m["price"] <= ML_PRICE_RANGE[1]):
+        return False
     return MIN_EDGE[m["type"]] <= m["edge"] <= MAX_EDGE and m["ev"] > 0
 
 
