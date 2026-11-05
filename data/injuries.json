@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-05T13:41:53-05:00",
- "official_report": "2026-11-05T13:30:00-05:00",
+ "fetched_at": "2026-11-05T16:55:24-05:00",
+ "official_report": "2026-11-05T16:45:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -64,24 +64,12 @@
   },
   {
    "team": "BOS",
-   "player_id": "4065648",
-   "name": "Jayson Tatum",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Rest",
-   "return_date": "2026-11-06",
-   "comment": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Other Rest"
-  },
-  {
-   "team": "BOS",
    "player_id": "4066354",
    "name": "Payton Pritchard",
    "espn_status": "Day-To-Day",
    "detail": "Right Head Eye",
    "return_date": "2026-11-06",
-   "comment": "Pritchard exited Wednesday's 109-102 win over the Bucks and did not return due to a right eye abrasion, finishing with 10 points (4-7 FG, 2-2 FT), five assists and one rebound across 18 minutes.",
+   "comment": "Pritchard (eye) is questionable for Friday against Charlotte, Taylor Snow of the Celtics' official site reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Head Eye"
@@ -561,7 +549,7 @@
    "espn_status": "Out",
    "detail": "Left Leg Knee",
    "return_date": "2026-11-06",
-   "comment": "The Lakers assigned Thiero (knee) to the G League's Coachella Valley Lakers on Wednesday, per Khobi Price of The California Post.",
+   "comment": "The Lakers recalled Thiero (knee) from the G League's Coachella Valley Lakers on Thursday, per Ryan Ward of SI.com.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
@@ -640,27 +628,27 @@
   },
   {
    "team": "NO",
-   "player_id": "4397688",
-   "name": "Trey Murphy III",
-   "espn_status": "Day-To-Day",
-   "detail": "Leg Knee",
-   "return_date": "2026-11-06",
-   "comment": "Murphy (knees) is listed as out for Wednesday's game against Utah.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Leg Knee"
-  },
-  {
-   "team": "NO",
    "player_id": "5061589",
    "name": "Yves Missi",
    "espn_status": "Out",
    "detail": "Left Leg Knee",
    "return_date": "2026-11-08",
-   "comment": "Missi (knee) won't play in Saturday's game against Atlanta.",
+   "comment": "Missi (knee) is out for Friday's game against Minnesota.",
    "status": "Out",
    "official_status": null,
    "reason": "Left Leg Knee"
+  },
+  {
+   "team": "NO",
+   "player_id": "4397688",
+   "name": "Trey Murphy III",
+   "espn_status": "Day-To-Day",
+   "detail": "Leg Knee",
+   "return_date": "2026-11-06",
+   "comment": "Murphy (knee) is probable for Friday's game against Minnesota.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Leg Knee"
   },
   {
    "team": "NY",
@@ -844,27 +832,27 @@
   },
   {
    "team": "PHX",
-   "player_id": "4278402",
-   "name": "Jordan Goodwin",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Calf",
-   "return_date": "2026-11-05",
-   "comment": "Goodwin (calf) won't play in Wednesday's game against Portland.",
-   "status": "Day-To-Day",
+   "player_id": "5105977",
+   "name": "Rasheer Fleming",
+   "espn_status": "Out",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-07",
+   "comment": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Left Leg Calf"
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "PHX",
-   "player_id": "5105977",
-   "name": "Rasheer Fleming",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-05",
-   "comment": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
-   "status": "Day-To-Day",
+   "player_id": "4278402",
+   "name": "Jordan Goodwin",
+   "espn_status": "Out",
+   "detail": "Left Leg Calf",
+   "return_date": "2026-11-07",
+   "comment": "Goodwin (calf) is out for Thursday's game against Orlando.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Left Leg Ankle"
+   "reason": "Left Leg Calf"
   },
   {
    "team": "PHX",
@@ -3544,6 +3532,11 @@
    {
     "player_id": "4702656",
     "name": "Alijah Martin",
+    "position": "G"
+   },
+   {
+    "player_id": "4411057",
+    "name": "Kevin McCullar Jr.",
     "position": "G"
    },
    {
