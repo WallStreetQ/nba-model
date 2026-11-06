@@ -1,33 +1,33 @@
 {
- "fetched_at": "2026-11-06T16:26:57-05:00",
+ "fetched_at": "2026-11-06T18:15:52-05:00",
  "games": [
   {
    "home_team": "ATL",
    "away_team": "WSH",
    "game_date": "2026-11-06",
    "book": "draftkings",
-   "ml_home": -324,
-   "ml_away": 261,
+   "ml_home": -309,
+   "ml_away": 250,
    "spread_home": -8.5,
    "spread_home_price": -107,
    "spread_away_price": -113,
-   "total_line": 229.5,
-   "total_over_price": -110,
-   "total_under_price": -110
+   "total_line": 227.5,
+   "total_over_price": -112,
+   "total_under_price": -108
   },
   {
    "home_team": "CHA",
    "away_team": "BOS",
    "game_date": "2026-11-06",
    "book": "draftkings",
-   "ml_home": 312,
-   "ml_away": -396,
+   "ml_home": 331,
+   "ml_away": -424,
    "spread_home": 10.5,
-   "spread_home_price": -115,
-   "spread_away_price": -105,
-   "total_line": 208.5,
-   "total_over_price": -107,
-   "total_under_price": -113
+   "spread_home_price": -112,
+   "spread_away_price": -108,
+   "total_line": 207.5,
+   "total_over_price": -115,
+   "total_under_price": -105
   },
   {
    "home_team": "CLE",
@@ -37,25 +37,25 @@
    "ml_home": 125,
    "ml_away": -148,
    "spread_home": 2.5,
-   "spread_home_price": -110,
-   "spread_away_price": -110,
+   "spread_home_price": -105,
+   "spread_away_price": -115,
    "total_line": 231.5,
-   "total_over_price": -110,
-   "total_under_price": -110
+   "total_over_price": -112,
+   "total_under_price": -108
   },
   {
    "home_team": "DAL",
    "away_team": "UTAH",
    "game_date": "2026-11-06",
    "book": "draftkings",
-   "ml_home": -264,
-   "ml_away": 217,
+   "ml_home": -257,
+   "ml_away": 211,
    "spread_home": -6.5,
-   "spread_home_price": -113,
-   "spread_away_price": -107,
+   "spread_home_price": -112,
+   "spread_away_price": -108,
    "total_line": 225.5,
-   "total_over_price": -113,
-   "total_under_price": -107
+   "total_over_price": -110,
+   "total_under_price": -110
   },
   {
    "home_team": "MEM",
@@ -68,8 +68,8 @@
    "spread_home_price": -117,
    "spread_away_price": -104,
    "total_line": 223.5,
-   "total_over_price": -108,
-   "total_under_price": -112
+   "total_over_price": -115,
+   "total_under_price": -105
   },
   {
    "home_team": "MIL",
@@ -83,7 +83,7 @@
    "spread_away_price": -110,
    "total_line": 229.5,
    "total_over_price": -105,
-   "total_under_price": -116
+   "total_under_price": -115
   },
   {
    "home_team": "NO",
@@ -148,9 +148,9 @@
    "book": "betrivers",
    "ml_home": -190,
    "ml_away": 155,
-   "spread_home": -5.0,
-   "spread_home_price": -114,
-   "spread_away_price": -107,
+   "spread_home": -5.5,
+   "spread_home_price": -107,
+   "spread_away_price": -114,
    "total_line": 230.5,
    "total_over_price": -112,
    "total_under_price": -109

@@ -7,11 +7,11 @@
   "neutral": false,
   "home_team": "ATL",
   "away_team": "WSH",
-  "total_line": 229.5,
+  "total_line": 227.5,
   "spread_home": -8.5,
-  "ml_home": -324.0,
-  "ml_away": 261.0,
-  "odds_provider": "DraftKings"
+  "ml_home": -309.0,
+  "ml_away": 250.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909288",
@@ -21,11 +21,11 @@
   "neutral": false,
   "home_team": "CHA",
   "away_team": "BOS",
-  "total_line": 208.5,
+  "total_line": 207.5,
   "spread_home": 10.5,
-  "ml_home": 312.0,
-  "ml_away": -396.0,
-  "odds_provider": "DraftKings"
+  "ml_home": 331.0,
+  "ml_away": -424.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909289",
@@ -39,7 +39,7 @@
   "spread_home": 2.5,
   "ml_home": 125.0,
   "ml_away": -148.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909290",
@@ -51,9 +51,9 @@
   "away_team": "UTAH",
   "total_line": 225.5,
   "spread_home": -6.5,
-  "ml_home": -264.0,
-  "ml_away": 217.0,
-  "odds_provider": "DraftKings"
+  "ml_home": -257.0,
+  "ml_away": 211.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909291",
@@ -67,7 +67,7 @@
   "spread_home": 4.5,
   "ml_home": 145.0,
   "ml_away": -173.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909292",
@@ -81,7 +81,7 @@
   "spread_home": 4.5,
   "ml_home": 154.0,
   "ml_away": -184.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909293",
@@ -95,7 +95,7 @@
   "spread_home": 3.5,
   "ml_home": 140.0,
   "ml_away": -166.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909294",
@@ -109,7 +109,7 @@
   "spread_home": -3.5,
   "ml_home": -154.0,
   "ml_away": 130.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909295",
@@ -123,7 +123,7 @@
   "spread_home": 17.5,
   "ml_home": 810.0,
   "ml_away": -1340.0,
-  "odds_provider": "DraftKings"
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909938",

@@ -1,7 +1,19 @@
 {
- "fetched_at": "2026-11-06T16:26:53-05:00",
- "official_report": "2026-11-06T16:15:00-05:00",
+ "fetched_at": "2026-11-06T18:15:48-05:00",
+ "official_report": "2026-11-06T18:15:00-05:00",
  "players": [
+  {
+   "team": "ATL",
+   "player_id": "4701230",
+   "name": "Jalen Johnson",
+   "espn_status": "Out",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-07",
+   "comment": "Johnson (ankle) is out for Friday's game against the Wizards.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
+  },
   {
    "team": "ATL",
    "player_id": "4585618",
@@ -37,18 +49,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Left Torso Hip"
-  },
-  {
-   "team": "ATL",
-   "player_id": "4701230",
-   "name": "Jalen Johnson",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-06",
-   "comment": "Johnson is questionable to suit up for Friday's game against Washington.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
   },
   {
    "team": "ATL",
@@ -259,12 +259,12 @@
    "player_id": "6442",
    "name": "Kyrie Irving",
    "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
-   "return_date": "2026-11-06",
+   "detail": null,
+   "return_date": null,
    "comment": "Irving (illness) is probable for Friday's game against Utah.",
    "status": "Day-To-Day",
    "official_status": null,
-   "reason": "Other Illness"
+   "reason": null
   },
   {
    "team": "DAL",
@@ -283,12 +283,12 @@
    "player_id": "4593125",
    "name": "Santi Aldama",
    "espn_status": "Out",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-11-06",
+   "detail": null,
+   "return_date": null,
    "comment": "Aldama (knee) is probable to suit up for Friday's game against the Jazz.",
    "status": "Out",
    "official_status": null,
-   "reason": "Right Leg Knee"
+   "reason": null
   },
   {
    "team": "DAL",
@@ -333,7 +333,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Torso Back",
    "return_date": "2026-11-07",
-   "comment": "DeRozan has been ruled out for Wednesday's game against the Raptors due to lower-back spasms.",
+   "comment": "DeRozan (back) is probable for Saturday's game against the Pacers.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Torso Back"
@@ -388,6 +388,42 @@
   },
   {
    "team": "GS",
+   "player_id": "6589",
+   "name": "Draymond Green",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Arm Elbow",
+   "return_date": "2026-11-07",
+   "comment": "Green (elbow) is listed as questionable ahead of Saturday's game against Orlando.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Arm Elbow"
+  },
+  {
+   "team": "GS",
+   "player_id": "3134903",
+   "name": "Gary Payton II",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Leg Calf",
+   "return_date": "2026-11-07",
+   "comment": "Payton is questionable to play Saturday against the Magic due to right calf tightness.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Leg Calf"
+  },
+  {
+   "team": "GS",
+   "player_id": "3102531",
+   "name": "Kristaps Porzingis",
+   "espn_status": "Out",
+   "detail": "Other Illness",
+   "return_date": "2027-01-02",
+   "comment": "Porzingis announced on his social media that he's stepping away from basketball.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Other Illness"
+  },
+  {
+   "team": "GS",
    "player_id": "4997536",
    "name": "Gui Santos",
    "espn_status": "Day-To-Day",
@@ -397,18 +433,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Knee"
-  },
-  {
-   "team": "GS",
-   "player_id": "3102531",
-   "name": "Kristaps Porzingis",
-   "espn_status": "Out",
-   "detail": "Other Illness",
-   "return_date": "2026-12-01",
-   "comment": "The Warriors have stopped issuing salary payments to Porzingis, who remains away from the team and is considering retirement, Anthony Slater and Shams Charania of ESPN reported Wednesday.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Other Illness"
   },
   {
    "team": "GS",
@@ -460,27 +484,27 @@
   },
   {
    "team": "IND",
+   "player_id": "2530530",
+   "name": "T.J. McConnell",
+   "espn_status": "Out",
+   "detail": "Right Leg Hamstring",
+   "return_date": "2026-11-07",
+   "comment": "McConnell (hamstring) is questionable for Saturday's game against Denver.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Leg Hamstring"
+  },
+  {
+   "team": "IND",
    "player_id": "3133603",
    "name": "Kelly Oubre Jr.",
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Calf",
    "return_date": "2026-11-07",
-   "comment": "Oubre (calf) has been ruled out for Wednesday's game against the Grizzlies.",
+   "comment": "Oubre (calf) is questionable for Saturday's game against Denver.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Calf"
-  },
-  {
-   "team": "IND",
-   "player_id": "2530530",
-   "name": "T.J. McConnell",
-   "espn_status": "Out",
-   "detail": "Right Leg Hamstring",
-   "return_date": "2026-11-09",
-   "comment": "McConnell (hamstring) is out for Monday's game against the Hawks and remains week-to-week.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Right Leg Hamstring"
   },
   {
    "team": "IND",
@@ -654,11 +678,11 @@
    "team": "NY",
    "player_id": "3062679",
    "name": "Josh Hart",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Leg Ankle",
-   "return_date": "2026-11-07",
-   "comment": "Hart is out for Wednesday's game against the Bulls due to right ankle soreness.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-10",
+   "comment": "Hart is out for Saturday's game against the Cavaliers due to right ankle soreness.",
+   "status": "Out",
    "official_status": null,
    "reason": "Leg Ankle"
   },
@@ -800,7 +824,7 @@
    "name": "Adem Bona",
    "espn_status": "Day-To-Day",
    "detail": "Torso Back",
-   "return_date": "2026-11-06",
+   "return_date": "2026-11-08",
    "comment": "Bona (back) is doubtful to play in Friday's game against the Cavaliers, Ky Carlin of USA Today reports.",
    "status": "Day-To-Day",
    "official_status": null,
@@ -1086,11 +1110,11 @@
    "team": "WSH",
    "player_id": "6583",
    "name": "Anthony Davis",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Right Leg Ankle",
-   "return_date": "2026-11-06",
-   "comment": "Davis is questionable for Friday's game against the Hawks due to a right ankle sprain, Josh Robbins of The Athletic reports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-07",
+   "comment": "Davis (ankle) is listed as out for Friday's game against the Hawks.",
+   "status": "Out",
    "official_status": null,
    "reason": "Right Leg Ankle"
   },
