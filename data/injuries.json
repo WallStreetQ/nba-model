@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-05T21:35:49-05:00",
- "official_report": "2026-11-05T21:30:00-05:00",
+ "fetched_at": "2026-11-06T10:49:51-05:00",
+ "official_report": "2026-11-06T10:45:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -92,7 +92,7 @@
    "name": "Devin Carter",
    "espn_status": "Out",
    "detail": "Other Illness",
-   "return_date": "2026-11-08",
+   "return_date": "2026-11-06",
    "comment": "Carter (illness) practiced with the G League's Maine Celtics on Wednesday.",
    "status": "Out",
    "official_status": null,
@@ -402,11 +402,11 @@
    "team": "GS",
    "player_id": "4997536",
    "name": "Gui Santos",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Leg Knee",
    "return_date": "2026-11-07",
    "comment": "Santos (knee) has been ruled out for Thursday's game against the Heat.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Leg Knee"
   },
@@ -618,11 +618,11 @@
    "team": "MIL",
    "player_id": "4697268",
    "name": "Kam Jones",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Right Leg Ankle",
-   "return_date": "2026-11-08",
+   "return_date": "2026-11-06",
    "comment": "Jones (ankle/two-way player) is out for Friday's game against Toronto.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Ankle"
   },
@@ -868,27 +868,27 @@
   },
   {
    "team": "PHX",
-   "player_id": "5105977",
-   "name": "Rasheer Fleming",
-   "espn_status": "Out",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-07",
-   "comment": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Left Leg Ankle"
-  },
-  {
-   "team": "PHX",
    "player_id": "4278402",
    "name": "Jordan Goodwin",
-   "espn_status": "Out",
+   "espn_status": "Day-To-Day",
    "detail": "Left Leg Calf",
    "return_date": "2026-11-07",
    "comment": "Goodwin (calf) is out for Thursday's game against Orlando.",
-   "status": "Out",
+   "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Calf"
+  },
+  {
+   "team": "PHX",
+   "player_id": "5105977",
+   "name": "Rasheer Fleming",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Ankle",
+   "return_date": "2026-11-07",
+   "comment": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Ankle"
   },
   {
    "team": "PHX",
@@ -1064,7 +1064,7 @@
    "name": "Trey Alexander",
    "espn_status": "Out",
    "detail": "Left Leg Knee",
-   "return_date": "2026-11-08",
+   "return_date": "2026-11-06",
    "comment": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
    "status": "Out",
    "official_status": null,
@@ -1321,11 +1321,6 @@
     "player_id": "4433188",
     "name": "Devin Carter",
     "position": "G"
-   },
-   {
-    "player_id": "5142621",
-    "name": "Chris Cenac Jr.",
-    "position": "F"
    },
    {
     "player_id": "3195",
@@ -1614,11 +1609,6 @@
     "position": "G"
    },
    {
-    "player_id": "5177362",
-    "name": "Riley Minix",
-    "position": "F"
-   },
-   {
     "player_id": "3908809",
     "name": "Donovan Mitchell",
     "position": "G"
@@ -1626,6 +1616,11 @@
    {
     "player_id": "4432158",
     "name": "Evan Mobley",
+    "position": "C"
+   },
+   {
+    "player_id": "4702134",
+    "name": "Norchad Omier",
     "position": "C"
    },
    {
@@ -2091,11 +2086,6 @@
    {
     "player_id": "4684740",
     "name": "Amen Thompson",
-    "position": "G"
-   },
-   {
-    "player_id": "5105837",
-    "name": "Bruce Thornton",
     "position": "G"
    },
    {

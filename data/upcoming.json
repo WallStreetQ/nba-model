@@ -1,19 +1,5 @@
 [
  {
-  "game_id": "401909937",
-  "game_date": "2026-11-05",
-  "start_utc": "2026-11-06T03:00Z",
-  "game_type": 2,
-  "neutral": false,
-  "home_team": "GS",
-  "away_team": "MIA",
-  "total_line": 235.5,
-  "spread_home": -3.5,
-  "ml_home": -167.0,
-  "ml_away": 140.0,
-  "odds_provider": "DraftKings"
- },
- {
   "game_id": "401909287",
   "game_date": "2026-11-06",
   "start_utc": "2026-11-07T00:00Z",
@@ -21,11 +7,11 @@
   "neutral": false,
   "home_team": "ATL",
   "away_team": "WSH",
-  "total_line": null,
-  "spread_home": null,
-  "ml_home": null,
-  "ml_away": null,
-  "odds_provider": null
+  "total_line": 228.5,
+  "spread_home": -7.5,
+  "ml_home": -297.0,
+  "ml_away": 241.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909288",
@@ -35,11 +21,11 @@
   "neutral": false,
   "home_team": "CHA",
   "away_team": "BOS",
-  "total_line": null,
-  "spread_home": null,
-  "ml_home": null,
-  "ml_away": null,
-  "odds_provider": null
+  "total_line": 207.5,
+  "spread_home": 8.5,
+  "ml_home": 261.0,
+  "ml_away": -324.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909289",
@@ -49,11 +35,11 @@
   "neutral": false,
   "home_team": "CLE",
   "away_team": "PHI",
-  "total_line": 229.5,
-  "spread_home": 1.5,
-  "ml_home": 111.0,
-  "ml_away": -132.0,
-  "odds_provider": "DraftKings"
+  "total_line": 230.5,
+  "spread_home": 2.5,
+  "ml_home": 124.0,
+  "ml_away": -148.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909290",
@@ -63,11 +49,11 @@
   "neutral": false,
   "home_team": "DAL",
   "away_team": "UTAH",
-  "total_line": 226.5,
+  "total_line": 225.5,
   "spread_home": -7.5,
-  "ml_home": -246.0,
-  "ml_away": 203.0,
-  "odds_provider": "DraftKings"
+  "ml_home": -277.0,
+  "ml_away": 227.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909291",
@@ -77,11 +63,11 @@
   "neutral": false,
   "home_team": "MEM",
   "away_team": "OKC",
-  "total_line": 225.5,
+  "total_line": 223.5,
   "spread_home": 3.5,
-  "ml_home": 139.0,
-  "ml_away": -165.0,
-  "odds_provider": "DraftKings"
+  "ml_home": 142.0,
+  "ml_away": -170.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909292",
@@ -92,10 +78,10 @@
   "home_team": "MIL",
   "away_team": "TOR",
   "total_line": 230.5,
-  "spread_home": 7.5,
-  "ml_home": 216.0,
-  "ml_away": -263.0,
-  "odds_provider": "DraftKings"
+  "spread_home": 6.5,
+  "ml_home": 211.0,
+  "ml_away": -257.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909293",
@@ -105,11 +91,11 @@
   "neutral": false,
   "home_team": "NO",
   "away_team": "MIN",
-  "total_line": 229.5,
+  "total_line": 230.5,
   "spread_home": 4.5,
-  "ml_home": 139.0,
-  "ml_away": -165.0,
-  "odds_provider": "DraftKings"
+  "ml_home": 146.0,
+  "ml_away": -174.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909294",
@@ -119,11 +105,11 @@
   "neutral": false,
   "home_team": "LAL",
   "away_team": "POR",
-  "total_line": 233.5,
+  "total_line": 231.5,
   "spread_home": -2.5,
-  "ml_home": -130.0,
-  "ml_away": 110.0,
-  "odds_provider": "DraftKings"
+  "ml_home": -155.0,
+  "ml_away": 130.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909295",
@@ -133,11 +119,11 @@
   "neutral": false,
   "home_team": "SAC",
   "away_team": "SA",
-  "total_line": 228.5,
-  "spread_home": 15.5,
-  "ml_home": 610.0,
-  "ml_away": -900.0,
-  "odds_provider": "DraftKings"
+  "total_line": 229.5,
+  "spread_home": 16.5,
+  "ml_home": 740.0,
+  "ml_away": -1180.0,
+  "odds_provider": "Draft Kings"
  },
  {
   "game_id": "401909938",
@@ -329,6 +315,118 @@
   "neutral": false,
   "home_team": "SAC",
   "away_team": "MIA",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909952",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T00:00Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "ATL",
+  "away_team": "LAL",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909953",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T00:00Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "CHA",
+  "away_team": "CLE",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909954",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T00:00Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "DET",
+  "away_team": "WSH",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909955",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T00:30Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "TOR",
+  "away_team": "MEM",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909956",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T01:00Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "DAL",
+  "away_team": "IND",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909957",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T01:30Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "HOU",
+  "away_team": "DEN",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909958",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T02:00Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "PHX",
+  "away_team": "SA",
+  "total_line": null,
+  "spread_home": null,
+  "ml_home": null,
+  "ml_away": null,
+  "odds_provider": null
+ },
+ {
+  "game_id": "401909959",
+  "game_date": "2026-11-09",
+  "start_utc": "2026-11-10T03:00Z",
+  "game_type": 2,
+  "neutral": false,
+  "home_team": "GS",
+  "away_team": "NO",
   "total_line": null,
   "spread_home": null,
   "ml_home": null,
