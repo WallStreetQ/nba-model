@@ -529,9 +529,34 @@
     "LAC 2H +7.5",
     "2H Over 113.5"
    ]
+  },
+  "401909936": {
+   "game_id": "401909936",
+   "date": "2026-11-05",
+   "start_utc": "2026-11-06T02:00Z",
+   "home": "PHX",
+   "away": "ORL",
+   "priced_at": "2026-11-05T22:32:06-05:00",
+   "late": true,
+   "pre_source": "prediction log",
+   "h1_home": 63.0,
+   "h1_away": 51.0,
+   "pre_2h": 111.9186085600786,
+   "pre_2hm": -1.1757793377129957,
+   "mu_2h": 111.0746777407212,
+   "sd_2h": 13.92584187011514,
+   "mu_2hm": -4.126696177958466,
+   "sd_2hm": 11.041599874925764,
+   "p_home_win": 0.7642395791413132,
+   "h2_total_line": null,
+   "h2_spread_home": null,
+   "book": null,
+   "h1_line": "ORL 51 \u2013 63 PHX",
+   "markets": [],
+   "picks": []
   }
  },
  "model_through": "2026-11-04",
  "halftime_fitted": true,
- "updated_at": "2026-11-04T23:36:01-05:00"
+ "updated_at": "2026-11-05T22:32:06-05:00"
 }
