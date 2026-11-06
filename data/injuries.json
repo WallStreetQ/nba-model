@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-06T10:49:51-05:00",
- "official_report": "2026-11-06T10:45:00-05:00",
+ "fetched_at": "2026-11-06T12:00:47-05:00",
+ "official_report": "2026-11-06T12:00:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -997,6 +997,18 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
+  },
+  {
+   "team": "TOR",
+   "player_id": "2993874",
+   "name": "Kyle Anderson",
+   "espn_status": "Day-To-Day",
+   "detail": "Other Illness",
+   "return_date": "2026-11-06",
+   "comment": "Anderson is questionable for Friday against the Bucks due to illness.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Other Illness"
   },
   {
    "team": "TOR",

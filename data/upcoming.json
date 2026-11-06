@@ -11,7 +11,7 @@
   "spread_home": -7.5,
   "ml_home": -297.0,
   "ml_away": 241.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909288",
@@ -25,7 +25,7 @@
   "spread_home": 8.5,
   "ml_home": 261.0,
   "ml_away": -324.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909289",
@@ -39,7 +39,7 @@
   "spread_home": 2.5,
   "ml_home": 124.0,
   "ml_away": -148.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909290",
@@ -49,11 +49,11 @@
   "neutral": false,
   "home_team": "DAL",
   "away_team": "UTAH",
-  "total_line": 225.5,
-  "spread_home": -7.5,
+  "total_line": 224.5,
+  "spread_home": -6.5,
   "ml_home": -277.0,
   "ml_away": 227.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909291",
@@ -64,10 +64,10 @@
   "home_team": "MEM",
   "away_team": "OKC",
   "total_line": 223.5,
-  "spread_home": 3.5,
+  "spread_home": 4.5,
   "ml_home": 142.0,
   "ml_away": -170.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909292",
@@ -77,11 +77,11 @@
   "neutral": false,
   "home_team": "MIL",
   "away_team": "TOR",
-  "total_line": 230.5,
+  "total_line": 231.5,
   "spread_home": 6.5,
-  "ml_home": 211.0,
-  "ml_away": -257.0,
-  "odds_provider": "Draft Kings"
+  "ml_home": 205.0,
+  "ml_away": -249.0,
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909293",
@@ -92,10 +92,10 @@
   "home_team": "NO",
   "away_team": "MIN",
   "total_line": 230.5,
-  "spread_home": 4.5,
+  "spread_home": 3.5,
   "ml_home": 146.0,
   "ml_away": -174.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909294",
@@ -109,7 +109,7 @@
   "spread_home": -2.5,
   "ml_home": -155.0,
   "ml_away": 130.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909295",
@@ -123,7 +123,7 @@
   "spread_home": 16.5,
   "ml_home": 740.0,
   "ml_away": -1180.0,
-  "odds_provider": "Draft Kings"
+  "odds_provider": "DraftKings"
  },
  {
   "game_id": "401909938",
