@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-06T18:15:48-05:00",
- "official_report": "2026-11-06T18:15:00-05:00",
+ "fetched_at": "2026-11-06T21:02:00-05:00",
+ "official_report": "2026-11-06T21:00:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -124,6 +124,18 @@
   },
   {
    "team": "CHA",
+   "player_id": "4433287",
+   "name": "Brandon Miller",
+   "espn_status": "Day-To-Day",
+   "detail": "Right Groin Groin",
+   "return_date": "2026-11-09",
+   "comment": "Miller (groin) won't return to Friday's game against the Celtics, Brett Siegel of ClutchPoints.com reports.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Right Groin Groin"
+  },
+  {
+   "team": "CHA",
    "player_id": "3032979",
    "name": "Dennis Schroder",
    "espn_status": "Out",
@@ -208,15 +220,15 @@
   },
   {
    "team": "CLE",
-   "player_id": "5023693",
-   "name": "Tyrese Proctor",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Ankle",
-   "return_date": "2026-11-06",
-   "comment": "Proctor (ankle) is questionable to play in Friday's game against the 76ers.",
-   "status": "Day-To-Day",
+   "player_id": "4066328",
+   "name": "Jarrett Allen",
+   "espn_status": "Out",
+   "detail": "Right Leg Knee",
+   "return_date": "2026-11-07",
+   "comment": "Allen (knee) is out for Friday's game against the 76ers.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Left Leg Ankle"
+   "reason": "Right Leg Knee"
   },
   {
    "team": "CLE",
@@ -231,42 +243,6 @@
    "reason": "Right Leg Ankle"
   },
   {
-   "team": "CLE",
-   "player_id": "4576087",
-   "name": "Peyton Watson",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Hamstring",
-   "return_date": "2026-11-06",
-   "comment": "Watson (hamstring) is questionable for Friday's game against the 76ers.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Hamstring"
-  },
-  {
-   "team": "CLE",
-   "player_id": "4066328",
-   "name": "Jarrett Allen",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Knee",
-   "return_date": "2026-11-06",
-   "comment": "Allen (knee) is questionable for Friday's game against Philadelphia.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Knee"
-  },
-  {
-   "team": "DAL",
-   "player_id": "6442",
-   "name": "Kyrie Irving",
-   "espn_status": "Day-To-Day",
-   "detail": null,
-   "return_date": null,
-   "comment": "Irving (illness) is probable for Friday's game against Utah.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": null
-  },
-  {
    "team": "DAL",
    "player_id": "5279129",
    "name": "Sergio de Larrea",
@@ -277,30 +253,6 @@
    "status": "Out",
    "official_status": null,
    "reason": "Right Leg Knee"
-  },
-  {
-   "team": "DAL",
-   "player_id": "4593125",
-   "name": "Santi Aldama",
-   "espn_status": "Out",
-   "detail": null,
-   "return_date": null,
-   "comment": "Aldama (knee) is probable to suit up for Friday's game against the Jazz.",
-   "status": "Out",
-   "official_status": null,
-   "reason": null
-  },
-  {
-   "team": "DAL",
-   "player_id": "4432582",
-   "name": "Max Christie",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Torso Hip",
-   "return_date": "2026-11-06",
-   "comment": "Christie (hip) is probable for Friday's game against the Jazz.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Torso Hip"
   },
   {
    "team": "DAL",
@@ -337,18 +289,6 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Torso Back"
-  },
-  {
-   "team": "DEN",
-   "player_id": "4592427",
-   "name": "Spencer Jones",
-   "espn_status": "Out",
-   "detail": "Not Specified Leg Hamstring",
-   "return_date": "2026-11-11",
-   "comment": "Jones (hamstring) is out for Wednesday's game against the Raptors.",
-   "status": "Out",
-   "official_status": null,
-   "reason": "Not Specified Leg Hamstring"
   },
   {
    "team": "DEN",
@@ -822,11 +762,11 @@
    "team": "PHI",
    "player_id": "5105637",
    "name": "Adem Bona",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Torso Back",
    "return_date": "2026-11-08",
-   "comment": "Bona (back) is doubtful to play in Friday's game against the Cavaliers, Ky Carlin of USA Today reports.",
-   "status": "Day-To-Day",
+   "comment": "Bona (neck) is listed as out for Friday's game versus the Cavaliers.",
+   "status": "Out",
    "official_status": null,
    "reason": "Torso Back"
   },
@@ -856,27 +796,27 @@
   },
   {
    "team": "PHX",
-   "player_id": "4278402",
-   "name": "Jordan Goodwin",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Leg Calf",
-   "return_date": "2026-11-07",
-   "comment": "Goodwin (calf) is out for Thursday's game against Orlando.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Leg Calf"
-  },
-  {
-   "team": "PHX",
    "player_id": "5105977",
    "name": "Rasheer Fleming",
    "espn_status": "Day-To-Day",
    "detail": "Left Leg Ankle",
    "return_date": "2026-11-07",
-   "comment": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
+   "comment": "Fleming (ankle) is questionable for Saturday's game against the Rockets.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Leg Ankle"
+  },
+  {
+   "team": "PHX",
+   "player_id": "4278402",
+   "name": "Jordan Goodwin",
+   "espn_status": "Day-To-Day",
+   "detail": "Left Leg Calf",
+   "return_date": "2026-11-07",
+   "comment": "Goodwin (calf) is doubtful for Saturday's game against the Rockets.",
+   "status": "Day-To-Day",
+   "official_status": null,
+   "reason": "Left Leg Calf"
   },
   {
    "team": "PHX",
@@ -930,11 +870,11 @@
    "team": "SAC",
    "player_id": "4065732",
    "name": "De'Andre Hunter",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Other Illness",
-   "return_date": "2026-11-06",
-   "comment": "Hunter is questionable for Friday against the Spurs due to an illness.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-08",
+   "comment": "Hunter (illness) is listed as out for Friday's game against San Antonio.",
+   "status": "Out",
    "official_status": null,
    "reason": "Other Illness"
   },
@@ -1000,51 +940,27 @@
   },
   {
    "team": "TOR",
-   "player_id": "3134908",
-   "name": "Jakob Poeltl",
-   "espn_status": "Day-To-Day",
-   "detail": "Left Arm Shoulder",
-   "return_date": "2026-11-06",
-   "comment": "Poeltl (shoulder) is listed as probable for Friday's game against Milwaukee.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Left Arm Shoulder"
-  },
-  {
-   "team": "TOR",
-   "player_id": "4395724",
-   "name": "Immanuel Quickley",
-   "espn_status": "Day-To-Day",
-   "detail": "Right Leg Hamstring",
-   "return_date": "2026-11-06",
-   "comment": "Quickley (hamstring) is questionable for Friday against the Bucks.",
-   "status": "Day-To-Day",
-   "official_status": null,
-   "reason": "Right Leg Hamstring"
-  },
-  {
-   "team": "TOR",
    "player_id": "4433134",
    "name": "Scottie Barnes",
-   "espn_status": "Day-To-Day",
+   "espn_status": "Out",
    "detail": "Left Groin Groin",
-   "return_date": "2026-11-06",
-   "comment": "Barnes (adductor) was not present at the morning shootaround, Michael Grange of Sportsnet.careports.",
-   "status": "Day-To-Day",
+   "return_date": "2026-11-09",
+   "comment": "Barnes (adductor) is listed as out for Friday's game against Milwaukee, Michael Grange of Sportsnet.ca reports.",
+   "status": "Out",
    "official_status": null,
    "reason": "Left Groin Groin"
   },
   {
    "team": "TOR",
-   "player_id": "2993874",
-   "name": "Kyle Anderson",
-   "espn_status": "Day-To-Day",
-   "detail": "Other Illness",
-   "return_date": "2026-11-06",
-   "comment": "Anderson is questionable for Friday against the Bucks due to illness.",
-   "status": "Day-To-Day",
+   "player_id": "4395724",
+   "name": "Immanuel Quickley",
+   "espn_status": "Out",
+   "detail": "Right Leg Hamstring",
+   "return_date": "2026-11-09",
+   "comment": "Quickley (hamstring) won't play Friday in Milwaukee, Michael Grange of Sportsnet.ca reports.",
+   "status": "Out",
    "official_status": null,
-   "reason": "Other Illness"
+   "reason": "Right Leg Hamstring"
   },
   {
    "team": "TOR",
