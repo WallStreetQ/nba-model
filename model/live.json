@@ -1,65 +1,5 @@
 {
  "games": {
-  "401909936": {
-   "game_id": "401909936",
-   "date": "2026-11-05",
-   "start_utc": "2026-11-06T02:00Z",
-   "home": "PHX",
-   "away": "ORL",
-   "priced_at": "2026-11-05T22:32:06-05:00",
-   "late": true,
-   "pre_source": "prediction log",
-   "h1_home": 63.0,
-   "h1_away": 51.0,
-   "pre_2h": 111.9186085600786,
-   "pre_2hm": -1.1757793377129957,
-   "mu_2h": 111.0746777407212,
-   "sd_2h": 13.92584187011514,
-   "mu_2hm": -4.126696177958466,
-   "sd_2hm": 11.041599874925764,
-   "p_home_win": 0.7642395791413132,
-   "h2_total_line": null,
-   "h2_spread_home": null,
-   "book": null,
-   "h1_line": "ORL 51 \u2013 63 PHX",
-   "markets": [],
-   "picks": [],
-   "final": {
-    "home": 117.0,
-    "away": 104.0
-   },
-   "act_2h": 107.0
-  },
-  "401909937": {
-   "game_id": "401909937",
-   "date": "2026-11-05",
-   "start_utc": "2026-11-06T03:00Z",
-   "home": "GS",
-   "away": "MIA",
-   "priced_at": "2026-11-06T03:29:32-05:00",
-   "late": true,
-   "pre_source": "prediction log",
-   "h1_home": 53.0,
-   "h1_away": 53.0,
-   "pre_2h": 124.32402001710344,
-   "pre_2hm": 6.843842406164725,
-   "mu_2h": 123.01961567523773,
-   "sd_2h": 13.92584187011514,
-   "mu_2hm": 8.587120820814292,
-   "sd_2hm": 11.041599874925764,
-   "p_home_win": 0.7836529748113403,
-   "h2_total_line": null,
-   "h2_spread_home": null,
-   "book": null,
-   "h1_line": "MIA 53 \u2013 53 GS",
-   "markets": [],
-   "picks": [],
-   "final": {
-    "home": 120.0,
-    "away": 100.0
-   },
-   "act_2h": 114.0
-  },
   "401909287": {
    "game_id": "401909287",
    "date": "2026-11-06",
@@ -708,5 +648,5 @@
  },
  "model_through": "2026-11-05",
  "halftime_fitted": true,
- "updated_at": "2026-11-06T23:28:28-05:00"
+ "updated_at": "2026-11-07T00:00:03-05:00"
 }
