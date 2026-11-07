@@ -1,6 +1,6 @@
 {
- "fetched_at": "2026-11-06T21:02:00-05:00",
- "official_report": "2026-11-06T21:00:00-05:00",
+ "fetched_at": "2026-11-07T07:00:53-05:00",
+ "official_report": "2026-11-07T07:00:00-05:00",
  "players": [
   {
    "team": "ATL",
@@ -129,7 +129,7 @@
    "espn_status": "Day-To-Day",
    "detail": "Right Groin Groin",
    "return_date": "2026-11-09",
-   "comment": "Miller (groin) won't return to Friday's game against the Celtics, Brett Siegel of ClutchPoints.com reports.",
+   "comment": "Head coach Charles Lee said Miller (groin) will be re-evaluated over the weekend, and they expect to have more information by Monday, Steve Reed of The Associated Press reports.",
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Groin Groin"
@@ -217,6 +217,18 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Left Arm Hand"
+  },
+  {
+   "team": "CLE",
+   "player_id": "4066757",
+   "name": "Sam Merrill",
+   "espn_status": "Out",
+   "detail": "Right Arm Elbow",
+   "return_date": "2026-11-07",
+   "comment": "Merrill (elbow) won't return to Friday's game against the 76ers, Dave McMenamin of ESPN.com reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Right Arm Elbow"
   },
   {
    "team": "CLE",
@@ -565,6 +577,18 @@
    "status": "Day-To-Day",
    "official_status": null,
    "reason": "Right Leg Ankle"
+  },
+  {
+   "team": "MIN",
+   "player_id": "5279133",
+   "name": "Joan Beringer",
+   "espn_status": "Out",
+   "detail": "Fracture",
+   "return_date": "2026-11-08",
+   "comment": "Beringer was ruled out for the second half of Friday's game against the Pelicans due to a nasal fracture, Dane Moore of 'The Dane Moore NBA Podcast' reports.",
+   "status": "Out",
+   "official_status": null,
+   "reason": "Fracture"
   },
   {
    "team": "MIN",
